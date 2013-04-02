@@ -24,3 +24,13 @@ C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug
 C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
 C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
 C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Npgsql.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Mono.Security.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Npgsql.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Npgsql.xml
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\de\Npgsql.resources.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\es\Npgsql.resources.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
