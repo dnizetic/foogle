@@ -31,8 +31,28 @@ namespace Foogle_WPF
             InitialiseDatabaseConnection();
         }
 
+        private bool g_bConnectedTestDebug = false;
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            // Primjer funkcionalnosti, obrisati!
+            if (g_bConnectedTestDebug)
+            {
+                UserLabel.Content = "Prijavite se! ->";
+                UserLabel.Foreground = Brushes.Black;
+                UserLabel.FontWeight = FontWeights.Bold;
+
+                LoginButton.Content = "Prijava";
+                g_bConnectedTestDebug = false;
+            }
+            else
+            {
+                UserLabel.Content = "John Doe";
+                UserLabel.Foreground = Brushes.Blue;
+                UserLabel.FontWeight = FontWeights.Normal;
+
+                LoginButton.Content = "Odjava";
+                g_bConnectedTestDebug = true;
+            }
             /* TODO: 
              *      Korisnik nije prijavljen:
              *          1. otvori formu za prijavu i ponudi:
@@ -50,9 +70,11 @@ namespace Foogle_WPF
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            // TODO: Provjeri login status, dozvoli samo ako je prijavljen
+            // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
+           
+            SuggestSkills(SearchCombo.Text);
         }
-
 
 
         /*
@@ -63,29 +85,36 @@ namespace Foogle_WPF
          * user.
          *
          * @param (String current_text) current text typed in the search box
-         * //@return (String[]) array of suggestions (strings)
+         * //TODO: @return (String[]) array of suggestions (strings)
          */
         private DataSet ds = new DataSet();
         private DataTable dt = new DataTable();
 
-        private void SuggestSkills(String current_text)
+        private void SuggestSkills(String searchText)
         {
             try
             {
                 
-                string sql = "select * from skill where skill_tag LIKE '%" + current_text + "%';";
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
+                string sql = "select * from skill where skill_tag LIKE '%" + searchText + "%';";
+                NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, sqlConnection);
 
                 ds.Reset();
 
                 da.Fill(ds);
-                // since it C# DataSet can handle multiple tables, we will select first
+                // since C# DataSet can handle multiple tables, we will select first
                 dt = ds.Tables[0];
                 // connect grid to DataTable
-                //dataGridView1.DataSource = dt;
+                //dataGridView1.DataSource = dt;  
 
-                String[] suggs = new String[10];
 
+                // TODO: Mislim da bi trebalo tu izbacit van tablicu s imenima, popisom skillova i bodovima =)
+                String[] suggestions = new String[10];
+
+                ResultList.Items.Clear(); // prvo očisti ono što je prije bilo unutra
+                foreach (String item in suggestions)
+                {
+                    ResultList.Items.Add("Hello 10x"); 
+                }
             }
             catch (Exception msg)
             {
@@ -98,29 +127,32 @@ namespace Foogle_WPF
 
         private void SearchCombo_TextChanged(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show("I'm changed");
+            MessageBox.Show("DEBUG: I'm changed"); // ovo ne radi kad se upisuje tekst, mislim da samo kad se bira
         }
 
 
 
-        public static NpgsqlConnection conn = null;
+        public static NpgsqlConnection sqlConnection = null;
         private void InitialiseDatabaseConnection()
         {
             try
             {
                 // PostgeSQL-style connection string
-                string connstring = String.Format("Server={0};Port={1};" +
+                string connectionString = String.Format("Server={0};Port={1};" +
                     "User Id={2};Password={3};Database={4};",
-                    "localhost", "5432", "postgres",
+                    "localhost", "5432", "postgres", // TODO: postaviti bazu online i promijeniti adresu.
                     "alphaomega", "foogle");
                 
-                conn = new NpgsqlConnection(connstring);
-                conn.Open();
+                sqlConnection = new NpgsqlConnection(connectionString);
+                sqlConnection.Open();
                 
-            }  catch (Exception msg) {
-               
+            }  
+            catch (Exception msg) 
+            {
                 MessageBox.Show(msg.ToString());
-                throw;
+                MessageBox.Show("Ako ne radi povezivanje, onda connection string nije dobar, provjerite isti! " +
+                                "Isto tako, problem može biti da aplikacija nema pristup bazi jer baza ili nije na svome mjestu ili ne radi server.");
+                throw; // nema baze ili veze - nema koristi od aplikacije.
             }
         }
 

@@ -34,3 +34,13 @@ C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug
 C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
 C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
 C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Mono.Security.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.pdb
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.xml
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\de\Npgsql.resources.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\es\Npgsql.resources.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
