@@ -83,6 +83,10 @@ namespace Foogle_WPF
          * Based on current text in the search box, this
          * function returns a set of suggestions for the
          * user.
+         * 
+         * Example: user types "p", suggestions: "php, ..."
+         * Example: user types "q", suggestion: "jquery, ..."
+         * Examples are listed in a ListBox below the TextBox
          *
          * @param (String current_text) current text typed in the search box
          * //TODO: @return (String[]) array of suggestions (strings)
@@ -90,12 +94,12 @@ namespace Foogle_WPF
         private DataSet ds = new DataSet();
         private DataTable dt = new DataTable();
 
-        private void SuggestSkills(String searchText)
+        private String[] SuggestSkills(String searchText)
         {
             try
             {
                 
-                string sql = "select * from skill where skill_tag LIKE '%" + searchText + "%';";
+                string sql = "select * from skill where skill_tag LIKE '%" + searchText + "%' limit 10;";
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, sqlConnection);
 
                 ds.Reset();
@@ -109,12 +113,18 @@ namespace Foogle_WPF
 
                 // TODO: Mislim da bi trebalo tu izbacit van tablicu s imenima, popisom skillova i bodovima =)
                 String[] suggestions = new String[10];
-
-                ResultList.Items.Clear(); // prvo očisti ono što je prije bilo unutra
-                foreach (String item in suggestions)
+                int i = 0;
+                foreach (DataRow row in dt.Rows)
                 {
-                    ResultList.Items.Add("Hello 10x"); 
+                    String s = row["skill_tag"] as String;
+                    suggestions[i++] = s;
+
+                    //if(i == 1)
+                    //    MessageBox.Show(s);
                 }
+
+                return suggestions;
+
             }
             catch (Exception msg)
             {
@@ -124,12 +134,49 @@ namespace Foogle_WPF
         }
 
 
-
+        //@zvjerka
+        //promjenil sam iz combo u textbox (ima razloga koristit combobox? 
+        //ovo ne bu biranje skillova vec autocomplete.
         private void SearchCombo_TextChanged(object sender, SelectionChangedEventArgs e)
         {
             MessageBox.Show("DEBUG: I'm changed"); // ovo ne radi kad se upisuje tekst, mislim da samo kad se bira
         }
 
+
+
+
+
+        //http://stackoverflow.com/questions/950770/autocomplete-textbox-in-wpf
+
+        //this.SearchBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+        //this.SearchBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        private void OnSearchBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+            //MessageBox.Show("Text changed");
+
+            TextBox t = sender as TextBox;
+            if (t != null)
+            {
+                //say you want to do a search when user types 1 or more chars
+                if (t.Text.Length >= 1)
+                {
+                    //SuggestStrings will have the logic to return array of strings either from cache/db
+                    string[] arr = SuggestSkills(t.Text);
+
+                    foreach (String s in arr)
+                    {
+                        //if(s.Length > 0)
+                        MessageBox.Show(s);
+                    }
+
+                    //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+                    //collection.AddRange(arr);
+
+                    //this.textBox1.AutoCompleteCustomSource = collection;
+                }
+            }
+
+        }
 
 
         public static NpgsqlConnection sqlConnection = null;
@@ -142,12 +189,12 @@ namespace Foogle_WPF
                     "User Id={2};Password={3};Database={4};",
                     "localhost", "5432", "postgres", // TODO: postaviti bazu online i promijeniti adresu.
                     "alphaomega", "foogle");
-                
+
                 sqlConnection = new NpgsqlConnection(connectionString);
                 sqlConnection.Open();
-                
-            }  
-            catch (Exception msg) 
+
+            }
+            catch (Exception msg)
             {
                 MessageBox.Show(msg.ToString());
                 MessageBox.Show("Ako ne radi povezivanje, onda connection string nije dobar, provjerite isti! " +
