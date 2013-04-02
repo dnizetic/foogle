@@ -1,0 +1,13 @@
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe.config
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe
+F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.pdb
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\MainWindow.baml
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\MainWindow.g.cs
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\App.g.cs
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF_MarkupCompile.cache
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.g.resources
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resources
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
+F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
