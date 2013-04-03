@@ -1,0 +1,19 @@
+Rekla sam da nije bitno da unesemo sve kategorije i skillove, nego one koji nam trebaju za testiranje.
+Ostalo može unijeti administrator.
+Ako nema kategorije nemoguæe je dodijeljivati rejting inicijalno.
+
+Tvrtka ne mora biti kao posebna tablica ako se svakom da pisati ime svoje tvrtke.
+Ako više ljudi radi u istoj firmi, imaš nepotrebne podatke.
+
+Prosjek se odnosi na prosjek ocjena na faksu, kao jedna od moguænosti dodatnog
+sortiranja ili èisto informativno (možda to nekog poslodavca zanima, pogotovo
+ako je iz podruèja gospodarstva ili organizacije u kojima je teško procijeniti
+konkretno znanje studenta). To je fiksna velièina i ne ažurira se.
+
+Ne, cilj aplikacije je pronaæi posao za BIVŠEG studenta.Korisnici koji nisu 
+diplomirali nisu u sustavu. (??)
+
+
+BTW, daj reci nkj bitno, npr. kak izraèunati rejting s obzirom na ocjenu u preporukama.
+ 
+
