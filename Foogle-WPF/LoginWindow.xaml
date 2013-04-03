@@ -1,0 +1,15 @@
+﻿<Window x:Class="Foogle_WPF.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="UserTextBox" HorizontalAlignment="Left" Height="23" Margin="134,128,0,0" TextWrapping="Wrap" Text="user name&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="134,173,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="UserNameLabel" Content="Korisničko ime:" HorizontalAlignment="Left" Margin="23,128,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PasswordLabel" Content="Lozinka:" HorizontalAlignment="Left" Margin="23,170,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="LoginButton" Content="Prijavi me" HorizontalAlignment="Left" Margin="134,223,0,0" VerticalAlignment="Top" Width="120" Click="LoginButton_Click"/>
+    </Grid>
+</Window>
