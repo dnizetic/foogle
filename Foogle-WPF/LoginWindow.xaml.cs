@@ -28,5 +28,10 @@ namespace Foogle_WPF
         {
 
         }
+
+        private void RememberMeCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,10 +6,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="UserTextBox" HorizontalAlignment="Left" Height="23" Margin="134,128,0,0" TextWrapping="Wrap" Text="user name&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="134,173,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="UserNameLabel" Content="Korisničko ime:" HorizontalAlignment="Left" Margin="23,128,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="PasswordLabel" Content="Lozinka:" HorizontalAlignment="Left" Margin="23,170,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="LoginButton" Content="Prijavi me" HorizontalAlignment="Left" Margin="134,223,0,0" VerticalAlignment="Top" Width="120" Click="LoginButton_Click"/>
+        <TextBox x:Name="UserTextBox" HorizontalAlignment="Left" Height="23" Margin="138,110,0,0" TextWrapping="Wrap" Text="user name&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="138,159,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="UserNameLabel" Content="Korisničko ime:" HorizontalAlignment="Left" Margin="27,110,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PasswordLabel" Content="Lozinka:" HorizontalAlignment="Left" Margin="27,156,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="LoginButton" Content="Prijava" HorizontalAlignment="Left" Margin="27,198,0,0" VerticalAlignment="Top" Width="90" Click="LoginButton_Click"/>
+        <CheckBox x:Name="RememberMeCheckBox" Content="Zapamti prijavu" HorizontalAlignment="Left" Margin="138,201,0,0" VerticalAlignment="Top" Width="120" Checked="RememberMeCheckBox_Checked"/>
+        <Label x:Name="NameFoogleLabel" Content="Foogle" HorizontalAlignment="Left" Margin="27,37,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Rockwell" RenderTransformOrigin="0.986,0.333" Width="90"/>
     </Grid>
 </Window>
