@@ -1,13 +1,6 @@
 Student ranking type: hierarchical
 
 - recommendation > employment_history (years) > portfolio projects (sum of time worked on projects - in years) > student_skills
----------------------------------------------
-
-Tables used to determine student rank:
- - student_skills 
- - recommendation
- - employment history
- - portfolio projects
 
 --------------------------------------------
 Example 1
@@ -35,3 +28,10 @@ This is basicaly ranking by:
 2) years of experience (Level 2 & Level 3)
 3) self input skills (Level 4)
 
+---------------------------------------------
+
+Tables used to determine student rank:
+ - student_skills 
+ - recommendation
+ - employment history
+ - portfolio projects
