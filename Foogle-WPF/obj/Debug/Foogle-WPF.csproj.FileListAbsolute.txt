@@ -44,6 +44,7 @@ F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
 F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
 F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
 F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
+<<<<<<< HEAD
 D:\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe.config
 D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
 D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
@@ -69,3 +70,25 @@ D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF_MarkupCompile.cache
 D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.g.resources
 D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resources
 D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
+=======
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\TestWindow.baml
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\TestWindow.g.cs
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.Design.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.VisualStudio.Design.dll
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.Design.pdb
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
+>>>>>>> 70e80ebd789e2c7ca8ce66631c62ffeb7648d1f9

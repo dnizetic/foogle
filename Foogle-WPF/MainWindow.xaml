@@ -1,6 +1,7 @@
-﻿<Window x:Class="Foogle_WPF.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" x:Class="Foogle_WPF.MainWindow"
         Title="Foogle" Height="377" Width="450" SizeToContent="WidthAndHeight" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner" Foreground="Black">
     <Grid HorizontalAlignment="Left" Width="442" Height="350">
         <Grid.Background>
@@ -23,7 +24,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ComboBox Visibility="Hidden" x:Name="SearchCombo" HorizontalAlignment="Left" Margin="80,144,0,0" VerticalAlignment="Top" Width="208" Height="25" TabIndex="2" IsEditable="True" Uid="SearchCombo" SelectionChanged="SearchCombo_TextChanged"/>
         <Image x:Name="LogoImage" Margin="15,40,10,0" Tag="Logo" IsHitTestVisible="False" Uid="LogoImage" Height="99" VerticalAlignment="Top" ToolTip="TODO: Logo goes here :)"/>
         <Button x:Name="LoginButton" Content="Prijava" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="69" TabIndex="1" BorderThickness="3" Height="25" Uid="LoginButton" Click="LoginButton_Click"/>
         <Label x:Name="UserLabel" Content="Prijavite se -&gt;" HorizontalAlignment="Left" Margin="138,9,0,0" VerticalAlignment="Top" Width="224" IsHitTestVisible="False" FontWeight="Bold" TextOptions.TextHintingMode="Fixed" HorizontalContentAlignment="Right" RenderTransformOrigin="0.5,0.5">
@@ -36,7 +36,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="80,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192" TextChanged="OnSearchBoxTextChanged"/>
+        <Controls:AutoCompleteBox  TextChanged="SelItem" FilterMode="None" Populating="searchBoxPopulating"  x:Name="searchBox"  HorizontalAlignment="Left" Margin="80,144,0,0" VerticalAlignment="Top" Width="208"/>
+        <!-- <TextBox Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="80,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192" TextChanged="OnSearchBoxTextChanged"/>-->
         <!-- <TextBox HorizontalAlignment="Left" Height="23" Margin="80,144,0,0" TextWrapping="Wrap" Text="[php, mysql...]" VerticalAlignment="Top" Width="196"/> -->
 
     </Grid>

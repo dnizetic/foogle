@@ -36,3 +36,6 @@ F:\Dropbox\GitHub\foogle\foogle\obj\Debug\foogle.csprojResolveAssemblyReference.
 F:\Dropbox\GitHub\foogle\foogle\obj\Debug\foogle.Form1.resources
 F:\Dropbox\GitHub\foogle\foogle\obj\Debug\foogle.Properties.Resources.resources
 F:\Dropbox\GitHub\foogle\foogle\obj\Debug\foogle.csproj.GenerateResource.Cache
+D:\Users\Ljiljana\Documents\GitHub\foogle\foogle\bin\Debug\foogle.exe.config
+D:\Users\Ljiljana\Documents\GitHub\foogle\foogle\obj\Debug\foogle.exe
+D:\Users\Ljiljana\Documents\GitHub\foogle\foogle\obj\Debug\foogle.pdb

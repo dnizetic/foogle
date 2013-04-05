@@ -73,7 +73,55 @@ namespace Foogle_WPF
             // TODO: Provjeri login status, dozvoli samo ako je prijavljen
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
            
-            SuggestSkills(SearchCombo.Text);
+        }
+
+        private void SelItem(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        //http://intellibox.codeplex.com/
+        //http://stackoverflow.com/questions/10822445/autocompletebox-dont-selecteditem-on-down-up-key
+
+        //private String full_str = null;
+        private void searchBoxPopulating(object sender, 
+                System.Windows.Controls.PopulatingEventArgs e)
+        {
+            string text = searchBox.Text;
+
+           // char last = text[text.Length - 1];
+            //full_str += last;
+            //searchBox.Text = full_str;
+                
+
+            if (text.Length > 0)
+            {
+
+                //get last word
+                string lastWord = text.Substring(text.LastIndexOf(' ') + 1);
+
+
+                //MessageBox.Show(lastWord);
+
+                string[] arr = SuggestSkills(lastWord);
+
+                foreach (String s in arr)
+                {
+                    //if(text.Length > 3)
+                    //    MessageBox.Show(s);
+                }
+
+                AutoCompleteBox b = (AutoCompleteBox) sender;
+                
+                b.ItemsSource = arr;
+
+                
+
+                //searchBox.ItemsSource = arr;
+                
+                searchBox.PopulateComplete();
+            }
+
         }
 
 
@@ -119,8 +167,6 @@ namespace Foogle_WPF
                     String s = row["skill_tag"] as String;
                     suggestions[i++] = s;
 
-                    //if(i == 1)
-                    //    MessageBox.Show(s);
                 }
 
                 return suggestions;
@@ -133,50 +179,6 @@ namespace Foogle_WPF
             }
         }
 
-
-        //@zvjerka
-        //promjenil sam iz combo u textbox (ima razloga koristit combobox? 
-        //ovo ne bu biranje skillova vec autocomplete.
-        private void SearchCombo_TextChanged(object sender, SelectionChangedEventArgs e)
-        {
-            MessageBox.Show("DEBUG: I'm changed"); // ovo ne radi kad se upisuje tekst, mislim da samo kad se bira
-        }
-
-
-
-
-
-        //http://stackoverflow.com/questions/950770/autocomplete-textbox-in-wpf
-
-        //this.SearchBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-        //this.SearchBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        private void OnSearchBoxTextChanged(object sender, TextChangedEventArgs e)
-        {
-            //MessageBox.Show("Text changed");
-
-            TextBox t = sender as TextBox;
-            if (t != null)
-            {
-                //say you want to do a search when user types 1 or more chars
-                if (t.Text.Length >= 1)
-                {
-                    //SuggestStrings will have the logic to return array of strings either from cache/db
-                    string[] arr = SuggestSkills(t.Text);
-
-                    foreach (String s in arr)
-                    {
-                        //if(s.Length > 0)
-                        MessageBox.Show(s);
-                    }
-
-                    //AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-                    //collection.AddRange(arr);
-
-                    //this.textBox1.AutoCompleteCustomSource = collection;
-                }
-            }
-
-        }
 
 
         public static NpgsqlConnection sqlConnection = null;
@@ -201,6 +203,11 @@ namespace Foogle_WPF
                                 "Isto tako, problem može biti da aplikacija nema pristup bazi jer baza ili nije na svome mjestu ili ne radi server.");
                 throw; // nema baze ili veze - nema koristi od aplikacije.
             }
+        }
+
+        private void searchBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
     }

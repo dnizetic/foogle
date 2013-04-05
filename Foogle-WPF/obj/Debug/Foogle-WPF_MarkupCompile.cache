@@ -9,12 +9,21 @@ Foogle_WPF
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\GitHub\foogle\Foogle-WPF\App.xaml
 22037783069
 
 611046803
 13452568849
 MainWindow.xaml;LoginWindow.xaml;
+=======
+C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\App.xaml
+2-1562810139
+
+61760550170
+222008904415
+MainWindow.xaml;TestWindow.xaml;
+>>>>>>> 70e80ebd789e2c7ca8ce66631c62ffeb7648d1f9
 
 False
 
