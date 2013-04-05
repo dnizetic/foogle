@@ -28,3 +28,10 @@ Level 3: students with longest period spent on portfolio projects (ranked by sum
 
 Level 4: students that match 1 or more queried skills (ranked by the number of skills they matched, descending).
 ----------------------------------------------------------------------------------------------------------------------
+
+This is basicaly ranking by:
+
+1) # of recommendations (Level 1 - top tier students)
+2) years of experience (Level 2 & Level 3)
+3) self input skills (Level 4)
+
