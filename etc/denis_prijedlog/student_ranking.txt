@@ -34,4 +34,3 @@ This is basicaly ranking by:
 1) # of recommendations (Level 1 - top tier students)
 2) years of experience (Level 2 & Level 3)
 3) self input skills (Level 4)
-

@@ -73,26 +73,16 @@ namespace Foogle_WPF
             // TODO: Provjeri login status, dozvoli samo ako je prijavljen
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
            
+
+
         }
 
-        private void SelItem(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        //http://intellibox.codeplex.com/
-        //http://stackoverflow.com/questions/10822445/autocompletebox-dont-selecteditem-on-down-up-key
-
-        //private String full_str = null;
+   
+        //called on every character deletion / add
         private void searchBoxPopulating(object sender, 
                 System.Windows.Controls.PopulatingEventArgs e)
         {
             string text = searchBox.Text;
-
-           // char last = text[text.Length - 1];
-            //full_str += last;
-            //searchBox.Text = full_str;
-                
 
             if (text.Length > 0)
             {
@@ -100,10 +90,16 @@ namespace Foogle_WPF
                 //get last word
                 string lastWord = text.Substring(text.LastIndexOf(' ') + 1);
 
+                //pass prefix to all sugestions
+                int index1 = text.LastIndexOf(' ');
+                string prefix = "";
+                if(index1 != -1)
+                    prefix = text.Substring(0, index1 + 1);
+                //MessageBox.Show(prefix);
 
                 //MessageBox.Show(lastWord);
 
-                string[] arr = SuggestSkills(lastWord);
+                string[] arr = SuggestSkills(lastWord, prefix);
 
                 foreach (String s in arr)
                 {
@@ -115,10 +111,6 @@ namespace Foogle_WPF
                 
                 b.ItemsSource = arr;
 
-                
-
-                //searchBox.ItemsSource = arr;
-                
                 searchBox.PopulateComplete();
             }
 
@@ -137,12 +129,12 @@ namespace Foogle_WPF
          * Examples are listed in a ListBox below the TextBox
          *
          * @param (String current_text) current text typed in the search box
-         * //TODO: @return (String[]) array of suggestions (strings)
+         * @return (String[]) array of suggestions (strings)
          */
         private DataSet ds = new DataSet();
         private DataTable dt = new DataTable();
 
-        private String[] SuggestSkills(String searchText)
+        private String[] SuggestSkills(String searchText, String prefix)
         {
             try
             {
@@ -164,7 +156,10 @@ namespace Foogle_WPF
                 int i = 0;
                 foreach (DataRow row in dt.Rows)
                 {
-                    String s = row["skill_tag"] as String;
+                    //suggest all until last word
+
+                    String s = prefix;
+                    s += row["skill_tag"] as String;
                     suggestions[i++] = s;
 
                 }
