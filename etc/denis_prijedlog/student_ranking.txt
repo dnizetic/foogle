@@ -27,6 +27,7 @@ This is basicaly ranking by:
 
 1) # of recommendations (Level 1 - top tier students)
 2) years of experience (Level 2 & Level 3)
+<<<<<<< HEAD
 3) self input skills (Level 4)
 
 ---------------------------------------------
@@ -38,3 +39,6 @@ Tables used to determine student rank:
  - portfolio projects
 
 -----------------------------------------------
+=======
+3) self input skills (Level 4)
+>>>>>>> 5364d7553f00d7b19acb67d293fd41b43fee090d
