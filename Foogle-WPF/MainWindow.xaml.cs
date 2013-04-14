@@ -74,9 +74,44 @@ namespace Foogle_WPF
         {
             // TODO: Provjeri login status, dozvoli samo ako je prijavljen
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
-           
 
+            string searchText = searchBox.Text;
 
+            String[] skills = searchText.Split(' ');
+
+            //query: students, recommendations, employment history, portfolio projects, skills
+            string sql = @"
+                select first_name, last_name from student
+                join student_skills on student.id = student_skills.student_id
+                join recommendation on student.id = recommendation.student_id
+                join employment_history on student.id = employment_history.student_id
+                join portfolio_projects on student.id = portfolio_projects.id
+            ";
+
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, sqlConnection);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+
+            ds.Reset(); //data set
+            da.Fill(ds); // //data adapter - fill data set
+            dt = ds.Tables[0]; //data table
+
+            foreach (DataRow row in dt.Rows)
+            {
+                //s += row["skill_tag"] as String;
+
+            }
+        }
+
+        private Boolean StudentHasSkill(String[] skills, String skill)
+        {
+            foreach (String s in skills)
+            {
+                if (skill.CompareTo(s) == 0)
+                    return true;
+
+            }
+            return false;
         }
 
    
