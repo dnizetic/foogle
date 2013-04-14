@@ -42,3 +42,6 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resou
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.xml

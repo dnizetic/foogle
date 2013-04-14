@@ -75,7 +75,7 @@ namespace Foogle_WPF
             // TODO: Provjeri login status, dozvoli samo ako je prijavljen
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
 
-            string searchText = searchBox.Text;
+            /*string searchText = searchBox.Text;
 
             String[] skills = searchText.Split(' ');
 
@@ -100,7 +100,20 @@ namespace Foogle_WPF
             {
                 //s += row["skill_tag"] as String;
 
+            }*/
+
+            using (var context = new ChinookContext())
+            {
+                var skills_db = from a in context.Skills
+                                select a;
+
+                foreach (var s in skills_db)
+                {
+                    MessageBox.Show(s.skill_tag);
+                    //Console.WriteLine(s.SkillTag);
+                }
             }
+
         }
 
         private Boolean StudentHasSkill(String[] skills, String skill)
