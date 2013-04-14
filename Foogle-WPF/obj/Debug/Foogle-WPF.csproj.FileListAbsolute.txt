@@ -1,100 +1,4 @@
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe.config
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.pdb
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\MainWindow.baml
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\MainWindow.g.cs
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\App.g.cs
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF_MarkupCompile.cache
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.g.resources
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resources
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe.config
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\MainWindow.baml
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\MainWindow.g.cs
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\App.g.cs
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF_MarkupCompile.cache
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.g.resources
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resources
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Npgsql.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Mono.Security.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Npgsql.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\Npgsql.xml
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\de\Npgsql.resources.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\es\Npgsql.resources.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Mono.Security.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.pdb
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.xml
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\de\Npgsql.resources.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\es\Npgsql.resources.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
-<<<<<<< HEAD
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe.config
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.pdb
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.dll
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\Mono.Security.dll
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.pdb
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\Npgsql.xml
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\de\Npgsql.resources.dll
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\es\Npgsql.resources.dll
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
-D:\GitHub\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\MainWindow.baml
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\LoginWindow.baml
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\MainWindow.g.cs
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\LoginWindow.g.cs
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\App.g.cs
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF_MarkupCompile.cache
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.g.resources
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resources
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
-=======
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\TestWindow.baml
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\obj\Debug\TestWindow.g.cs
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.Design.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.VisualStudio.Design.dll
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.Design.pdb
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
->>>>>>> 70e80ebd789e2c7ca8ce66631c62ffeb7648d1f9
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe.config
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.pdb
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Npgsql.dll
@@ -125,7 +29,6 @@ C:\Users\denis\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\MainWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\LoginWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\TestWindow.baml
@@ -137,3 +40,5 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF_MarkupCompile.cache
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.g.resources
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resources
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb

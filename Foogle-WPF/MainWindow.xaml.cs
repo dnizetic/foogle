@@ -29,6 +29,8 @@ namespace Foogle_WPF
             InitializeComponent();
 
             InitialiseDatabaseConnection();
+
+            
         }
 
         private bool g_bConnectedTestDebug = false;
