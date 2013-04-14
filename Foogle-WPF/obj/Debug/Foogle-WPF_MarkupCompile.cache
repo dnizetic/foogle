@@ -4,26 +4,17 @@
 winexe
 C#
 .cs
-D:\GitHub\foogle\Foogle-WPF\obj\Debug\
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\
 Foogle_WPF
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-D:\GitHub\foogle\Foogle-WPF\App.xaml
-22037783069
+C:\Users\denis\foogle\Foogle-WPF\App.xaml
+3-676575195
 
-611046803
-13452568849
-MainWindow.xaml;LoginWindow.xaml;
-=======
-C:\Users\denis\Documents\Visual Studio 2012\Projects\foogle\Foogle-WPF\App.xaml
-2-1562810139
-
-61760550170
-222008904415
-MainWindow.xaml;TestWindow.xaml;
->>>>>>> 70e80ebd789e2c7ca8ce66631c62ffeb7648d1f9
+7-505623821
+22-462813923
+MainWindow.xaml;LoginWindow.xaml;TestWindow.xaml;
 
 False
 
