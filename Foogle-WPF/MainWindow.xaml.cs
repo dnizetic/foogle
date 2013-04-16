@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 using System.Data;
 
 using Npgsql;
-using DotNetOpenAuth.OAuth;
-using DotNetOpenAuth.Messaging;
-using DotNetOpenAuth.OAuth.ChannelElements;
 using System.Diagnostics;
 using System.Net;
 

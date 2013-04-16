@@ -34,14 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetOpenAuth">
-      <HintPath>..\etc\DotNetOpenAuth\Bin-net4.5\DotNetOpenAuth.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\etc\DotNetOpenAuth\Lib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
       <HintPath>..\etc\Npgsql-2.0.11.91\bin\Debug4\Npgsql.dll</HintPath>
@@ -78,7 +72,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ChinookContext.cs" />
-    <Compile Include="InMemoryTokenManager.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
