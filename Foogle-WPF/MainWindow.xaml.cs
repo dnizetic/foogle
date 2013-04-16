@@ -15,6 +15,11 @@ using System.Windows.Shapes;
 using System.Data;
 
 using Npgsql;
+using DotNetOpenAuth.OAuth;
+using DotNetOpenAuth.Messaging;
+using DotNetOpenAuth.OAuth.ChannelElements;
+using System.Diagnostics;
+using System.Net;
 
 
 namespace Foogle_WPF
@@ -29,9 +34,10 @@ namespace Foogle_WPF
             InitializeComponent();
 
             InitialiseDatabaseConnection();
-
             
         }
+
+
 
         private bool g_bConnectedTestDebug = false;
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -109,7 +115,46 @@ namespace Foogle_WPF
 
                 foreach (var s in skills_db)
                 {
-                    MessageBox.Show(s.skill_tag);
+                    //MessageBox.Show(s.skill_tag);
+                    //Console.WriteLine(s.SkillTag);
+                }
+            }
+
+            //http://msdn.microsoft.com/en-us/data/jj574232.aspx
+            using (var context = new ChinookContext())
+            {
+                var students = from a in context.Students
+                               //.Include(a )
+                               select a;
+
+                var pfs = from b in context.PortfolioProjects
+                               //.Include(a )
+                               select b;
+
+                foreach (var p in pfs)
+                {
+                    //MessageBox.Show(p.project_name);
+                }
+
+                
+                var studs = from a in context.Students
+                            .Include("PortfolioProjects")
+                            select a;
+
+                foreach (var s in students)
+                {
+                    MessageBox.Show(s.id.ToString());
+                    MessageBox.Show(s.first_name);
+
+                    if (s.PortfolioProjects != null)
+                    {
+                        foreach (var pp in s.PortfolioProjects)
+                        {
+                            MessageBox.Show(pp.id.ToString());
+                        }
+                    }
+
+                    //MessageBox.Show(s.skill_tag);
                     //Console.WriteLine(s.SkillTag);
                 }
             }
@@ -254,6 +299,69 @@ namespace Foogle_WPF
         {
 
         }
+
+
+
+        /*
+
+        //OAuth
+        //http://scatteredcode.wordpress.com/2011/12/01/dotnetopenauth-oauth-and-mvc-for-dummies/
+        private ServiceProviderDescription GetServiceDescription()
+        {
+            return new ServiceProviderDescription
+            {
+                AccessTokenEndpoint = new MessageReceivingEndpoint("https://api.linkedin.com/uas/oauth/accessToken", HttpDeliveryMethods.PostRequest),
+                RequestTokenEndpoint = new MessageReceivingEndpoint("https://api.linkedin.com/uas/oauth/requestToken", HttpDeliveryMethods.PostRequest),
+                UserAuthorizationEndpoint = new MessageReceivingEndpoint("https://www.linkedin.com/uas/oauth/authorize", HttpDeliveryMethods.PostRequest),
+                TamperProtectionElements = new ITamperProtectionChannelBindingElement[] { new HmacSha1SigningBindingElement() },
+                ProtocolVersion = DotNetOpenAuth.OAuth.ProtocolVersion.V10a
+            };
+        }
+        */
+
+
+
+        private void UserRegisterButton(object sender, RoutedEventArgs e)
+        {
+            //var newW = new UserRegisterWindow();
+
+            //newW.Show();
+
+
+            Process.Start("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
+
+
+            //url:
+            //https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com
+            //using (var wb = new WebClient())
+            //{
+            //    var response = wb.DownloadString("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
+                
+                //get authorization code
+                
+            //}
+        }
+
+        //http://developer.linkedin.com/documents/authentication
+
+
+        //which API call?
+        //on application start, authorize the app
+        
+
+        //authorize link:
+        //https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com
+
+
+
+        //response:
+        //https://www.google.com/?code=AQSM4KzTUCbaVgiNDLUMDm1Occ030XFtmvOdKYi2M_bigBbvUSnmx-_kfz3M-5AVpqPstOQgLrb17Cd5ktWukwGPcdmOxygBZ3qSFQxGMqJZ91fGwvs&state=mylongstring
+
+        //authorization code: 
+        //AQSM4KzTUCbaVgiNDLUMDm1Occ030XFtmvOdKYi2M_bigBbvUSnmx-_kfz3M-5AVpqPstOQgLrb17Cd5ktWukwGPcdmOxygBZ3qSFQxGMqJZ91fGwvs
+
+        //get access token
+
 
     }
 }

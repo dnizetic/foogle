@@ -45,3 +45,10 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.xml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.g.cs
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\DotNetOpenAuth.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\DotNetOpenAuth.pdb
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\DotNetOpenAuth.xml
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\log4net.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\log4net.xml

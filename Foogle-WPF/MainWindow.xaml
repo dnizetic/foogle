@@ -38,6 +38,7 @@
         </Label>
         <Controls:AutoCompleteBox FilterMode="None" Populating="searchBoxPopulating"  x:Name="searchBox"  HorizontalAlignment="Left" Margin="80,144,0,0" VerticalAlignment="Top" Width="208"/>
         <Image Margin="80,49,129.6,211" Source="foogle.png" Stretch="Fill"/>
+        <Button Content="Registracija (korisnik)" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="118" Click="UserRegisterButton"/>
         <!-- <TextBox Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="80,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192" TextChanged="OnSearchBoxTextChanged"/>-->
         <!-- <TextBox HorizontalAlignment="Left" Height="23" Margin="80,144,0,0" TextWrapping="Wrap" Text="[php, mysql...]" VerticalAlignment="Top" Width="196"/> -->
 
