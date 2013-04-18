@@ -33,7 +33,7 @@ namespace Foogle_WPF
             InitialiseDatabaseConnection();
             
         }
-
+        //
 
 
         private bool g_bConnectedTestDebug = false;
@@ -317,15 +317,24 @@ namespace Foogle_WPF
         */
 
 
-
+        NavigationWindow window = new NavigationWindow();
         private void UserRegisterButton(object sender, RoutedEventArgs e)
         {
+            window.Source = new Uri("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
+            window.Show();
+            
+            
+            
+            //WebBrowser browser = new WebBrowser();
+            //browser.Navigate("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com"); 
+            
+            
             //var newW = new UserRegisterWindow();
 
             //newW.Show();
 
 
-            Process.Start("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
+            //Process.Start("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
 
 
             //url:
@@ -337,6 +346,15 @@ namespace Foogle_WPF
                 //get authorization code
                 
             //}
+        }
+
+        
+
+        private void RegistracijaProfesor(object sender, RoutedEventArgs e)
+        {
+            UserRegisterWindow ww = new UserRegisterWindow();
+
+            ww.Show();
         }
 
         //http://developer.linkedin.com/documents/authentication

@@ -12,6 +12,7 @@ using System.IO;
 using System.Collections.Specialized;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
+using System.Windows.Forms;
 
 
 public class oAuthLinkedIn : oAuthBase2
@@ -299,6 +300,8 @@ public class oAuthLinkedIn : oAuthBase2
 
             webRequest = null;
 
+            //MessageBox.Show(responseData);
+            
             return responseData;
 
         }

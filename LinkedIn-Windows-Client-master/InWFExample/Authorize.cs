@@ -45,7 +45,7 @@ namespace InWFExample
 
         private string oauth_token = null;
         private string oauth_verifier = null;
-
+        
         private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             string responsed = e.Url.ToString();
@@ -79,8 +79,18 @@ namespace InWFExample
                 tmrCloseCheck.Tick += new EventHandler(tmrCloseCheck_Tick);
                 tmrCloseCheck.Start();
                 ShowOfflienContent("Completed.htm");
-                MessageBox.Show(oauth_verifier);
                 
+                
+            }
+            String text = webBrowser1.DocumentText;
+
+            if (text.Contains("access-code"))
+            {
+                int pos = text.LastIndexOf("access-code");
+  
+                String access_code = text.Substring(pos + 13, 5);
+
+                MessageBox.Show(access_code);
             }
         }
 
@@ -105,7 +115,6 @@ namespace InWFExample
         {
             System.Diagnostics.Debug.WriteLine("webBrowser1_DocumentCompleted" + e.Url);
 
-            //MessageBox.Show("Im here");
         }
     }
 }

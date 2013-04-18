@@ -6,12 +6,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="UserTextBox" HorizontalAlignment="Left" Height="23" Margin="138,110,0,0" TextWrapping="Wrap" Text="user name&#xD;&#xA;" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="138,159,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="UserNameLabel" Content="LI kor. ime:" HorizontalAlignment="Left" Margin="27,110,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="PasswordLabel" Content="Lozinka:" HorizontalAlignment="Left" Margin="27,156,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="RegisterButton" Content="Registracija" HorizontalAlignment="Left" Margin="138,198,0,0" VerticalAlignment="Top" Width="120" Click="RegisterButton_Click" RenderTransformOrigin="2.031,0.385" Height="27"/>
-        <Label x:Name="NameFoogleLabel" Content="Foogle" HorizontalAlignment="Left" Margin="27,37,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Rockwell" RenderTransformOrigin="0.986,0.333" Width="90"/>
-        <Label Content="Unesite vaš LinkedIn korisničko ime i lozinku:" HorizontalAlignment="Left" Margin="27,76,0,0" VerticalAlignment="Top" Width="257"/>
+        <TextBox x:Name="ProfessorEmail" HorizontalAlignment="Left" Height="23" Margin="138,110,0,0" TextWrapping="Wrap" Text="samo @foi.hr adrese" VerticalAlignment="Top" Width="120"/>
+        <!--<TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="138,159,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/> -->
+        <Label x:Name="UserNameLabel" Content="FOI Email:" HorizontalAlignment="Left" Margin="27,110,0,0" VerticalAlignment="Top"/>
+        <!-- <Label x:Name="PasswordLabel" Content="Lozinka:" HorizontalAlignment="Left" Margin="27,156,0,0" VerticalAlignment="Top"/>-->
+        <Button x:Name="RegisterButton" Content="Registracija" HorizontalAlignment="Left" Margin="138,150,0,0" VerticalAlignment="Top" Width="120" Click="RegisterButton_Click" RenderTransformOrigin="2.031,0.385" Height="27"/>
+        <Label x:Name="NameFoogleLabel" Content="Registracija: profesor" HorizontalAlignment="Left" Margin="27,37,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Rockwell" RenderTransformOrigin="0.986,0.333" Width="231"/>
     </Grid>
 </Window>
