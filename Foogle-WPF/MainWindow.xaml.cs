@@ -33,31 +33,10 @@ namespace Foogle_WPF
             InitialiseDatabaseConnection();
             
         }
-        //
 
-
-        private bool g_bConnectedTestDebug = false;
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            // Primjer funkcionalnosti, obrisati!
-            if (g_bConnectedTestDebug)
-            {
-                UserLabel.Content = "Prijavite se! ->";
-                UserLabel.Foreground = Brushes.Black;
-                UserLabel.FontWeight = FontWeights.Bold;
-
-                LoginButton.Content = "Prijava";
-                g_bConnectedTestDebug = false;
-            }
-            else
-            {
-                UserLabel.Content = "John Doe";
-                UserLabel.Foreground = Brushes.Blue;
-                UserLabel.FontWeight = FontWeights.Normal;
-
-                LoginButton.Content = "Odjava";
-                g_bConnectedTestDebug = true;
-            }
+            
             /* TODO: 
              *      Korisnik nije prijavljen:
              *          1. otvori formu za prijavu i ponudi:

@@ -1,16 +1,21 @@
 ﻿<Window x:Class="Foogle_WPF.UserRegisterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="UserRegister" Height="300" Width="300">
+        Title="UserRegister" Height="300" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="ProfessorEmail" HorizontalAlignment="Left" Height="23" Margin="138,110,0,0" TextWrapping="Wrap" Text="samo @foi.hr adrese" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ProfessorEmail" HorizontalAlignment="Left" Height="23" Margin="138,110,0,0" TextWrapping="Wrap" Text="samo @foi.hr adrese" VerticalAlignment="Top" Width="246"/>
         <!--<TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="23" Margin="138,159,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120"/> -->
         <Label x:Name="UserNameLabel" Content="FOI Email:" HorizontalAlignment="Left" Margin="27,110,0,0" VerticalAlignment="Top"/>
         <!-- <Label x:Name="PasswordLabel" Content="Lozinka:" HorizontalAlignment="Left" Margin="27,156,0,0" VerticalAlignment="Top"/>-->
-        <Button x:Name="RegisterButton" Content="Registracija" HorizontalAlignment="Left" Margin="138,150,0,0" VerticalAlignment="Top" Width="120" Click="RegisterButton_Click" RenderTransformOrigin="2.031,0.385" Height="27"/>
+        <Button x:Name="RegisterButton" Content="Registracija" HorizontalAlignment="Left" Margin="138,211,0,0" VerticalAlignment="Top" Width="120" Click="RegisterButton_Click" RenderTransformOrigin="2.031,0.385" Height="27"/>
         <Label x:Name="NameFoogleLabel" Content="Registracija: profesor" HorizontalAlignment="Left" Margin="27,37,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Rockwell" RenderTransformOrigin="0.986,0.333" Width="231"/>
+        <Label x:Name="UserNameLabel_Copy" Content="FOI Email:" HorizontalAlignment="Left" Margin="27,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ime" HorizontalAlignment="Left" Margin="27,141,0,0" VerticalAlignment="Top" Width="62"/>
+        <Label Content="Prezime" HorizontalAlignment="Left" Margin="27,172,0,0" VerticalAlignment="Top" Width="62"/>
+        <TextBox Name="ProfIme" HorizontalAlignment="Left" Height="23" Margin="138,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246"/>
+        <TextBox Name="ProfPrezime" HorizontalAlignment="Left" Height="23" Margin="138,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246"/>
     </Grid>
 </Window>

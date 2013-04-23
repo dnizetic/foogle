@@ -47,3 +47,5 @@ C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.xml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.g.cs
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.g.cs

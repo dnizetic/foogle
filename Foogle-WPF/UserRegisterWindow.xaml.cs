@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 
 namespace Foogle_WPF
 {
+
     /// <summary>
     /// Interaction logic for UserRegister.xaml
     /// </summary>
@@ -30,24 +31,46 @@ namespace Foogle_WPF
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
+
+            if (ProfIme.Text.Equals("")
+            || ProfPrezime.Text.Equals(""))
+            {
+                MessageBox.Show("Unesite ime i prezime.");
+                return;
+            }
+            if (!IsValidEmail(ProfessorEmail.Text))
+            {
+                MessageBox.Show("Uneseni mail nije validan.");
+                return;
+            }
+
             //create professor user
             //send confirmation email
 
+            MailMessage mail = new MailMessage();
             SmtpClient client = new SmtpClient();
-            client.Host = "smtp.google.com";
-            client.Port = 587;
-            client.UseDefaultCredentials = false;
+            client.Port = 25;
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Host = "smtp.gmail.com";
             client.EnableSsl = true;
-
             //we need a foogle gmail created
-            client.Credentials = new NetworkCredential("myemail@gmail.com", "password");
+            client.Credentials = new NetworkCredential("fooglefoi@gmail.com",
+                "alphaomega851");
 
-            String email = ProfessorEmail.Text;
-            MailMessage mm = new MailMessage("donotreply@domain.com", email);
+            mail.To.Add(new MailAddress("dnizetic851@gmail.com"));
+            mail.From = new MailAddress("fooglefoi@gmail.com");
+            mail.Subject = "this is a test email.";
+            mail.Body = "this is my test email body";
+
             try
             {
-                client.Send(mm);
+                client.Send(mail);
+                MessageBox.Show("Zahtjev za registracijom je primljen. Kad vas racun bude verificiran od strane administratora, o tome cete biti obavijesteni emailom.");
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -55,6 +78,22 @@ namespace Foogle_WPF
             }
 
         }
+
+
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
 
         private void RememberMeCheckBox_Checked(object sender, RoutedEventArgs e)
         {
