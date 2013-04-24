@@ -32,8 +32,6 @@ namespace Foogle_WPF
 
             InitialiseDatabaseConnection();
 
-
-            
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -336,7 +334,8 @@ namespace Foogle_WPF
 
         private void RegistracijaProfesor(object sender, RoutedEventArgs e)
         {
-            UserRegisterWindow ww = new UserRegisterWindow();
+            //UserRegisterWindow ww = new UserRegisterWindow();
+            Registration ww = new Registration();
 
             ww.Show();
         }

@@ -49,3 +49,6 @@ C:\Users\denis\Desktop\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF_MarkupCompile
 C:\Users\denis\Desktop\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.g.resources
 C:\Users\denis\Desktop\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.Properties.Resources.resources
 C:\Users\denis\Desktop\Login_WPF\Login_WPF\obj\x86\Debug\Login_WPF.csproj.GenerateResource.Cache
+C:\Users\denis\foogle\Login_Register_WPF\Login_WPF\bin\Debug\Login_WPF.exe.config
+C:\Users\denis\foogle\Login_Register_WPF\Login_WPF\obj\x86\Debug\Login_WPF.exe
+C:\Users\denis\foogle\Login_Register_WPF\Login_WPF\obj\x86\Debug\Login_WPF.pdb

@@ -23,6 +23,9 @@ namespace Foogle_WPF
     public partial class UserRegisterWindow : Window
     {
 
+        //!Important
+        //Replaced by Registration.xaml.cs
+
         //http://developer.linkedin.com/thread/1190
         public UserRegisterWindow()
         {
@@ -68,6 +71,22 @@ namespace Foogle_WPF
                 client.Send(mail);
                 MessageBox.Show("Zahtjev za registracijom je primljen. Kad vas racun bude verificiran od strane administratora, o tome cete biti obavijesteni emailom.");
 
+
+                using (var context = new FoogleContext())
+                {
+                    context.Korisnici.Add(
+                        new Korisnik
+                        {
+                            //id = 1,
+                            aktiviran = false,
+                            email = ProfessorEmail.Text,
+                            ime = ProfIme.Text,
+                            prezime = ProfPrezime.Text,
+                            tip_korisnika = "p"
+                        });
+
+                    context.SaveChanges();
+                }
 
                 using (var context = new FoogleContext())
                 {
