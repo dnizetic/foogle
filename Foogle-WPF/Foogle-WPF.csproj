@@ -77,13 +77,14 @@
     <Compile Include="AdminUserConfirmationWindow.xaml.cs">
       <DependentUpon>AdminUserConfirmationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChinookContext.cs" />
+    <Compile Include="Models\FoogleContext.cs" />
+    <Compile Include="Models\Korisnik.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PortfolioProjects.cs" />
-    <Compile Include="Skill.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="Models\PortfolioProjects.cs" />
+    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="TestWindow.xaml.cs">
       <DependentUpon>TestWindow.xaml</DependentUpon>
     </Compile>

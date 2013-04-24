@@ -26,6 +26,12 @@ namespace Foogle_WPF
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            //get user email: if !exists, return false
+
+            String email = Email.Text;
+            String pass = Password.Text;
+
+
 
         }
 

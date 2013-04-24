@@ -24,12 +24,12 @@
             </ListView.View>
         </ListView>
         <!-- Image x:Name="LogoImage" Margin="15,40,10,0" Tag="Logo" IsHitTestVisible="False" Uid="LogoImage" Height="99" VerticalAlignment="Top" ToolTip="TODO: Logo goes here :)"/> -->
-        <Button x:Name="LoginButton" Content="Prijava (prof.)" HorizontalAlignment="Right" Margin="0,10,135.4,0" VerticalAlignment="Top" Width="84" TabIndex="1" BorderThickness="3" Height="22" Uid="LoginButton" Click="LoginButton_Click" RenderTransformOrigin="1.093,0.555"/>
+        <Button x:Name="LoginButton" Content="Prijava" HorizontalAlignment="Right" Margin="0,10,135.4,0" VerticalAlignment="Top" Width="84" TabIndex="1" BorderThickness="3" Height="22" Uid="LoginButton" Click="LoginButton_Click" RenderTransformOrigin="1.093,0.555"/>
         <Controls:AutoCompleteBox FilterMode="None" Populating="searchBoxPopulating"  x:Name="searchBox"  HorizontalAlignment="Left" Margin="158,146,0,0" VerticalAlignment="Top" Width="208"/>
         <Image Margin="128,51,201.4,208" Source="foogle.png" Stretch="Fill"/>
         <Button Content="Registracija (korisnik)" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="118" Click="UserRegisterButton"/>
         <Button Content="Registracija (prof.)" HorizontalAlignment="Left" Margin="143,10,0,0" VerticalAlignment="Top" Width="119" Click="RegistracijaProfesor"/>
-        <Button Content="Prijava (admin)" HorizontalAlignment="Left" Margin="460,10,0,0" VerticalAlignment="Top" Width="105"/>
+        <Button Name="PrijavaAdminButton" Content="Prijava (admin)" HorizontalAlignment="Left" Margin="460,10,0,0" VerticalAlignment="Top" Width="105" Click="PrijavaAdminButton_Click" />
         <!-- <TextBox Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="80,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192" TextChanged="OnSearchBoxTextChanged"/>-->
         <!-- <TextBox HorizontalAlignment="Left" Height="23" Margin="80,144,0,0" TextWrapping="Wrap" Text="[php, mysql...]" VerticalAlignment="Top" Width="196"/> -->
 

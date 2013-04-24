@@ -1,6 +1,7 @@
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe.config
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Foogle-WPF.pdb
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Npgsql.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
@@ -12,6 +13,7 @@ C:\Users\denis\foogle\Foogle-WPF\bin\Debug\WPFToolkit.Design.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\WPFToolkit.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\WPFToolkit.VisualStudio.Design.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Mono.Security.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.xml
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Npgsql.pdb
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\Npgsql.xml
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
@@ -29,12 +31,17 @@ C:\Users\denis\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
 C:\Users\denis\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\MainWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\LoginWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\TestWindow.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\MainWindow.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\LoginWindow.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\TestWindow.g.cs
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\App.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF_MarkupCompile.cache
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.g.resources
@@ -42,10 +49,3 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle_WPF.Properties.Resources.resou
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csproj.GenerateResource.Cache
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
-C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.dll
-C:\Users\denis\foogle\Foogle-WPF\bin\Debug\EntityFramework.xml
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.baml
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\UserRegisterWindow.g.cs
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.baml
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.g.cs

@@ -58,7 +58,7 @@ namespace Foogle_WPF
             client.Credentials = new NetworkCredential("fooglefoi@gmail.com",
                 "alphaomega851");
 
-            mail.To.Add(new MailAddress("dnizetic851@gmail.com"));
+            mail.To.Add(new MailAddress(ProfessorEmail.Text));
             mail.From = new MailAddress("fooglefoi@gmail.com");
             mail.Subject = "this is a test email.";
             mail.Body = "this is my test email body";
@@ -69,6 +69,21 @@ namespace Foogle_WPF
                 MessageBox.Show("Zahtjev za registracijom je primljen. Kad vas racun bude verificiran od strane administratora, o tome cete biti obavijesteni emailom.");
 
 
+                using (var context = new FoogleContext())
+                {
+                    context.Korisnici.Add(
+                        new Korisnik
+                        {
+                            //id = 1,
+                            aktiviran = false,
+                            email = ProfessorEmail.Text,
+                            ime = ProfIme.Text,
+                            prezime = ProfPrezime.Text,
+                            tip_korisnika = "p"
+                        });
+
+                    context.SaveChanges();
+                }
 
 
             }

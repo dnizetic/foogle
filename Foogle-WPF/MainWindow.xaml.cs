@@ -31,12 +31,17 @@ namespace Foogle_WPF
             InitializeComponent();
 
             InitialiseDatabaseConnection();
+
+
             
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            LoginWindow lw = new LoginWindow();
+
+            lw.Show();
+
             /* TODO: 
              *      Korisnik nije prijavljen:
              *          1. otvori formu za prijavu i ponudi:
@@ -84,7 +89,7 @@ namespace Foogle_WPF
 
             }*/
 
-            using (var context = new ChinookContext())
+            using (var context = new FoogleContext())
             {
                 var skills_db = from a in context.Skills
                                 select a;
@@ -97,7 +102,7 @@ namespace Foogle_WPF
             }
 
             //http://msdn.microsoft.com/en-us/data/jj574232.aspx
-            using (var context = new ChinookContext())
+            using (var context = new FoogleContext())
             {
                 var students = from a in context.Students
                                //.Include(a )
@@ -335,6 +340,15 @@ namespace Foogle_WPF
 
             ww.Show();
         }
+
+        private void PrijavaAdminButton_Click(object sender, RoutedEventArgs e)
+        {
+            AdminUserConfirmationWindow w = new AdminUserConfirmationWindow();
+
+            w.Show();
+        }
+
+
 
         //http://developer.linkedin.com/documents/authentication
 

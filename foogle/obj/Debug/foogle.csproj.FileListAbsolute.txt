@@ -52,6 +52,7 @@ C:\Users\denis\foogle\foogle\bin\Debug\fi\Npgsql.resources.dll
 C:\Users\denis\foogle\foogle\bin\Debug\fr\Npgsql.resources.dll
 C:\Users\denis\foogle\foogle\bin\Debug\ja\Npgsql.resources.dll
 C:\Users\denis\foogle\foogle\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\denis\foogle\foogle\obj\Debug\foogle.csprojResolveAssemblyReference.cache
 C:\Users\denis\foogle\foogle\obj\Debug\foogle.Form1.resources
 C:\Users\denis\foogle\foogle\obj\Debug\foogle.Properties.Resources.resources
 C:\Users\denis\foogle\foogle\obj\Debug\foogle.csproj.GenerateResource.Cache
