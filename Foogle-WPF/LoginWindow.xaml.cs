@@ -24,6 +24,19 @@ namespace Foogle_WPF
             InitializeComponent();
         }
 
+        public static string Hash(string value)
+        {
+            var sha = new System.Security.Cryptography.SHA1CryptoServiceProvider();
+            byte[] hash = sha.ComputeHash(Encoding.ASCII.GetBytes(value));
+            return BytesToHex(hash).ToLower();
+        }
+
+        private static string BytesToHex(byte[] bytes)
+        {
+            return String.Concat(Array.ConvertAll(bytes, x => x.ToString("X2")));
+        }
+
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             //get user email: if !exists, return false
@@ -32,6 +45,34 @@ namespace Foogle_WPF
             String pass = Password.Text;
 
 
+            using (var context = new FoogleContext())
+            {
+                var user = from a in context.Korisnici
+                                where a.email.Equals(email)
+                                select a;
+
+                
+                if (user.Count() == 0)
+                {
+                    LoginError.Visibility = System.Windows.Visibility.Visible;
+                }
+                else
+                {
+
+                    Korisnik k = user.ElementAt(0);
+
+                    if (pass.Equals(k.password))
+                    {
+                        MessageBox.Show("Uspjesno.");
+                        this.Close();
+                    }
+                    else
+                    {
+                        LoginError.Visibility = System.Windows.Visibility.Visible;
+                    }
+
+                }
+            }
 
         }
 

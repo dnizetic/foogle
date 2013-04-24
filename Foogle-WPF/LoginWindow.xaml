@@ -13,6 +13,6 @@
         <Button x:Name="LoginButton" Content="Prijava" HorizontalAlignment="Left" Margin="27,197,0,0" VerticalAlignment="Top" Width="90" Click="LoginButton_Click" RenderTransformOrigin="0.476,0.716"/>
         <CheckBox x:Name="RememberMeCheckBox" Content="Zapamti prijavu" HorizontalAlignment="Left" Margin="138,197,0,0" VerticalAlignment="Top" Width="120" Checked="RememberMeCheckBox_Checked"/>
         <Label x:Name="NameFoogleLabel" Content="Foogle" HorizontalAlignment="Left" Margin="27,37,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Rockwell" RenderTransformOrigin="0.986,0.333" Width="90"/>
-        <Label Visibility="Hidden" Foreground="Red" Content="Neuspjesna prijava: pogresan user / lozinka." HorizontalAlignment="Center" Margin="27,187,17.6,0" VerticalAlignment="Top" Width="249"/>
+        <Label Name="LoginError" Visibility="Hidden" Foreground="Red" Content="Neuspjesna prijava: pogresan user / lozinka." HorizontalAlignment="Center" Margin="27,187,17.6,0" VerticalAlignment="Top" Width="249"/>
     </Grid>
 </Window>
