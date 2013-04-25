@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.1.3
 -- Dumped by pg_dump version 9.1.3
--- Started on 2013-04-24 11:29:55
+-- Started on 2013-04-25 21:24:53
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -168,7 +168,7 @@ CREATE TABLE foogle_user (
     title integer,
     role character(1) DEFAULT 'S'::bpchar,
     activity character(1) DEFAULT 'P'::bpchar,
-    confirmed bit(1),
+    confirmed boolean,
     CONSTRAINT foogle_user_activity_check CHECK ((activity = ANY (ARRAY['A'::bpchar, 'P'::bpchar]))),
     CONSTRAINT foogle_user_role_check CHECK ((role = ANY (ARRAY['P'::bpchar, 'S'::bpchar, 'A'::bpchar])))
 );
@@ -534,7 +534,7 @@ COPY experience (id, student, company, months_of_service) FROM stdin;
 --
 
 COPY foogle_user (id, email, firstname, lastname, title, role, activity, confirmed) FROM stdin;
-1	ldetic@foi.hr	Ljiljana	Pintari†	\N	S	P	0
+1	ldetic@foi.hr	Ljiljana	Pintari†	\N	S	P	\N
 \.
 
 
@@ -842,7 +842,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2013-04-24 11:29:56
+-- Completed on 2013-04-25 21:24:53
 
 --
 -- PostgreSQL database dump complete
