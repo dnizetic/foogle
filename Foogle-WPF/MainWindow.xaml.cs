@@ -17,6 +17,7 @@ using System.Data;
 using Npgsql;
 using System.Diagnostics;
 using System.Net;
+using System.IO;
 
 
 namespace Foogle_WPF
@@ -279,57 +280,77 @@ namespace Foogle_WPF
 
         }
 
-
-
-        /*
-
-        //OAuth
-        //http://scatteredcode.wordpress.com/2011/12/01/dotnetopenauth-oauth-and-mvc-for-dummies/
-        private ServiceProviderDescription GetServiceDescription()
-        {
-            return new ServiceProviderDescription
-            {
-                AccessTokenEndpoint = new MessageReceivingEndpoint("https://api.linkedin.com/uas/oauth/accessToken", HttpDeliveryMethods.PostRequest),
-                RequestTokenEndpoint = new MessageReceivingEndpoint("https://api.linkedin.com/uas/oauth/requestToken", HttpDeliveryMethods.PostRequest),
-                UserAuthorizationEndpoint = new MessageReceivingEndpoint("https://www.linkedin.com/uas/oauth/authorize", HttpDeliveryMethods.PostRequest),
-                TamperProtectionElements = new ITamperProtectionChannelBindingElement[] { new HmacSha1SigningBindingElement() },
-                ProtocolVersion = DotNetOpenAuth.OAuth.ProtocolVersion.V10a
-            };
-        }
-        */
-
-
-        NavigationWindow window = new NavigationWindow();
+        //NavigationWindow window = new NavigationWindow();
         private void UserRegisterButton(object sender, RoutedEventArgs e)
         {
-            window.Source = new Uri("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
-            window.Show();
-            
-            
-            
-            //WebBrowser browser = new WebBrowser();
-            //browser.Navigate("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com"); 
-            
-            
-            //var newW = new UserRegisterWindow();
+           
+            webBrowser1.Navigate("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
 
-            //newW.Show();
-
-
-            //Process.Start("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
-
-
-            //url:
-            //https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com
-            //using (var wb = new WebClient())
-            //{
-            //    var response = wb.DownloadString("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
-                
-                //get authorization code
-                
-            //}
         }
 
+        private void wbCompleted(object sender, NavigationEventArgs e)
+        {
+            String uri = webBrowser1.Source.AbsoluteUri;
+
+            String[] code = uri.Split('&');
+            String temp = code[0];
+            String[] new_code = temp.Split('=');
+
+            String final_code = new_code[1];
+
+
+            //MessageBox.Show("Final code: " + final_code);
+            if (final_code != "code")
+            {
+                MessageBox.Show("Im in");
+
+
+                HttpWebRequest httpWReq =
+                    (HttpWebRequest)WebRequest.Create("https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&code=" + final_code + @"&redirect_uri=http://www.google.com&client_id=y0ubjypbbvov&client_secret=iwxSaObfSq6X9szw");
+
+                MessageBox.Show(httpWReq.RequestUri.AbsoluteUri);
+                ASCIIEncoding encoding = new ASCIIEncoding();
+                string postData = "username=user";
+                postData += "&password=pass";
+                byte[] data = encoding.GetBytes(postData);
+
+                httpWReq.Method = "POST";
+                
+                httpWReq.ContentType = "application/x-www-form-urlencoded";
+                httpWReq.ContentLength = data.Length;
+
+                using (Stream stream = httpWReq.GetRequestStream())
+                {
+                    stream.Write(data, 0, data.Length);
+                }
+
+                HttpWebResponse response = null;
+                try
+                {
+                    response = (HttpWebResponse) httpWReq.GetResponse();
+
+                    string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+
+                    MessageBox.Show(responseString);
+
+                    int startIndex = responseString.LastIndexOf(':') + 2;
+                    int len = responseString.Count() - 2 - startIndex;
+
+                    String access_token = responseString.Substring(startIndex, len);
+
+                    MessageBox.Show(access_token);
+
+                    webBrowser1.Navigate("https://api.linkedin.com/v1/people/~?oauth2_access_token=" + access_token);
+
+                    //now we have a link to his profile; we can scrape skills / categories / etc
+                }
+                catch (Exception re)
+                {
+                    MessageBox.Show(re.Message);
+                }
+            }
+
+        }
         
 
         private void RegistracijaProfesor(object sender, RoutedEventArgs e)
@@ -346,29 +367,6 @@ namespace Foogle_WPF
 
             w.Show();
         }
-
-
-
-        //http://developer.linkedin.com/documents/authentication
-
-
-        //which API call?
-        //on application start, authorize the app
-        
-
-        //authorize link:
-        //https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com
-
-
-
-        //response:
-        //https://www.google.com/?code=AQSM4KzTUCbaVgiNDLUMDm1Occ030XFtmvOdKYi2M_bigBbvUSnmx-_kfz3M-5AVpqPstOQgLrb17Cd5ktWukwGPcdmOxygBZ3qSFQxGMqJZ91fGwvs&state=mylongstring
-
-        //authorization code: 
-        //AQSM4KzTUCbaVgiNDLUMDm1Occ030XFtmvOdKYi2M_bigBbvUSnmx-_kfz3M-5AVpqPstOQgLrb17Cd5ktWukwGPcdmOxygBZ3qSFQxGMqJZ91fGwvs
-
-        //get access token
-
 
     }
 }
