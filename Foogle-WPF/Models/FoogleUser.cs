@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Foogle_WPF
 {
-    class FoogleUser
+    public class FoogleUser
     {
 
         public int id { get; set; }

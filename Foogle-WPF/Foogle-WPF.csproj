@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Npgsql">
       <HintPath>..\etc\Npgsql-2.0.11.91\bin\Debug4\Npgsql.dll</HintPath>
     </Reference>
@@ -82,13 +85,9 @@
     </Compile>
     <Compile Include="Models\FoogleContext.cs" />
     <Compile Include="Models\FoogleUser.cs" />
-    <Compile Include="Models\Korisnik.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\PortfolioProjects.cs" />
-    <Compile Include="Models\Skill.cs" />
-    <Compile Include="Models\Student.cs" />
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>

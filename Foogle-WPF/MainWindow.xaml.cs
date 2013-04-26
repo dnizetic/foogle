@@ -18,6 +18,8 @@ using Npgsql;
 using System.Diagnostics;
 using System.Net;
 using System.IO;
+using System.Xml;
+using mshtml;
 
 
 namespace Foogle_WPF
@@ -88,18 +90,9 @@ namespace Foogle_WPF
 
             }*/
 
-            using (var context = new FoogleContext())
-            {
-                var skills_db = from a in context.Skills
-                                select a;
+          
 
-                foreach (var s in skills_db)
-                {
-                    //MessageBox.Show(s.skill_tag);
-                    //Console.WriteLine(s.SkillTag);
-                }
-            }
-
+            /*
             //http://msdn.microsoft.com/en-us/data/jj574232.aspx
             using (var context = new FoogleContext())
             {
@@ -137,7 +130,7 @@ namespace Foogle_WPF
                     //MessageBox.Show(s.skill_tag);
                     //Console.WriteLine(s.SkillTag);
                 }
-            }
+            } */
 
         }
 
@@ -284,12 +277,28 @@ namespace Foogle_WPF
         private void UserRegisterButton(object sender, RoutedEventArgs e)
         {
            
-            webBrowser1.Navigate("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com");
+            webBrowser1.Navigate("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com&scope=r_fullprofile");
 
         }
 
+
+        bool xml_page = false;
         private void wbCompleted(object sender, NavigationEventArgs e)
         {
+            if (xml_page)
+            {
+                HTMLDocument h = (HTMLDocument) webBrowser1.Document;
+
+                String innerText = h.documentElement.innerText;
+                MessageBox.Show(innerText);
+
+                parseXml(innerText);
+
+                xml_page = false;
+                return;
+            }
+
+
             String uri = webBrowser1.Source.AbsoluteUri;
 
             String[] code = uri.Split('&');
@@ -298,17 +307,16 @@ namespace Foogle_WPF
 
             String final_code = new_code[1];
 
-
-            //MessageBox.Show("Final code: " + final_code);
-            if (final_code != "code")
+            //first return
+            if (uri.Contains("code="))
             {
-                MessageBox.Show("Im in");
+                //MessageBox.Show("Im in");
 
 
                 HttpWebRequest httpWReq =
                     (HttpWebRequest)WebRequest.Create("https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&code=" + final_code + @"&redirect_uri=http://www.google.com&client_id=y0ubjypbbvov&client_secret=iwxSaObfSq6X9szw");
 
-                MessageBox.Show(httpWReq.RequestUri.AbsoluteUri);
+                //MessageBox.Show(httpWReq.RequestUri.AbsoluteUri);
                 ASCIIEncoding encoding = new ASCIIEncoding();
                 string postData = "username=user";
                 postData += "&password=pass";
@@ -331,18 +339,47 @@ namespace Foogle_WPF
 
                     string responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 
-                    MessageBox.Show(responseString);
+                    //MessageBox.Show(responseString);
 
                     int startIndex = responseString.LastIndexOf(':') + 2;
                     int len = responseString.Count() - 2 - startIndex;
 
                     String access_token = responseString.Substring(startIndex, len);
 
-                    MessageBox.Show(access_token);
+                    //File f = new File("access_tokens.txt");
+                    
+                    //MessageBox.Show(access_token);
 
                     webBrowser1.Navigate("https://api.linkedin.com/v1/people/~?oauth2_access_token=" + access_token);
 
+                    
+                    //webBrowser1.Navigate("http://api.linkedin.com/v1/people/~/skills");
                     //now we have a link to his profile; we can scrape skills / categories / etc
+                    
+                    //first-name & last-name: get from xml
+                    xml_page = true;
+
+                    //parseXml(webBrowser1.Document.);
+
+                    /*
+                    using (var context = new FoogleContext())
+                    {
+                        context.Users.Add(
+                            new FoogleUser
+                            {
+                                email = email,
+                                confirmed = false,
+                                firstname = firstname,
+                                lastname = lastname,
+                                role = "s",
+                                activity = null,
+                                password = "",
+                                title = null
+                            });
+
+                        context.SaveChanges();
+                    } */
+
                 }
                 catch (Exception re)
                 {
@@ -351,7 +388,36 @@ namespace Foogle_WPF
             }
 
         }
-        
+
+
+
+        private void parseXml(String myXml)
+        {
+            StringBuilder output = new StringBuilder();
+
+
+            XmlDocument xml = new XmlDocument();
+            string newXml = "";
+
+            newXml = myXml.Replace("-", "");
+    
+
+            xml.LoadXml(newXml); // suppose that myXmlString contains "<Names>...</Names>"
+
+            MessageBox.Show(newXml);
+
+            XmlNodeList xnList = xml.SelectNodes("/person");
+            foreach (XmlNode xn in xnList)
+            {
+                string firstName = xn["first-name"].InnerText;
+                string lastName = xn["last-name"].InnerText;
+                //Console.WriteLine("Name: {0} {1}", firstName, lastName);
+                MessageBox.Show(firstName);
+            }
+            //OutputTextBlock.Text = output.ToString();
+        }
+
+
 
         private void RegistracijaProfesor(object sender, RoutedEventArgs e)
         {

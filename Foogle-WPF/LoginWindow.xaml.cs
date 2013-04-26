@@ -47,7 +47,7 @@ namespace Foogle_WPF
 
             using (var context = new FoogleContext())
             {
-                var user = from a in context.Korisnici
+                var user = from a in context.Users
                                 where a.email.Equals(email)
                                 select a;
 
@@ -59,7 +59,7 @@ namespace Foogle_WPF
                 else
                 {
 
-                    Korisnik k = user.ElementAt(0);
+                    FoogleUser k = user.ElementAt(0);
 
                     if (pass.Equals(k.password))
                     {

@@ -14,28 +14,17 @@ namespace Foogle_WPF
     {
         //public DbSet<Artist> Artists { get; set; }
         //public DbSet<Album> Albums { get; set; }
-        public DbSet<Skill> Skills { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<PortfolioProjects> PortfolioProjects { get; set; }
-        public DbSet<Korisnik> Korisnici { get; set; }
+
         public DbSet<FoogleUser> Users { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Map to the correct Chinook Database tables
-            //modelBuilder.Entity<Artist>().ToTable("Artist", "public");
-            //modelBuilder.Entity<Album>().ToTable("Album", "public");
-            modelBuilder.Entity<Skill>().ToTable("skill", "public");
-            modelBuilder.Entity<Student>().ToTable("student", "public");
-            modelBuilder.Entity<PortfolioProjects>().ToTable("portfolio_projects", "public");
-            modelBuilder.Entity<Korisnik>().ToTable("korisnik", "public");
 
             modelBuilder.Entity<FoogleUser>().ToTable("foogle_user", "public");
 
             // Chinook Database for PostgreSQL doesn't auto-increment Ids
-
-            
             //modelBuilder.Conventions
             //    .Remove<StoreGeneratedIdentityKeyConvention>();
         }

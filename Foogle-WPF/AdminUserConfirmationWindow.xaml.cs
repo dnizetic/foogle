@@ -27,8 +27,8 @@ namespace Foogle_WPF
     public partial class AdminUserConfirmationWindow : Window
     {
 
-        public ObservableCollection<Korisnik> _KorisnikCollection =
-            new ObservableCollection<Korisnik>();
+        public ObservableCollection<FoogleUser> _KorisnikCollection =
+            new ObservableCollection<FoogleUser>();
 
 
         public AdminUserConfirmationWindow()
@@ -37,9 +37,9 @@ namespace Foogle_WPF
             using (var context = new FoogleContext())
             {
                 //neaktivirani profesori
-                var professors = from a in context.Korisnici
-                                 where a.aktiviran.Equals(false)
-                                 where a.tip_korisnika.Equals("p")
+                var professors = from a in context.Users
+                                 where a.confirmed.Equals(false)
+                                 where a.role.Equals("p")
                                  select a;
 
 
@@ -55,7 +55,7 @@ namespace Foogle_WPF
 
         }
 
-        public ObservableCollection<Korisnik> KorisnikCollection
+        public ObservableCollection<FoogleUser> KorisnikCollection
         { get { return _KorisnikCollection; } }
 
 
