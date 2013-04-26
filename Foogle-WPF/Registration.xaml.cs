@@ -127,8 +127,8 @@ namespace Foogle_WPF
 
                     mail.To.Add(new MailAddress(email));
                     mail.From = new MailAddress("fooglefoi@gmail.com");
-                    mail.Subject = "this is a test email.";
-                    mail.Body = "When confirmed, we will send you your password.";
+                    mail.Subject = "Foogle - registracija";
+                    mail.Body = "Kad vas admin potvrdi, poslat cemo vam email.";
 
                     try
                     {
@@ -146,8 +146,7 @@ namespace Foogle_WPF
                                     lastname = lastname,
                                     role = "p",
                                     activity = null,
-                                    password = password,
-                                    title = 0
+                                    password = password
                                 });
 
                             context.SaveChanges();

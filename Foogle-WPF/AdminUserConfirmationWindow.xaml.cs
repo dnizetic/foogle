@@ -49,6 +49,8 @@ namespace Foogle_WPF
 
                 }
 
+                
+
             }
 
             InitializeComponent();
@@ -56,7 +58,12 @@ namespace Foogle_WPF
         }
 
         public ObservableCollection<FoogleUser> KorisnikCollection
-        { get { return _KorisnikCollection; } }
+        { get { 
+
+            
+            return _KorisnikCollection; 
+        
+        } }
 
 
 

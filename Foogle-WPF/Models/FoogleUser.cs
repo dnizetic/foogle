@@ -20,7 +20,9 @@ namespace Foogle_WPF
 
         public string password { get; set; }
 
-        public int title { get; set; }
+        public string linkedin { get; set; }
+
+        public string linkedin_id { get; set; }
 
     }
 }

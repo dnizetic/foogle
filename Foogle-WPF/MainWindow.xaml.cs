@@ -37,9 +37,14 @@ namespace Foogle_WPF
 
         }
 
+        public void setLoggedInLabel()
+        {
+            LoggedInLabel.Content = "Dobrodosli!";
+        }
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow lw = new LoginWindow();
+            Login lw = new Login();
 
             lw.Show();
 
@@ -283,18 +288,27 @@ namespace Foogle_WPF
 
 
         bool xml_page = false;
+        string access_token = "";
+
         private void wbCompleted(object sender, NavigationEventArgs e)
         {
             if (xml_page)
             {
-                HTMLDocument h = (HTMLDocument) webBrowser1.Document;
 
-                String innerText = h.documentElement.innerText;
-                MessageBox.Show(innerText);
+                string url = "https://api.linkedin.com/v1/people/~?oauth2_access_token=" + access_token;
 
-                parseXml(innerText);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
 
-                xml_page = false;
+                Stream resStream = resp.GetResponseStream();
+                StreamReader reader = new StreamReader(resStream);
+                string text = reader.ReadToEnd();
+
+                MessageBox.Show(text);
+
+                parseXml(text);
+
+                xml_page = false; 
                 return;
             }
 
@@ -344,7 +358,7 @@ namespace Foogle_WPF
                     int startIndex = responseString.LastIndexOf(':') + 2;
                     int len = responseString.Count() - 2 - startIndex;
 
-                    String access_token = responseString.Substring(startIndex, len);
+                    access_token = responseString.Substring(startIndex, len);
 
                     //File f = new File("access_tokens.txt");
                     
@@ -352,33 +366,7 @@ namespace Foogle_WPF
 
                     webBrowser1.Navigate("https://api.linkedin.com/v1/people/~?oauth2_access_token=" + access_token);
 
-                    
-                    //webBrowser1.Navigate("http://api.linkedin.com/v1/people/~/skills");
-                    //now we have a link to his profile; we can scrape skills / categories / etc
-                    
-                    //first-name & last-name: get from xml
                     xml_page = true;
-
-                    //parseXml(webBrowser1.Document.);
-
-                    /*
-                    using (var context = new FoogleContext())
-                    {
-                        context.Users.Add(
-                            new FoogleUser
-                            {
-                                email = email,
-                                confirmed = false,
-                                firstname = firstname,
-                                lastname = lastname,
-                                role = "s",
-                                activity = null,
-                                password = "",
-                                title = null
-                            });
-
-                        context.SaveChanges();
-                    } */
 
                 }
                 catch (Exception re)
@@ -393,30 +381,89 @@ namespace Foogle_WPF
 
         private void parseXml(String myXml)
         {
-            StringBuilder output = new StringBuilder();
-
-
-            XmlDocument xml = new XmlDocument();
-            string newXml = "";
-
-            newXml = myXml.Replace("-", "");
-    
-
-            xml.LoadXml(newXml); // suppose that myXmlString contains "<Names>...</Names>"
-
-            MessageBox.Show(newXml);
-
-            XmlNodeList xnList = xml.SelectNodes("/person");
-            foreach (XmlNode xn in xnList)
+            try
             {
-                string firstName = xn["first-name"].InnerText;
-                string lastName = xn["last-name"].InnerText;
-                //Console.WriteLine("Name: {0} {1}", firstName, lastName);
-                MessageBox.Show(firstName);
+                using (XmlReader reader = XmlReader.Create(new StringReader(myXml)))
+                {
+                    
+                    reader.ReadToFollowing("first-name");
+                    String fname = reader.ReadElementContentAsString();
+
+
+                    reader.ReadToFollowing("last-name");
+                    String lname = reader.ReadElementContentAsString();
+
+                    reader.ReadToFollowing("url");
+                    String lin = reader.ReadElementContentAsString();
+
+                    //= and &
+                    int startIndex = lin.IndexOf('=');
+                    int endIndex = lin.IndexOf('&');
+                    string id = lin.Substring(startIndex + 1, endIndex - startIndex - 1);
+
+                    MessageBox.Show(id);
+
+                    //check if lid already exists
+                    using (var context = new FoogleContext())
+                    {
+                        var usrs = from b in context.Users
+                                    where b.linkedin_id.Equals(id)
+                                    select b;
+
+                        if (usrs.Count() > 0)
+                        {
+                            MessageBox.Show("Vec ste registrirani, jebo te");
+                            return;
+                        }
+                    }
+
+
+                    saveUser(fname, lname, lin, id);
+                }
             }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+
             //OutputTextBlock.Text = output.ToString();
         }
 
+
+
+        private void saveUser(string first_name, string last_name, string lin,
+            string lid)
+        {
+            try
+            {
+                using (var context = new FoogleContext())
+                {
+                    context.Users.Add(
+                        new FoogleUser
+                        {
+                            email = "",
+                            confirmed = true,
+                            firstname = first_name,
+                            lastname = last_name,
+                            role = "s",
+                            activity = null,
+                            password = "",
+                            linkedin = lin,
+                            linkedin_id = lid
+                        });
+
+                    context.SaveChanges();
+                }
+
+                MessageBox.Show("Uspjesno ste uneseni u bazu podataka.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.InnerException);
+            }
+        }
 
 
         private void RegistracijaProfesor(object sender, RoutedEventArgs e)

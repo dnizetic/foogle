@@ -1,21 +1,23 @@
 ﻿<Window x:Class="Foogle_WPF.AdminUserConfirmationWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AdminUserConfirmationWindow" Height="300" Width="500"
+        Title="AdminUserConfirmationWindow" Height="300" Width="582.4"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
-    <Grid Margin="0,0,-0.4,0">
-        <ListView ItemsSource="{Binding KorisnikCollection}" HorizontalAlignment="Left" Height="100" Margin="0,94,0,0" VerticalAlignment="Top" Width="484">
+    <Grid Margin="0,0,-69.2,0">
+        <ListView ItemsSource="{Binding KorisnikCollection}" HorizontalAlignment="Left" Height="210" Margin="10,52,0,0" VerticalAlignment="Top" Width="558">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}" />
-                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding email}" />
-                    <GridViewColumn Header="Ime" DisplayMemberBinding="{Binding ime}"/>
-                    <GridViewColumn Header="Prezime" DisplayMemberBinding="{Binding prezime}"/>
-                    <GridViewColumn Header="Tip korisnika" DisplayMemberBinding="{Binding tip_korisnika}"/>
-                    <GridViewColumn Header="Aktiviran" DisplayMemberBinding="{Binding aktiviran}"/>
+                    <GridViewColumn Width="25" Header="ID" DisplayMemberBinding="{Binding id}" />
+                    <GridViewColumn Width="150" Header="Email" DisplayMemberBinding="{Binding email}" />
+                    <GridViewColumn Width="75" Header="Ime" DisplayMemberBinding="{Binding firstname}"/>
+                    <GridViewColumn Width="75" Header="Prezime" DisplayMemberBinding="{Binding lastname}"/>
+                    <GridViewColumn Width="80" Header="Tip korisnika" DisplayMemberBinding="{Binding role}"/>
+                    <GridViewColumn Width="90" Header="Aktiviran" DisplayMemberBinding="{Binding activated}"/>
+                    <GridViewColumn Width="50" Header="Akcije" />
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label Content="Lista profesora koji čekaju autorizaciju." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="37" Width="226"/>
 
     </Grid>
 </Window>
