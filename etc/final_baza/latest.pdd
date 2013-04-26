@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<DBMODEL Version="1.5" TYPE="PostgreSQL">
+
+<MODELSETTINGS MDDVERSION="1.3.1 (build 737)" ModelProject="" ModelName="latest" ModelCompany="" ModelAuthor="" ModelCopyright="" ModelVersion="" ModelVersionAI="0" ModelCreated="2013-04-26 19:25:23" ModelUpdated="2013-04-26 19:25:23" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" GenSettings="object GenSettings1: TGenSettings\n  TextCharCase = tccMixed\n  ModelCheck = True\n  DropIfExists = True\n  ISQL = False\n  DBOptions = [dbgoCreate, dbgoBeginScript, dbgoEndScript]\n  ViewOptions = [viewgoCreate, viewgoCreateRule]\n  SPOptions = [spgoCreate]\n  TableOptions = [tblgoCreate, tblgoBeginScript, tblgoEndScript, tblgoComment, tblgoCreatePK, tblgoCreateFK, tblgoCreateIndex, tblgoCreateRule, tblgoCreateTrigger, tblgoCreateCHECK, tblgoFieldDefault]\n  OwnerOptions = [owngoSchema, owngoTable, owngoView, owngoSP, owngoSequence, owngoUDT]\n  ACLOptions = [aclgoSchema, aclgoTable, aclgoView, aclgoSP, aclgoSequence]\n  ModifyOptions = [mgoKeepTbls, mgoBackupTbls, mgoTraceRenaming]\n  RoleCreate = True\n  RoleWhenCreate = rocrInScript\n  SQLTypeNames = False\nend\n" DisplaySettings="object DisplaySettings1: TDisplaySettings\n  ObjectsDisplay = [edoColumns, edoInhColumns, edoIndices, edoConstraints, edoTriggers, edoRules, edoColTypes, edoFKs, rdoRefName, spdoParameters, spdoResult, spdoParamTypes, spdoParamKind, vdoAttributes, vdoTargets, vdoRules]\n  Color = clWhite\n  ShowIcons = True\n  SnapGrid = True\n  DisplaySnap = True\n  SnapSize = 10\n  ShowPages = True\n  EntityFillColor = clWhite\n  EntityLineColor = clNavy\n  SPFillColor = 13499135\n  SPLineColor = clNavy\n  ViewFillColor = 3329434\n  ViewLineColor = clNavy\n  RefNotation = 0\n  RefColor = clNavy\n  RefLabelColor = clWhite\n  MinimapShapesStyle = mmssFillAndBorder\n  MinimapVisibleAreaStyle = mmvasBitmapShading\n  MinimapBackColor = clWhite\nend\n" DefaultDelete="3" DefaultUpdate="3" DefaultDataType="23" DefaultSchemaID="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\A" EncloseNames="1" HPageCount="5" VPageCount="5" />
+
+<DATABASE Name="Database_1" CharacterSet="" Collate="" CType="" Tablespace="" Owner="" Template="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="0" />
+
+<STAMPS>
+</STAMPS>
+
+<ROLES>
+</ROLES>
+
+<SCHEMAS>
+<SCHEMA ID="0" Name="public" Owner="" Generate="0" Comments="" System="1"></SCHEMA>
+</SCHEMAS>
+
+<SEQUENCES>
+</SEQUENCES>
+
+<DOMAINS>
+</DOMAINS>
+
+<COMPOSITES>
+</COMPOSITES>
+
+<SCALARS>
+</SCALARS>
+
+<ENUMS>
+</ENUMS>
+
+<TABLESPACES>
+</TABLESPACES>
+
+<METADATA>
+<ENTITIES>
+</ENTITIES>
+
+<REFERENCES>
+</REFERENCES>
+
+<NOTES>
+</NOTES>
+
+<STOREDPROCES>
+</STOREDPROCES>
+
+<VIEWS>
+</VIEWS>
+
+</METADATA>
+</DBMODEL>
