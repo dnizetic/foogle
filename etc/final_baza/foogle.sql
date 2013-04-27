@@ -28,7 +28,10 @@ lastname varchar(50),
 title integer references title(id) on delete restrict on update cascade, 
 role char(1), 
 activity char(1), 
-confirmed boolean);
+confirmed boolean,
+linkedin varchar(255),
+linkedin_id varchar(255)
+);
 
 create table user_category(
 category integer references category on delete restrict on update cascade,
@@ -73,5 +76,5 @@ $$language plpgsql;
 
 create trigger years_of_service_insert after insert on experience for each row execute procedure years_of_service();
 
-
+create trigger years_of_service_update after update on experience for each row execute procedure years_of_service();
 
