@@ -37,14 +37,17 @@ namespace Foogle_WPF
 
         }
 
-        public void setLoggedInLabel()
+        //activates when user logs in
+        public static bool logged_in = false;
+
+        public static void showButt()
         {
-            LoggedInLabel.Content = "Dobrodosli!";
+            
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            Login lw = new Login();
+            Login lw = new Login(LoggedInLabel);
 
             lw.Show();
 
@@ -479,6 +482,22 @@ namespace Foogle_WPF
             AdminUserConfirmationWindow w = new AdminUserConfirmationWindow();
 
             w.Show();
+        }
+
+        private void EndorsementButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            //if (logged_in == false)
+            //{
+            //    MessageBox.Show("Niste ulogirani.");
+            //}
+            //else
+            //{
+
+                Endorsement ew = new Endorsement();
+
+                ew.Show();
+            //}
         }
 
     }

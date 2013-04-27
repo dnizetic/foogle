@@ -25,9 +25,11 @@ namespace Foogle_WPF
     public partial class Login : Window
     {
 
-        public Login()
+        Label lab;
+        public Login(Label l)
         {
             InitializeComponent();
+            lab = l;
         }
         Registration registration = new Registration();
         Welcome welcome = new Welcome();
@@ -66,19 +68,18 @@ namespace Foogle_WPF
                     var usrs = from b in context.Users
                                where b.email.Equals(email)
                                where b.password.Equals(password)
+                               where b.confirmed.Equals(true)
                                select b;
 
                     if (usrs.Count() == 1)
                     {
                         MessageBox.Show("Dobrodosli!");
 
-                        
-                        //var window2 = Application.Current.Windows
-                        //    .Cast<Window>()
-                        //    .FirstOrDefault(window => window is MainWindow);
+                        //Label l = this.FindName("LoggedInLabel") as Label;
+                        //l.Content = "Dobrodosli!";
+                        lab.Content = "Dobrodosli!";
 
-                        
-                        //main_w.UpdateLayout();
+                        MainWindow.logged_in = true;
 
                         Close();
 

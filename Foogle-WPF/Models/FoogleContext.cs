@@ -16,13 +16,14 @@ namespace Foogle_WPF
         //public DbSet<Album> Albums { get; set; }
 
         public DbSet<FoogleUser> Users { get; set; }
-
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Map to the correct Chinook Database tables
 
             modelBuilder.Entity<FoogleUser>().ToTable("foogle_user", "public");
+            modelBuilder.Entity<Category>().ToTable("category", "public");
 
             // Chinook Database for PostgreSQL doesn't auto-increment Ids
             //modelBuilder.Conventions

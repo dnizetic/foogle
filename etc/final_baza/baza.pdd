@@ -2,7 +2,7 @@
 
 <DBMODEL Version="1.5" TYPE="PostgreSQL">
 
-<MODELSETTINGS MDDVERSION="1.3.1 (build 737)" ModelProject="" ModelName="baza" ModelCompany="" ModelAuthor="" ModelCopyright="" ModelVersion="" ModelVersionAI="0" ModelCreated="2013-04-25 00:53:49" ModelUpdated="2013-04-25 03:01:02" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" GenSettings="object GenSettings1: TGenSettings\n  TextCharCase = tccMixed\n  ModelCheck = True\n  DropIfExists = True\n  ISQL = False\n  DBOptions = [dbgoCreate, dbgoBeginScript, dbgoEndScript]\n  ViewOptions = [viewgoCreate, viewgoCreateRule]\n  SPOptions = [spgoCreate]\n  TableOptions = [tblgoCreate, tblgoBeginScript, tblgoEndScript, tblgoComment, tblgoCreatePK, tblgoCreateFK, tblgoCreateIndex, tblgoCreateRule, tblgoCreateTrigger, tblgoCreateCHECK, tblgoFieldDefault]\n  OwnerOptions = [owngoSchema, owngoTable, owngoView, owngoSP, owngoSequence, owngoUDT]\n  ACLOptions = [aclgoSchema, aclgoTable, aclgoView, aclgoSP, aclgoSequence]\n  ModifyOptions = [mgoKeepTbls, mgoBackupTbls, mgoTraceRenaming]\n  RoleCreate = True\n  RoleWhenCreate = rocrInScript\n  SQLTypeNames = False\nend\n" DisplaySettings="object DisplaySettings1: TDisplaySettings\n  ObjectsDisplay = [edoColumns, edoInhColumns, edoIndices, edoConstraints, edoTriggers, edoRules, edoColTypes, edoFKs, rdoRefName, spdoParameters, spdoResult, spdoParamTypes, spdoParamKind, vdoAttributes, vdoTargets, vdoRules]\n  Color = clWhite\n  ShowIcons = True\n  SnapGrid = True\n  DisplaySnap = True\n  SnapSize = 10\n  ShowPages = True\n  EntityFillColor = clWhite\n  EntityLineColor = clNavy\n  SPFillColor = 13499135\n  SPLineColor = clNavy\n  ViewFillColor = 3329434\n  ViewLineColor = clNavy\n  RefNotation = 0\n  RefColor = clNavy\n  RefLabelColor = clWhite\n  MinimapShapesStyle = mmssFillAndBorder\n  MinimapVisibleAreaStyle = mmvasBitmapShading\n  MinimapBackColor = clWhite\nend\n" DefaultDelete="3" DefaultUpdate="3" DefaultDataType="23" DefaultSchemaID="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\A" EncloseNames="1" HPageCount="5" VPageCount="5" />
+<MODELSETTINGS MDDVERSION="1.3.1 (build 737)" ModelProject="" ModelName="baza" ModelCompany="" ModelAuthor="" ModelCopyright="" ModelVersion="" ModelVersionAI="0" ModelCreated="2013-04-25 00:53:49" ModelUpdated="2013-04-27 18:11:16" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" GenSettings="object GenSettings1: TGenSettings\n  TextCharCase = tccMixed\n  ModelCheck = True\n  DropIfExists = True\n  ISQL = False\n  DBOptions = [dbgoCreate, dbgoBeginScript, dbgoEndScript]\n  ViewOptions = [viewgoCreate, viewgoCreateRule]\n  SPOptions = [spgoCreate]\n  TableOptions = [tblgoCreate, tblgoBeginScript, tblgoEndScript, tblgoComment, tblgoCreatePK, tblgoCreateFK, tblgoCreateIndex, tblgoCreateRule, tblgoCreateTrigger, tblgoCreateCHECK, tblgoFieldDefault]\n  OwnerOptions = [owngoSchema, owngoTable, owngoView, owngoSP, owngoSequence, owngoUDT]\n  ACLOptions = [aclgoSchema, aclgoTable, aclgoView, aclgoSP, aclgoSequence]\n  ModifyOptions = [mgoKeepTbls, mgoBackupTbls, mgoTraceRenaming]\n  RoleCreate = True\n  RoleWhenCreate = rocrInScript\n  SQLTypeNames = False\nend\n" DisplaySettings="object DisplaySettings1: TDisplaySettings\n  ObjectsDisplay = [edoColumns, edoInhColumns, edoIndices, edoConstraints, edoTriggers, edoRules, edoColTypes, edoFKs, rdoRefName, spdoParameters, spdoResult, spdoParamTypes, spdoParamKind, vdoAttributes, vdoTargets, vdoRules]\n  Color = clWhite\n  ShowIcons = True\n  SnapGrid = True\n  DisplaySnap = True\n  SnapSize = 10\n  ShowPages = True\n  EntityFillColor = clWhite\n  EntityLineColor = clNavy\n  SPFillColor = 13499135\n  SPLineColor = clNavy\n  ViewFillColor = 3329434\n  ViewLineColor = clNavy\n  RefNotation = 0\n  RefColor = clNavy\n  RefLabelColor = clWhite\n  MinimapShapesStyle = mmssFillAndBorder\n  MinimapVisibleAreaStyle = mmvasBitmapShading\n  MinimapBackColor = clWhite\nend\n" DefaultDelete="3" DefaultUpdate="3" DefaultDataType="23" DefaultSchemaID="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\A" EncloseNames="1" HPageCount="5" VPageCount="5" />
 
 <DATABASE Name="Database_1" CharacterSet="" Collate="" CType="" Tablespace="" Owner="" Template="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="0" />
 
@@ -48,10 +48,6 @@
 	<COLUMNS>
 	</COLUMNS>
 </COMPOSITE>
-<COMPOSITE ID="17715" Name="title" SchemaName="public" OwnerName="" Comments="" MasterTableOID="17606">
-	<COLUMNS>
-	</COLUMNS>
-</COMPOSITE>
 <COMPOSITE ID="17716" Name="user_category" SchemaName="public" OwnerName="" Comments="" MasterTableOID="17641">
 	<COLUMNS>
 	</COLUMNS>
@@ -79,21 +75,22 @@
 <ENTITIES>
 <ENTITY ID="17614" Name="category" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="660" YPos="520" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
 	<COLUMNS>
-		<COLUMN ID="42" Name="id" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="43" Name="name" Pos="2" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="42" Name="id" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="43" Name="name" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="74" Name="master_category" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
 	</COLUMNS>
 	<REFERENCES_BEGIN>
 		<REFERENCE_BEGIN ID="17665" />
 		<REFERENCE_BEGIN ID="17647" />
 	</REFERENCES_BEGIN>
 	<CONSTRAINTS>
-		<CONSTRAINT ID="17619" Name="category_pkey" Kind="2" Expression="" ReferenceIndex="17618" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+		<CONSTRAINT ID="17619" Name="category_pkey" Kind="2" Expression="" ReferenceIndex="17749" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
 			<CONSTRAINTCOLUMNS COMMATEXT="42"></CONSTRAINTCOLUMNS>
 			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
 		</CONSTRAINT>
 	</CONSTRAINTS>
 	<INDEXES>
-		<INDEX ID="17618" Name="category_pkey_idx_pk" Unique="1" Method="1" Predicate="" TablespaceID="0" ReferenceConstraint="17619" StorageParams="" Comments="">
+		<INDEX ID="17749" Name="category_pkey_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17619" StorageParams="" Comments="">
 			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
 			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
 			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
@@ -131,17 +128,18 @@
 	</TRIGGERS>
 </ENTITY>
 
-<ENTITY ID="17622" Name="foogle_user" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="40" YPos="80" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
+<ENTITY ID="17622" Name="foogle_user" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="50" YPos="60" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
 	<COLUMNS>
 		<COLUMN ID="48" Name="id" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
 		<COLUMN ID="49" Name="email" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
 		<COLUMN ID="50" Name="firstname" Pos="2" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
 		<COLUMN ID="51" Name="lastname" Pos="3" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="52" Name="title" Pos="4" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="53" Name="role" Pos="5" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aS\a::bpchar" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="54" Name="activity" Pos="6" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aP\a::bpchar" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="72" Name="password" Pos="7" Datatype="1043" Type="varchar" Width="45" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="73" Name="confirmed" Pos="8" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="53" Name="role" Pos="4" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aS\a::bpchar" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="54" Name="activity" Pos="5" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aP\a::bpchar" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="72" Name="password" Pos="6" Datatype="1043" Type="varchar" Width="45" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="73" Name="confirmed" Pos="7" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="75" Name="linkedin" Pos="8" Datatype="1043" Type="varchar" Width="255" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="76" Name="linkedin_id" Pos="9" Datatype="1043" Type="varchar" Width="255" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
 	</COLUMNS>
 	<REFERENCES_BEGIN>
 		<REFERENCE_BEGIN ID="17683" />
@@ -149,17 +147,14 @@
 		<REFERENCE_BEGIN ID="17700" />
 		<REFERENCE_BEGIN ID="17652" />
 	</REFERENCES_BEGIN>
-	<REFERENCES_END>
-		<REFERENCE_END ID="17634" />
-	</REFERENCES_END>
 	<CONSTRAINTS>
-		<CONSTRAINT ID="17631" Name="foogle_user_pkey" Kind="2" Expression="" ReferenceIndex="17742" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+		<CONSTRAINT ID="17631" Name="foogle_user_pkey" Kind="2" Expression="" ReferenceIndex="17767" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
 			<CONSTRAINTCOLUMNS COMMATEXT="48"></CONSTRAINTCOLUMNS>
 			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
 		</CONSTRAINT>
 	</CONSTRAINTS>
 	<INDEXES>
-		<INDEX ID="17742" Name="foogle_user_pkey_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17631" StorageParams="" Comments="">
+		<INDEX ID="17767" Name="foogle_user_pkey_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17631" StorageParams="" Comments="">
 			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
 			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
 			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
@@ -239,7 +234,7 @@
 			<CONSTRAINTCOLUMNS COMMATEXT="63"></CONSTRAINTCOLUMNS>
 			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
 		</CONSTRAINT>
-		<CONSTRAINT ID="17699" Name="student_jmbag_key" Kind="1" Expression="" ReferenceIndex="17743" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+		<CONSTRAINT ID="17699" Name="student_jmbag_key" Kind="1" Expression="" ReferenceIndex="17768" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
 			<CONSTRAINTCOLUMNS COMMATEXT="64"></CONSTRAINTCOLUMNS>
 			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
 		</CONSTRAINT>
@@ -250,31 +245,8 @@
 			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
 			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
 		</INDEX>
-		<INDEX ID="17743" Name="student_jmbag_key_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17699" StorageParams="" Comments="">
+		<INDEX ID="17768" Name="student_jmbag_key_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17699" StorageParams="" Comments="">
 			<INDEXCOLUMNS COMMATEXT="jmbag"></INDEXCOLUMNS>
-			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
-			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
-		</INDEX>
-	</INDEXES>
-</ENTITY>
-
-<ENTITY ID="17606" Name="title" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="350" YPos="20" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
-	<COLUMNS>
-		<COLUMN ID="67" Name="id" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="68" Name="title" Pos="2" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-	</COLUMNS>
-	<REFERENCES_BEGIN>
-		<REFERENCE_BEGIN ID="17634" />
-	</REFERENCES_BEGIN>
-	<CONSTRAINTS>
-		<CONSTRAINT ID="17611" Name="title_pkey" Kind="2" Expression="" ReferenceIndex="17610" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
-			<CONSTRAINTCOLUMNS COMMATEXT="67"></CONSTRAINTCOLUMNS>
-			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
-		</CONSTRAINT>
-	</CONSTRAINTS>
-	<INDEXES>
-		<INDEX ID="17610" Name="title_pkey_idx_pk" Unique="1" Method="1" Predicate="" TablespaceID="0" ReferenceConstraint="17611" StorageParams="" Comments="">
-			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
 			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
 			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
 		</INDEX>
@@ -310,8 +282,6 @@
 
 <REFERENCES>
 <REFERENCE ID="17713" Name="experience_student_fkey" SOURCE="17693" DESTINATION="17707" FKIDS="63=45\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="1" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17697" />
-
-<REFERENCE ID="17634" Name="foogle_user_title_fkey" SOURCE="17606" DESTINATION="17622" FKIDS="67=52\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="1" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17611" />
 
 <REFERENCE ID="17678" Name="recommendation_skill_fkey" SOURCE="17659" DESTINATION="17672" FKIDS="60=56\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17664" />
 

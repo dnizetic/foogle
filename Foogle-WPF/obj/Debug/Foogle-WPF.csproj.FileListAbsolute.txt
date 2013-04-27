@@ -55,3 +55,7 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Login.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Registration.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Welcome.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Welcome.g.cs
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Endorsement.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Endorsement.g.cs
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SelectCategory.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SelectCategory.g.cs
