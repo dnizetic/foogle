@@ -17,6 +17,7 @@ namespace Foogle_WPF
 
         public DbSet<FoogleUser> Users { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Skill> Skills { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -24,6 +25,7 @@ namespace Foogle_WPF
 
             modelBuilder.Entity<FoogleUser>().ToTable("foogle_user", "public");
             modelBuilder.Entity<Category>().ToTable("category", "public");
+            modelBuilder.Entity<Skill>().ToTable("skill", "public");
 
             // Chinook Database for PostgreSQL doesn't auto-increment Ids
             //modelBuilder.Conventions

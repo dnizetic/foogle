@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Foogle_WPF
 {
-    class Skill
+    public class Skill
     {
+
         public int id { get; set; }
-        public string skill_tag { get; set; }
+        public string name { get; set; }
 
     }
 }

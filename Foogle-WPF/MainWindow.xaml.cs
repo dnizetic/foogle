@@ -260,8 +260,8 @@ namespace Foogle_WPF
                 // PostgeSQL-style connection string
                 string connectionString = String.Format("Server={0};Port={1};" +
                     "User Id={2};Password={3};Database={4};",
-                   // "localhost", "5432", "postgres", "alphaomega", "foogle"); // lokalno
-                    "161.53.120.202", "5432", "pi2013-20", "pi2013-20!#", "pi2013-20"); // miro.foi.hr
+                    "localhost", "5432", "postgres", "alphaomega", "foogle"); // lokalno
+                    //"161.53.120.202", "5432", "pi2013-20", "pi2013-20!#", "pi2013-20"); // miro.foi.hr
 
                 sqlConnection = new NpgsqlConnection(connectionString);
                 sqlConnection.Open();
@@ -310,6 +310,11 @@ namespace Foogle_WPF
                 MessageBox.Show(text);
 
                 parseXml(text);
+
+
+                //store skills
+                storeUserSkills();
+
 
                 xml_page = false; 
                 return;
@@ -374,6 +379,12 @@ namespace Foogle_WPF
 
                     webBrowser1.Navigate("https://api.linkedin.com/v1/people/~?oauth2_access_token=" + access_token);
 
+                    //skills
+                    //webBrowser1.Navigate("https://api.linkedin.com/v1/people/~/skills?oauth2_access_token=" + access_token);
+
+                    //companies
+                    //webBrowser1.Navigate("https://api.linkedin.com/v1/people/~/positions?oauth2_access_token=" + access_token);
+
                     xml_page = true;
 
                 }
@@ -385,6 +396,93 @@ namespace Foogle_WPF
 
         }
 
+
+        private void storeUserSkills()
+        {
+            string url = "https://api.linkedin.com/v1/people/~/skills?oauth2_access_token=" + access_token;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
+
+            Stream resStream = resp.GetResponseStream();
+            StreamReader rdr = new StreamReader(resStream);
+            string text = rdr.ReadToEnd();
+
+            MessageBox.Show(text);
+
+
+            try
+            {
+                using (XmlReader reader = XmlReader.Create(new StringReader(text)))
+                {
+
+                    while (true)
+                    {
+                        reader.ReadToFollowing("name");
+                        String sname = reader.ReadElementContentAsString();
+
+
+                        storeUniqueSkill(sname);
+                        MessageBox.Show(sname);
+                        if (sname == null)
+                            break;
+                    }
+
+                    //check if lid already exists
+                    /*using (var context = new FoogleContext())
+                    {
+                        var usrs = from b in context.Users
+                                   where b.linkedin_id.Equals(id)
+                                   select b;
+
+                        if (usrs.Count() > 0)
+                        {
+                            MessageBox.Show("Vec ste registrirani, jebo te");
+                            return;
+                        }
+                    }*/
+
+                }
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+            }
+
+
+        }
+
+        private void storeUniqueSkill(String skill)
+        {
+            try
+            {
+                using (var context = new FoogleContext())
+                {
+                    var skills = from b in context.Skills
+                                 where b.name.Equals(skill)
+                                 select b;
+
+                    if (skills.Count() == 0)
+                    {
+                        MessageBox.Show("Unosim novi skill: " + skill);
+                        context.Skills.Add(
+                            new Skill
+                            {
+                                name = skill
+                            });
+
+                        context.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.InnerException);
+            }
+
+
+        }
 
 
         private void parseXml(String myXml)
