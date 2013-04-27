@@ -257,8 +257,8 @@ namespace Foogle_WPF
                 // PostgeSQL-style connection string
                 string connectionString = String.Format("Server={0};Port={1};" +
                     "User Id={2};Password={3};Database={4};",
-                    "localhost", "5432", "postgres", // TODO: postaviti bazu online i promijeniti adresu.
-                    "alphaomega", "foogle");
+                   // "localhost", "5432", "postgres", "alphaomega", "foogle"); // lokalno
+                    "161.53.120.202", "5432", "pi2013-20", "pi2013-20!#", "pi2013-20"); // miro.foi.hr
 
                 sqlConnection = new NpgsqlConnection(connectionString);
                 sqlConnection.Open();
@@ -267,7 +267,7 @@ namespace Foogle_WPF
             catch (Exception msg)
             {
                 MessageBox.Show(msg.ToString());
-                MessageBox.Show("Ako ne radi povezivanje, onda connection string nije dobar, provjerite isti! " +
+                MessageBox.Show("\tAko ne radi povezivanje te sje kod istog pokazuje greška no hg_pba.conf for bla bla bla il tako nešto, onda vam IP range-u nije dopušten pristup serveru te molim da mi u tom slučaju pošaljete svoj IP na zstrahij@foi.hr\n\tIsto tako, može biti da connection string nije dobar, provjerite isti, no ovaj slučaj je vrlo malo vjerojatan! " +
                                 "Isto tako, problem može biti da aplikacija nema pristup bazi jer baza ili nije na svome mjestu ili ne radi server.");
                 throw; // nema baze ili veze - nema koristi od aplikacije.
             }
