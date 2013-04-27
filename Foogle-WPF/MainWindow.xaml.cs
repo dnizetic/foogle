@@ -215,7 +215,7 @@ namespace Foogle_WPF
             try
             {
                 
-                string sql = "select * from skill where skill_tag LIKE '%" + searchText + "%' limit 10;";
+                string sql = "select * from skill where lower(name) LIKE '%" + searchText.ToLower() + "%' limit 10;";
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, sqlConnection);
 
                 ds.Reset();
@@ -235,8 +235,8 @@ namespace Foogle_WPF
                     //suggest all until last word
 
                     String s = prefix;
-                    s += row["skill_tag"] as String;
-                    suggestions[i++] = s;
+                    s += row["name"] as String;
+                    suggestions[i++] = s.ToLower();
 
                 }
 
@@ -309,12 +309,19 @@ namespace Foogle_WPF
 
                 MessageBox.Show(text);
 
-                parseXml(text);
+                
 
+
+                //the following two functions should be called periodically by the administrator
+                //in case the user adds/removes skills / employment history
 
                 //store skills
                 storeUserSkills();
 
+                //store years of experience (float)
+                double exp = getYearsOfExperience();
+
+                storeBasicUser(text, exp);
 
                 xml_page = false; 
                 return;
@@ -408,7 +415,7 @@ namespace Foogle_WPF
             StreamReader rdr = new StreamReader(resStream);
             string text = rdr.ReadToEnd();
 
-            MessageBox.Show(text);
+            //MessageBox.Show(text);
 
 
             try
@@ -423,24 +430,11 @@ namespace Foogle_WPF
 
 
                         storeUniqueSkill(sname);
-                        MessageBox.Show(sname);
+                        //MessageBox.Show(sname);
                         if (sname == null)
                             break;
                     }
 
-                    //check if lid already exists
-                    /*using (var context = new FoogleContext())
-                    {
-                        var usrs = from b in context.Users
-                                   where b.linkedin_id.Equals(id)
-                                   select b;
-
-                        if (usrs.Count() > 0)
-                        {
-                            MessageBox.Show("Vec ste registrirani, jebo te");
-                            return;
-                        }
-                    }*/
 
                 }
             }
@@ -449,9 +443,10 @@ namespace Foogle_WPF
 
                 MessageBox.Show(err.Message);
             }
-
-
         }
+
+
+
 
         private void storeUniqueSkill(String skill)
         {
@@ -485,7 +480,89 @@ namespace Foogle_WPF
         }
 
 
-        private void parseXml(String myXml)
+        private double getYearsOfExperience()
+        {
+
+            string url = "https://api.linkedin.com/v1/people/~/positions?oauth2_access_token=" + access_token;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
+
+            Stream resStream = resp.GetResponseStream();
+            StreamReader rdr = new StreamReader(resStream);
+            string text = rdr.ReadToEnd();
+
+            MessageBox.Show(text);
+
+
+            try
+            {
+                using (XmlReader reader = XmlReader.Create(new StringReader(text)))
+                {
+
+                    reader.ReadToFollowing("positions");
+                    reader.MoveToFirstAttribute();
+                    String amount = reader.Value;
+                    //MessageBox.Show(amount);
+
+                    double sum = 0;
+                    
+                    int j = Convert.ToInt32(amount);
+                    for(int i = 0; i < j; ++i)
+                    {
+                        reader.ReadToFollowing("year");
+
+                        int start_year = reader.ReadElementContentAsInt();
+
+                        reader.ReadToFollowing("month");
+                        int start_month = reader.ReadElementContentAsInt();
+
+                        reader.ReadToFollowing("year");
+                        int end_year = reader.ReadElementContentAsInt();
+
+                        reader.ReadToFollowing("month");
+                        int end_month = reader.ReadElementContentAsInt();
+
+                        DateTime a = new DateTime(start_year, start_month, 01);
+                        DateTime b = new DateTime(end_year, end_month, 01);
+
+                        TimeSpan duration = b - a;
+
+                        double days = duration.TotalDays;
+
+                        double years = days / 365.242199;
+                        int wholeYears = (int)Math.Floor(years);
+
+                        double partYears = years - wholeYears;
+                        double approxMonths = partYears * 12;
+
+                        MessageBox.Show("Years of exp in company: " 
+                            + wholeYears + ", months: " + approxMonths);
+
+
+                        double total = wholeYears + (approxMonths / 12);
+
+
+                        sum += total;
+                    }
+                    MessageBox.Show("Total exp: " + sum);
+
+                    return sum;
+
+                }
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+
+                return 0;
+            }
+
+        }
+
+
+        private void storeBasicUser(String myXml, double exp)
         {
             try
             {
@@ -524,7 +601,7 @@ namespace Foogle_WPF
                     }
 
 
-                    saveUser(fname, lname, lin, id);
+                    saveUser(fname, lname, lin, id, exp);
                 }
             }
             catch (Exception err)
@@ -539,7 +616,7 @@ namespace Foogle_WPF
 
 
         private void saveUser(string first_name, string last_name, string lin,
-            string lid)
+            string lid, double experience)
         {
             try
             {
@@ -556,7 +633,8 @@ namespace Foogle_WPF
                             activity = null,
                             password = "",
                             linkedin = lin,
-                            linkedin_id = lid
+                            linkedin_id = lid,
+                            exp = experience
                         });
 
                     context.SaveChanges();

@@ -29,5 +29,7 @@ namespace Foogle_WPF
 
         public string linkedin_id { get; set; }
 
+        public double exp { get; set; }
+
     }
 }
