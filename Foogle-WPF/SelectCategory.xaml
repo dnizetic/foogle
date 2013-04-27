@@ -1,10 +1,12 @@
 ﻿<Window x:Class="Foogle_WPF.SelectCategory"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="SelectCategory" Height="300" Width="300"
+        Title="SelectCategory" Height="125" Width="300"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
-        <ComboBox SelectedValuePath="id" DisplayMemberPath="name" ItemsSource="{Binding CategoriesCollection}" HorizontalAlignment="Left" Margin="91,98,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox SelectedValuePath="id" DisplayMemberPath="name" ItemsSource="{Binding CategoriesCollection}" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="266" RenderTransformOrigin="0.077,0.679"/>
+        <Label Content="Odaberite kategoriju:" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="266"/>
+        <Button Content="Endorse!" HorizontalAlignment="Left" Margin="201,64,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.296,0.009" Click="EndorseButton"/>
 
     </Grid>
 </Window>

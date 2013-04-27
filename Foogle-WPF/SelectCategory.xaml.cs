@@ -60,5 +60,10 @@ namespace Foogle_WPF
 
             }
         }
+
+        private void EndorseButton(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

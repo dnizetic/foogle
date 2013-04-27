@@ -309,9 +309,6 @@ namespace Foogle_WPF
 
                 MessageBox.Show(text);
 
-                
-
-
                 //the following two functions should be called periodically by the administrator
                 //in case the user adds/removes skills / employment history
 
