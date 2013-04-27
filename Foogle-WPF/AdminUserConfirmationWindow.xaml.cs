@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 using System.Collections.ObjectModel;
+using System.Net.Mail;
+using System.Net;
 
 namespace Foogle_WPF
 {
@@ -30,9 +32,10 @@ namespace Foogle_WPF
         public ObservableCollection<FoogleUser> _KorisnikCollection =
             new ObservableCollection<FoogleUser>();
 
-
-        public AdminUserConfirmationWindow()
+        private void populateCollection()
         {
+            _KorisnikCollection.Clear();
+
             //get all professors 'p' that are unactivated
             using (var context = new FoogleContext())
             {
@@ -49,12 +52,15 @@ namespace Foogle_WPF
 
                 }
 
-                
-
             }
+        }
+
+        public AdminUserConfirmationWindow()
+        {
+
+            populateCollection();
 
             InitializeComponent();
-
         }
 
         public ObservableCollection<FoogleUser> KorisnikCollection
@@ -65,6 +71,57 @@ namespace Foogle_WPF
         
         } }
 
+
+        //http://stackoverflow.com/questions/765984/wpf-listboxitems-with-datatemplates-how-do-i-reference-the-clr-object-bound-to
+        private void ConfirmButton(object sender, RoutedEventArgs e)
+        {
+            
+            var usr  = ((Button)sender).DataContext as FoogleUser;
+
+            if (usr == null)
+                throw new InvalidOperationException("Invalid DataContext");
+
+
+            var user = new FoogleUser() { id = usr.id, confirmed = true };
+            using (var db = new FoogleContext())
+            {
+                db.Users.Attach(user);
+                db.Entry(user).Property(x => x.confirmed).IsModified = true;
+                db.SaveChanges();
+            }
+
+
+            //send email
+            MailMessage mail = new MailMessage();
+            SmtpClient client = new SmtpClient();
+            client.Port = 25;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Host = "smtp.gmail.com";
+            client.EnableSsl = true;
+            //we need a foogle gmail created
+            client.Credentials = new NetworkCredential("fooglefoi@gmail.com",
+                "alphaomega851");
+
+            mail.To.Add(new MailAddress(usr.email));
+            mail.From = new MailAddress("fooglefoi@gmail.com");
+            mail.Subject = "Foogle - potvrdjen racun";
+            mail.Body = "Vas racun je potvrdjen. Mozete poceti koristiti aplikaciju.";
+
+            try
+            {
+                client.Send(mail);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            
+            //update listview
+            populateCollection();
+            
+            MessageBox.Show("Success.");
+        }
 
 
     }

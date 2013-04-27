@@ -18,6 +18,11 @@ namespace Foogle_WPF
         public string activity { get; set; }
         public bool confirmed { get; set; }
 
+        public string confirmed_textual
+        {
+            get { return this.confirmed == true ? "Da" : "Ne"; }
+        }
+
         public string password { get; set; }
 
         public string linkedin { get; set; }

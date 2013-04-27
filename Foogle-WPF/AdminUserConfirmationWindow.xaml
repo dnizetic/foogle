@@ -4,7 +4,7 @@
         Title="AdminUserConfirmationWindow" Height="300" Width="582.4"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid Margin="0,0,-69.2,0">
-        <ListView ItemsSource="{Binding KorisnikCollection}" HorizontalAlignment="Left" Height="210" Margin="10,52,0,0" VerticalAlignment="Top" Width="558">
+        <ListView Name="MyListView" ItemsSource="{Binding KorisnikCollection}" HorizontalAlignment="Left" Height="210" Margin="10,52,0,0" VerticalAlignment="Top" Width="558">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="25" Header="ID" DisplayMemberBinding="{Binding id}" />
@@ -12,8 +12,24 @@
                     <GridViewColumn Width="75" Header="Ime" DisplayMemberBinding="{Binding firstname}"/>
                     <GridViewColumn Width="75" Header="Prezime" DisplayMemberBinding="{Binding lastname}"/>
                     <GridViewColumn Width="80" Header="Tip korisnika" DisplayMemberBinding="{Binding role}"/>
-                    <GridViewColumn Width="90" Header="Aktiviran" DisplayMemberBinding="{Binding activated}"/>
-                    <GridViewColumn Width="50" Header="Akcije" />
+                    <GridViewColumn Width="90" Header="Aktiviran" DisplayMemberBinding="{Binding confirmed_textual}"/>
+                    
+                    <GridViewColumn  Header="Akcije">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button 
+                                   Content="Aktiviraj"
+                                   Margin="0"
+                                   VerticalAlignment="Center"
+                                   Click="ConfirmButton" >
+                                    <Button.BindingGroup>
+                                        <BindingGroup/>
+                                    </Button.BindingGroup>
+                                </Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
                 </GridView>
             </ListView.View>
         </ListView>
