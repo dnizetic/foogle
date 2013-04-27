@@ -322,7 +322,12 @@ namespace Foogle_WPF
             String temp = code[0];
             String[] new_code = temp.Split('=');
 
-            String final_code = new_code[1];
+            String final_code = "";
+            if (new_code.Length > 1)
+            {
+                final_code = new_code[1];
+            }
+            
 
             //first return
             if (uri.Contains("code="))
