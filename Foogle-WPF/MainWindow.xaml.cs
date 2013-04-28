@@ -795,8 +795,13 @@ namespace Foogle_WPF
         private void TestDataButton(object sender, RoutedEventArgs e)
         {
 
+        }
 
+        private void SearchByCategory(object sender, RoutedEventArgs e)
+        {
+            SelectCategory sc = new SelectCategory(0);
 
+            sc.Show();
 
         }
 
