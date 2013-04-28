@@ -21,6 +21,8 @@ namespace Foogle_WPF
     public partial class SelectCategory : Window
     {
 
+
+
         public ObservableCollection<Category> _CategoriesCollection =
             new ObservableCollection<Category>();
 
@@ -45,10 +47,14 @@ namespace Foogle_WPF
             }
         }
 
-        public SelectCategory()
+        private int user_id = 0;
+
+        public SelectCategory(int u_id)
         {
 
             populateCollection();
+            user_id = u_id;
+
             InitializeComponent();
         }
 
@@ -63,6 +69,44 @@ namespace Foogle_WPF
 
         private void EndorseButton(object sender, RoutedEventArgs e)
         {
+            //current professor_id (logged in)
+            int prof_id = MainWindow.professor_id;
+
+
+            //student id
+            int student_id = user_id;
+
+            //category_id
+            int cat_id = EndorseCombo.SelectedIndex;
+
+            MessageBox.Show("prof_id: " + prof_id + ", student_id" + student_id + "cat_id " + cat_id);
+
+            try
+            {
+                using (var context = new FoogleContext())
+                {
+                    Category cat = context.Categories.SingleOrDefault(c => c.id == cat_id);
+                    FoogleUser student = context.Users.SingleOrDefault(c => c.id == student_id);
+                    FoogleUser professor = context.Users.SingleOrDefault(c => c.id == prof_id);
+
+                    context.Recommendations.Add(
+                        new Recommendation
+                        {
+                            category = cat,
+                            student = student,
+                            teacher = professor
+                        });
+
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message + "\n" + err.InnerException);
+            }
+
+
+
 
         }
     }

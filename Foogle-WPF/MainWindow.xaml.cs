@@ -39,6 +39,8 @@ namespace Foogle_WPF
 
         //activates when user logs in
         public static bool logged_in = false;
+        //set it when professor logs in
+        public static int professor_id = 0;
 
         public static void showButt()
         {

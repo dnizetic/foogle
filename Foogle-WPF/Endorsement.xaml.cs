@@ -21,6 +21,10 @@ namespace Foogle_WPF
     public partial class Endorsement : Window
     {
 
+
+
+
+
         public ObservableCollection<FoogleUser> _KorisnikCollection =
             new ObservableCollection<FoogleUser>();
 
@@ -61,7 +65,6 @@ namespace Foogle_WPF
         {
             populateCollection();
 
-
             InitializeComponent();
         }
 
@@ -69,7 +72,13 @@ namespace Foogle_WPF
 
         private void SelectCategory(object sender, RoutedEventArgs e)
         {
-            SelectCategory sc = new SelectCategory();
+            //get user id
+            var usr = ((Button)sender).DataContext as FoogleUser;
+
+            if (usr == null)
+                throw new InvalidOperationException("Invalid DataContext");
+
+            SelectCategory sc = new SelectCategory(usr.id);
 
             sc.Show();
 

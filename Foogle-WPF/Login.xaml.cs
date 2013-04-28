@@ -71,6 +71,9 @@ namespace Foogle_WPF
                                where b.confirmed.Equals(true)
                                select b;
 
+
+                    
+
                     if (usrs.Count() == 1)
                     {
                         MessageBox.Show("Dobrodosli!");
@@ -80,6 +83,9 @@ namespace Foogle_WPF
                         lab.Content = "Dobrodosli!";
 
                         MainWindow.logged_in = true;
+
+                        FoogleUser f = usrs.First();
+                        MainWindow.professor_id = f.id;
 
                         Close();
 
