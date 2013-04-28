@@ -2,7 +2,7 @@
 
 <DBMODEL Version="1.5" TYPE="PostgreSQL">
 
-<MODELSETTINGS MDDVERSION="1.3.1 (build 737)" ModelProject="" ModelName="baza" ModelCompany="" ModelAuthor="" ModelCopyright="" ModelVersion="" ModelVersionAI="0" ModelCreated="2013-04-25 00:53:49" ModelUpdated="2013-04-28 04:07:21" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" GenSettings="object GenSettings1: TGenSettings\n  TextCharCase = tccMixed\n  ModelCheck = True\n  DropIfExists = True\n  ISQL = False\n  DBOptions = [dbgoCreate, dbgoBeginScript, dbgoEndScript]\n  ViewOptions = [viewgoCreate, viewgoCreateRule]\n  SPOptions = [spgoCreate]\n  TableOptions = [tblgoCreate, tblgoBeginScript, tblgoEndScript, tblgoComment, tblgoCreatePK, tblgoCreateFK, tblgoCreateIndex, tblgoCreateRule, tblgoCreateTrigger, tblgoCreateCHECK, tblgoFieldDefault]\n  OwnerOptions = [owngoSchema, owngoTable, owngoView, owngoSP, owngoSequence, owngoUDT]\n  ACLOptions = [aclgoSchema, aclgoTable, aclgoView, aclgoSP, aclgoSequence]\n  ModifyOptions = [mgoKeepTbls, mgoBackupTbls, mgoTraceRenaming]\n  RoleCreate = True\n  RoleWhenCreate = rocrInScript\n  SQLTypeNames = False\nend\n" DisplaySettings="object DisplaySettings1: TDisplaySettings\n  ObjectsDisplay = [edoColumns, edoInhColumns, edoIndices, edoConstraints, edoTriggers, edoRules, edoColTypes, edoFKs, rdoRefName, spdoParameters, spdoResult, spdoParamTypes, spdoParamKind, vdoAttributes, vdoTargets, vdoRules]\n  Color = clWhite\n  ShowIcons = True\n  SnapGrid = True\n  DisplaySnap = True\n  SnapSize = 10\n  ShowPages = True\n  EntityFillColor = clWhite\n  EntityLineColor = clNavy\n  SPFillColor = 13499135\n  SPLineColor = clNavy\n  ViewFillColor = 3329434\n  ViewLineColor = clNavy\n  RefNotation = 0\n  RefColor = clNavy\n  RefLabelColor = clWhite\n  MinimapShapesStyle = mmssFillAndBorder\n  MinimapVisibleAreaStyle = mmvasBitmapShading\n  MinimapBackColor = clWhite\nend\n" DefaultDelete="3" DefaultUpdate="3" DefaultDataType="23" DefaultSchemaID="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\A" EncloseNames="1" HPageCount="5" VPageCount="5" />
+<MODELSETTINGS MDDVERSION="1.3.1 (build 737)" ModelProject="" ModelName="baza" ModelCompany="" ModelAuthor="" ModelCopyright="" ModelVersion="" ModelVersionAI="0" ModelCreated="2013-04-25 00:53:49" ModelUpdated="2013-04-28 17:53:10" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" GenSettings="object GenSettings1: TGenSettings\n  TextCharCase = tccMixed\n  ModelCheck = True\n  DropIfExists = True\n  ISQL = False\n  DBOptions = [dbgoCreate, dbgoBeginScript, dbgoEndScript]\n  ViewOptions = [viewgoCreate, viewgoCreateRule]\n  SPOptions = [spgoCreate]\n  TableOptions = [tblgoCreate, tblgoBeginScript, tblgoEndScript, tblgoComment, tblgoCreatePK, tblgoCreateFK, tblgoCreateIndex, tblgoCreateRule, tblgoCreateTrigger, tblgoCreateCHECK, tblgoFieldDefault]\n  OwnerOptions = [owngoSchema, owngoTable, owngoView, owngoSP, owngoSequence, owngoUDT]\n  ACLOptions = [aclgoSchema, aclgoTable, aclgoView, aclgoSP, aclgoSequence]\n  ModifyOptions = [mgoKeepTbls, mgoBackupTbls, mgoTraceRenaming]\n  RoleCreate = True\n  RoleWhenCreate = rocrInScript\n  SQLTypeNames = False\nend\n" DisplaySettings="object DisplaySettings1: TDisplaySettings\n  ObjectsDisplay = [edoColumns, edoInhColumns, edoIndices, edoConstraints, edoTriggers, edoRules, edoColTypes, edoFKs, rdoRefName, spdoParameters, spdoResult, spdoParamTypes, spdoParamKind, vdoAttributes, vdoTargets, vdoRules]\n  Color = clWhite\n  ShowIcons = True\n  SnapGrid = True\n  DisplaySnap = True\n  SnapSize = 10\n  ShowPages = True\n  EntityFillColor = clWhite\n  EntityLineColor = clNavy\n  SPFillColor = 13499135\n  SPLineColor = clNavy\n  ViewFillColor = 3329434\n  ViewLineColor = clNavy\n  RefNotation = 0\n  RefColor = clNavy\n  RefLabelColor = clWhite\n  MinimapShapesStyle = mmssFillAndBorder\n  MinimapVisibleAreaStyle = mmvasBitmapShading\n  MinimapBackColor = clWhite\nend\n" DefaultDelete="3" DefaultUpdate="3" DefaultDataType="23" DefaultSchemaID="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\A" EncloseNames="1" HPageCount="5" VPageCount="5" />
 
 <DATABASE Name="Database_1" CharacterSet="" Collate="" CType="" Tablespace="" Owner="" Template="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="0" />
 
@@ -85,6 +85,7 @@
 	</COLUMNS>
 	<REFERENCES_BEGIN>
 		<REFERENCE_BEGIN ID="17647" />
+		<REFERENCE_BEGIN ID="17747" />
 	</REFERENCES_BEGIN>
 	<CONSTRAINTS>
 		<CONSTRAINT ID="17619" Name="category_pkey" Kind="2" Expression="" ReferenceIndex="17749" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
@@ -167,27 +168,27 @@
 	</INDEXES>
 </ENTITY>
 
-<ENTITY ID="17672" Name="recommendation" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="260" YPos="420" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
+<ENTITY ID="17672" Name="recommendation" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="260" YPos="390" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
 	<COLUMNS>
-		<COLUMN ID="56" Name="skill" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="57" Name="teacher" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="58" Name="student" Pos="3" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="1" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
-		<COLUMN ID="59" Name="id" Pos="4" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="59" Name="id" Pos="3" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="56" Name="category_id" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="57" Name="teacher_id" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="58" Name="student_id" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
 	</COLUMNS>
 	<REFERENCES_END>
-		<REFERENCE_END ID="17678" />
 		<REFERENCE_END ID="17683" />
 		<REFERENCE_END ID="17688" />
+		<REFERENCE_END ID="17747" />
 	</REFERENCES_END>
 	<CONSTRAINTS>
-		<CONSTRAINT ID="17677" Name="recommendation_pkey" Kind="2" Expression="" ReferenceIndex="17676" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
-			<CONSTRAINTCOLUMNS COMMATEXT="56,57,58"></CONSTRAINTCOLUMNS>
+		<CONSTRAINT ID="17746" Name="" Kind="2" Expression="" ReferenceIndex="17804" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+			<CONSTRAINTCOLUMNS COMMATEXT="59"></CONSTRAINTCOLUMNS>
 			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
 		</CONSTRAINT>
 	</CONSTRAINTS>
 	<INDEXES>
-		<INDEX ID="17676" Name="recommendation_pkey_idx_pk" Unique="1" Method="1" Predicate="" TablespaceID="0" ReferenceConstraint="17677" StorageParams="" Comments="">
-			<INDEXCOLUMNS COMMATEXT="skill,teacher,student"></INDEXCOLUMNS>
+		<INDEX ID="17804" Name="_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17746" StorageParams="" Comments="">
+			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
 			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
 			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
 		</INDEX>
@@ -200,7 +201,6 @@
 		<COLUMN ID="61" Name="name" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
 	</COLUMNS>
 	<REFERENCES_BEGIN>
-		<REFERENCE_BEGIN ID="17678" />
 		<REFERENCE_BEGIN ID="17730" />
 	</REFERENCES_BEGIN>
 	<CONSTRAINTS>
@@ -236,7 +236,7 @@
 			<CONSTRAINTCOLUMNS COMMATEXT="63"></CONSTRAINTCOLUMNS>
 			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
 		</CONSTRAINT>
-		<CONSTRAINT ID="17699" Name="student_jmbag_key" Kind="1" Expression="" ReferenceIndex="17799" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+		<CONSTRAINT ID="17699" Name="student_jmbag_key" Kind="1" Expression="" ReferenceIndex="17812" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
 			<CONSTRAINTCOLUMNS COMMATEXT="64"></CONSTRAINTCOLUMNS>
 			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
 		</CONSTRAINT>
@@ -247,7 +247,7 @@
 			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
 			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
 		</INDEX>
-		<INDEX ID="17799" Name="student_jmbag_key_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17699" StorageParams="" Comments="">
+		<INDEX ID="17812" Name="student_jmbag_key_idx_ui" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17699" StorageParams="" Comments="">
 			<INDEXCOLUMNS COMMATEXT="jmbag"></INDEXCOLUMNS>
 			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
 			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
@@ -310,8 +310,6 @@
 <REFERENCES>
 <REFERENCE ID="17713" Name="experience_student_fkey" SOURCE="17693" DESTINATION="17707" FKIDS="63=45\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="1" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17697" />
 
-<REFERENCE ID="17678" Name="recommendation_skill_fkey" SOURCE="17659" DESTINATION="17672" FKIDS="60=56\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17664" />
-
 <REFERENCE ID="17683" Name="recommendation_teacher_fkey" SOURCE="17622" DESTINATION="17672" FKIDS="48=57\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="1" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17631" />
 
 <REFERENCE ID="17688" Name="recommendation_student_fkey" SOURCE="17622" DESTINATION="17672" FKIDS="48=58\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="1" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17631" />
@@ -325,6 +323,8 @@
 <REFERENCE ID="17728" Name="Ref_user_skills_to_foogle_user" SOURCE="17622" DESTINATION="17776" FKIDS="48=78\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17631" />
 
 <REFERENCE ID="17730" Name="Ref_user_skills_to_skill" SOURCE="17659" DESTINATION="17776" FKIDS="60=79\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17664" />
+
+<REFERENCE ID="17747" Name="Ref_recommendation_to_category" SOURCE="17614" DESTINATION="17672" FKIDS="42=56\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17619" />
 
 </REFERENCES>
 

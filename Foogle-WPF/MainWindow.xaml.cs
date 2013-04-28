@@ -74,7 +74,11 @@ namespace Foogle_WPF
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
 
             //simple sort: # of skills matched (no formula)
+            string searchText = searchBox.Text;
 
+            String[] skills = searchText.Split(' ');
+
+            //get all students, set # of matched skills
 
 
             /*string searchText = searchBox.Text;
@@ -434,7 +438,7 @@ namespace Foogle_WPF
                         String sname = reader.ReadElementContentAsString();
 
 
-                        storeUniqueSkillToDatabase(sname);
+                        storeUniqueSkillToDatabase(sname.ToLower());
 
                         storeUserSkill(sname);
 
@@ -452,16 +456,37 @@ namespace Foogle_WPF
             }
         }
 
+
+        //OK
         private void storeUserSkill(String skill)
         {
-            //get user id
 
+            try
+            {
+                using (var context = new FoogleContext())
+                {
+                    var skills = from b in context.Skills
+                                 where b.name.Equals(skill)
+                                 select b;
 
+                    Skill s = skills.First();
+                    FoogleUser u = context.Users.SingleOrDefault(c => c.id == regged_user_id);
 
-            //get skill id
+                    context.UserSkills.Add(
+                        new UserSkills
+                        {
+                            skill = s,
+                            user = u
+                        });
 
+                    context.SaveChanges();
 
-
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.InnerException);
+            }
 
 
         }
@@ -634,6 +659,7 @@ namespace Foogle_WPF
 
 
 
+        private int regged_user_id = 0;
         private void saveUser(string first_name, string last_name, string lin,
             string lid, double experience)
         {
@@ -641,8 +667,8 @@ namespace Foogle_WPF
             {
                 using (var context = new FoogleContext())
                 {
-                    context.Users.Add(
-                        new FoogleUser
+
+                    FoogleUser regged_user = new FoogleUser
                         {
                             email = "",
                             confirmed = true,
@@ -654,9 +680,14 @@ namespace Foogle_WPF
                             linkedin = lin,
                             linkedin_id = lid,
                             exp = experience
-                        });
+                        };
+
+                    context.Users.Add(regged_user);
 
                     context.SaveChanges();
+
+                    regged_user_id = regged_user.id;
+
                 }
 
                 MessageBox.Show("Uspjesno ste uneseni u bazu podataka.");

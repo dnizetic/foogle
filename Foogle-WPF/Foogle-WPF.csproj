@@ -87,6 +87,7 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\UserSkills.cs" />
     <Compile Include="Models\FoogleContext.cs" />
     <Compile Include="Models\FoogleUser.cs" />
     <Compile Include="LoginWindow.xaml.cs">

@@ -20,7 +20,7 @@
         <WebBrowser Source="http://www.google.com" LoadCompleted="wbCompleted" Name="webBrowser1" HorizontalAlignment="Left" Height="401" Margin="10,189,0,0" VerticalAlignment="Top" Width="570"/>
         <Label  x:Name="LoggedInLabel" HorizontalAlignment="Left" Margin="500,37,0,0" VerticalAlignment="Top" Width="80"/>
         <Button Name="EndorsementButton" Content="Endorsement" HorizontalAlignment="Left" Margin="371,37,0,0" VerticalAlignment="Top" Width="90" Click="EndorsementButton_Click"/>
-        <Button Content="Traži (kategorijski)" HorizontalAlignment="Left" Margin="445,146,0,0" VerticalAlignment="Top" Width="111"/>
+        <Button Content="Traži (kategorijski)" HorizontalAlignment="Left" Margin="445,146,0,0" VerticalAlignment="Top" Width="111" Height="25"/>
     </Grid>
 
     
