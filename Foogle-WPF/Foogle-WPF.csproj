@@ -98,12 +98,16 @@
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchBySkillResults.xaml.cs">
+      <DependentUpon>SearchBySkillResults.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SelectCategory.xaml.cs">
       <DependentUpon>SelectCategory.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestWindow.xaml.cs">
       <DependentUpon>TestWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserMatch.cs" />
     <Compile Include="UserRegisterWindow.xaml.cs">
       <DependentUpon>UserRegisterWindow.xaml</DependentUpon>
     </Compile>
@@ -139,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchBySkillResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

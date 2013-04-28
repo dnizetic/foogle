@@ -21,6 +21,7 @@
         <Label  x:Name="LoggedInLabel" HorizontalAlignment="Left" Margin="500,37,0,0" VerticalAlignment="Top" Width="80"/>
         <Button Name="EndorsementButton" Content="Endorsement" HorizontalAlignment="Left" Margin="371,37,0,0" VerticalAlignment="Top" Width="90" Click="EndorsementButton_Click"/>
         <Button Content="Traži (kategorijski)" HorizontalAlignment="Left" Margin="445,146,0,0" VerticalAlignment="Top" Width="111" Height="25"/>
+        <Button Click="TestDataButton" Content="Testni podaci (pretr.)" HorizontalAlignment="Left" Margin="445,119,0,0" VerticalAlignment="Top" Width="111"/>
     </Grid>
 
     

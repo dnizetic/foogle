@@ -37,8 +37,9 @@ namespace Foogle_WPF
 
         }
 
-        //activates when user logs in
+        //activates when professor logs in
         public static bool logged_in = false;
+
         //set it when professor logs in
         public static int professor_id = 0;
 
@@ -53,19 +54,6 @@ namespace Foogle_WPF
 
             lw.Show();
 
-            /* TODO: 
-             *      Korisnik nije prijavljen:
-             *          1. otvori formu za prijavu i ponudi:
-             *                                      + registraciju
-             *                                      + povezivanje s LinkedIn računom
-             *                                      + prijavu sa postoječim podacima
-             *          2. poveži se s bazom
-             *          3. promijeni naziv u "Odjava" i dodaj korisničko ime u UserLabel
-             *          
-             *      Korisnik je prijavljen:
-             *          1. prekini vezu sa bazom
-             *          2. Promjeni naziv u "Prijava" i makni korisničko ime iz UserLabel
-             */
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
@@ -78,92 +66,100 @@ namespace Foogle_WPF
 
             String[] skills = searchText.Split(' ');
 
-            //get all students, set # of matched skills
+            //get all students, calculate # of matched skills
+            var user_info = new List<UserMatch>();
 
-
-            /*string searchText = searchBox.Text;
-
-            String[] skills = searchText.Split(' ');
-
-            //query: students, recommendations, employment history, portfolio projects, skills
-            string sql = @"
-                select first_name, last_name from student
-                join student_skills on student.id = student_skills.student_id
-                join recommendation on student.id = recommendation.student_id
-                join employment_history on student.id = employment_history.student_id
-                join portfolio_projects on student.id = portfolio_projects.id
-            ";
-
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, sqlConnection);
-            DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
-
-            ds.Reset(); //data set
-            da.Fill(ds); // //data adapter - fill data set
-            dt = ds.Tables[0]; //data table
-
-            foreach (DataRow row in dt.Rows)
+            try
             {
-                //s += row["skill_tag"] as String;
-
-            }*/
-
-          
-
-            /*
-            //http://msdn.microsoft.com/en-us/data/jj574232.aspx
-            using (var context = new FoogleContext())
-            {
-                var students = from a in context.Students
-                               //.Include(a )
-                               select a;
-
-                var pfs = from b in context.PortfolioProjects
-                               //.Include(a )
-                               select b;
-
-                foreach (var p in pfs)
+                using (var context = new FoogleContext())
                 {
-                    //MessageBox.Show(p.project_name);
-                }
+                    var students = from b in context.Users
+                                 select b;
 
-                
-                var studs = from a in context.Students
-                            .Include("PortfolioProjects")
-                            select a;
 
-                foreach (var s in students)
-                {
-                    MessageBox.Show(s.id.ToString());
-                    MessageBox.Show(s.first_name);
-
-                    if (s.PortfolioProjects != null)
+                    foreach (FoogleUser f in students)
                     {
-                        foreach (var pp in s.PortfolioProjects)
+
+                        int num_matched = 0;
+
+                        
+                        foreach (String s in skills)
                         {
-                            MessageBox.Show(pp.id.ToString());
+                            //get skill id
+                            using (var context2 = new FoogleContext())
+                            {
+                                var matched_skills = from d in context2.Skills
+                                                     where d.name.Equals(s)
+                                                     select d;
+
+
+
+                                Skill mapped_skill = matched_skills.First();
+
+                                //MessageBox.Show("Mapped skill: " + mapped_skill.name);
+
+                                if (mapped_skill != null &&
+                                    UserHasSkill(f.id, mapped_skill.id))
+                                {
+                                    ++num_matched;
+                                }
+
+                            }
+
                         }
+
+                        //MessageBox.Show("Num skills matched: " + num_matched);
+
+                        //store in an array
+                        user_info.Add(new UserMatch
+                        {
+                            num_matches = num_matched,
+                            user = f
+                        });
+
                     }
 
-                    //MessageBox.Show(s.skill_tag);
-                    //Console.WriteLine(s.SkillTag);
+                    var sortedList = user_info.OrderByDescending(si => si.num_matches).ToList();
+
+                    foreach (UserMatch u in sortedList)
+                    {
+                        MessageBox.Show("Num skills matched: " + u.num_matches + ", user: " + u.user.firstname);
+                    }
+
                 }
-            } */
-
-        }
-
-        private Boolean StudentHasSkill(String[] skills, String skill)
-        {
-            foreach (String s in skills)
-            {
-                if (skill.CompareTo(s) == 0)
-                    return true;
-
             }
-            return false;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.InnerException);
+            }
+
         }
 
-   
+        private Boolean UserHasSkill(int user_id, int skill_id)
+        {
+            try
+            {
+                using (var context = new FoogleContext())
+                {
+                    MessageBox.Show("user:id " + user_id + ", skill_id: " + skill_id);
+
+                    var user_skills = from b in context.UserSkills
+                                      where b.user.id.Equals(user_id)
+                                      where b.skill.id.Equals(skill_id)
+                                      select b;
+
+                    if (user_skills.Count() > 0)
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.InnerException);
+                return false;
+            }
+        }
+
         //called on every character deletion / add
         private void searchBoxPopulating(object sender, 
                 System.Windows.Controls.PopulatingEventArgs e)
@@ -438,9 +434,10 @@ namespace Foogle_WPF
                         String sname = reader.ReadElementContentAsString();
 
 
-                        storeUniqueSkillToDatabase(sname.ToLower());
+                        String skill_to_lower = sname.ToLower();
+                        storeUniqueSkillToDatabase(skill_to_lower);
 
-                        storeUserSkill(sname);
+                        storeUserSkill(skill_to_lower);
 
                         if (sname == null)
                             break;
@@ -731,5 +728,15 @@ namespace Foogle_WPF
             //}
         }
 
+        private void TestDataButton(object sender, RoutedEventArgs e)
+        {
+
+
+
+
+        }
+
     }
+
+
 }

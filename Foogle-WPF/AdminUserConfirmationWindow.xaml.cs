@@ -55,6 +55,17 @@ namespace Foogle_WPF
             }
         }
 
+        public ObservableCollection<FoogleUser> KorisnikCollection
+        {
+            get
+            {
+
+
+                return _KorisnikCollection;
+
+            }
+        }
+
         public AdminUserConfirmationWindow()
         {
 
@@ -63,13 +74,7 @@ namespace Foogle_WPF
             InitializeComponent();
         }
 
-        public ObservableCollection<FoogleUser> KorisnikCollection
-        { get { 
 
-            
-            return _KorisnikCollection; 
-        
-        } }
 
 
         //http://stackoverflow.com/questions/765984/wpf-listboxitems-with-datatemplates-how-do-i-reference-the-clr-object-bound-to
