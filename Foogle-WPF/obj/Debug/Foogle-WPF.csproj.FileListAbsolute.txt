@@ -61,3 +61,5 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SelectCategory.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SelectCategory.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchBySkillResults.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchBySkillResults.g.cs
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchSelectCategoryWindow.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchSelectCategoryWindow.g.cs

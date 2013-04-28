@@ -101,6 +101,9 @@
     <Compile Include="SearchBySkillResults.xaml.cs">
       <DependentUpon>SearchBySkillResults.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchSelectCategoryWindow.xaml.cs">
+      <DependentUpon>SearchSelectCategoryWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SelectCategory.xaml.cs">
       <DependentUpon>SelectCategory.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SearchBySkillResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchSelectCategoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -779,17 +779,17 @@ namespace Foogle_WPF
         private void EndorsementButton_Click(object sender, RoutedEventArgs e)
         {
 
-            //if (logged_in == false)
-            //{
-            //    MessageBox.Show("Niste ulogirani.");
-            //}
-            //else
-            //{
+            if (logged_in == false)
+            {
+                MessageBox.Show("Niste ulogirani.");
+            }
+            else
+            {
 
                 Endorsement ew = new Endorsement();
 
                 ew.Show();
-            //}
+            }
         }
 
         private void TestDataButton(object sender, RoutedEventArgs e)
@@ -799,7 +799,7 @@ namespace Foogle_WPF
 
         private void SearchByCategory(object sender, RoutedEventArgs e)
         {
-            SelectCategory sc = new SelectCategory(0);
+            SearchSelectCategoryWindow sc = new SearchSelectCategoryWindow();
 
             sc.Show();
 
