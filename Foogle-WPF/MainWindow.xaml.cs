@@ -74,6 +74,7 @@ namespace Foogle_WPF
                 using (var context = new FoogleContext())
                 {
                     var students = from b in context.Users
+                                 where b.role.Equals("s")
                                  select b;
 
 
@@ -114,7 +115,13 @@ namespace Foogle_WPF
                         user_info.Add(new UserMatch
                         {
                             num_matches = num_matched,
-                            user = f
+                            user = f,
+                            email = f.email,
+                            firstname = f.firstname,
+                            lastname = f.lastname,
+                            linkedin = f.linkedin,
+                            exp = f.exp,
+                            id = f.id
                         });
 
                     }
@@ -125,6 +132,10 @@ namespace Foogle_WPF
                     {
                         MessageBox.Show("Num skills matched: " + u.num_matches + ", user: " + u.user.firstname);
                     }
+
+                    SearchBySkillResults ssr = new SearchBySkillResults(sortedList);
+
+                    ssr.Show();
 
                 }
             }
@@ -291,7 +302,8 @@ namespace Foogle_WPF
         private void UserRegisterButton(object sender, RoutedEventArgs e)
         {
            
-            webBrowser1.Navigate("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com&scope=r_fullprofile");
+            //r_fullprofile & r_emailaddress
+            webBrowser1.Navigate("https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=y0ubjypbbvov&state=mylongstring&redirect_uri=http://www.google.com&scope=r_emailaddress r_fullprofile");
 
         }
 
@@ -327,6 +339,7 @@ namespace Foogle_WPF
 
                 //store skills
                 storeUserSkills();
+
 
                 xml_page = false; 
                 return;
@@ -391,6 +404,12 @@ namespace Foogle_WPF
 
                     webBrowser1.Navigate("https://api.linkedin.com/v1/people/~?oauth2_access_token=" + access_token);
 
+
+                    //email
+                    //webBrowser1.Navigate("https://api.linkedin.com/v1/people/~/email-address?oauth2_access_token=" + access_token);
+                
+                    
+
                     //skills
                     //webBrowser1.Navigate("https://api.linkedin.com/v1/people/~/skills?oauth2_access_token=" + access_token);
 
@@ -405,6 +424,45 @@ namespace Foogle_WPF
                     MessageBox.Show(re.Message);
                 }
             }
+
+        }
+
+        private String getUserEmail()
+        {
+
+            string url = "https://api.linkedin.com/v1/people/~/email-address?oauth2_access_token=" + access_token;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
+
+            Stream resStream = resp.GetResponseStream();
+            StreamReader rdr = new StreamReader(resStream);
+            string text = rdr.ReadToEnd();
+
+            MessageBox.Show(text);
+
+
+            try
+            {
+                using (XmlReader reader = XmlReader.Create(new StringReader(text)))
+                {
+
+                    reader.ReadToFollowing("email-address");
+                    String email = reader.ReadElementContentAsString();
+
+                    return email;
+
+                }
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+
+                return "";
+            }
+
+
 
         }
 
@@ -465,18 +523,24 @@ namespace Foogle_WPF
                     var skills = from b in context.Skills
                                  where b.name.Equals(skill)
                                  select b;
+                    
+
 
                     Skill s = skills.First();
                     FoogleUser u = context.Users.SingleOrDefault(c => c.id == regged_user_id);
 
-                    context.UserSkills.Add(
-                        new UserSkills
-                        {
-                            skill = s,
-                            user = u
-                        });
+                    if (!UserHasSkill(u.id, s.id))
+                    {
+                        context.UserSkills.Add(
+                            new UserSkills
+                            {
+                                skill = s,
+                                user = u
+                            });
 
-                    context.SaveChanges();
+                        context.SaveChanges();
+                    }
+
 
                 }
             }
@@ -667,7 +731,7 @@ namespace Foogle_WPF
 
                     FoogleUser regged_user = new FoogleUser
                         {
-                            email = "",
+                            email = getUserEmail(),
                             confirmed = true,
                             firstname = first_name,
                             lastname = last_name,

@@ -21,34 +21,12 @@ namespace Foogle_WPF
     public partial class SearchBySkillResults : Window
     {
 
-        /*
-        public ObservableCollection<FoogleUser> _KorisnikCollection =
-            new ObservableCollection<FoogleUser>();
-
-        private void populateCollection()
-        {
-            _KorisnikCollection.Clear();
-
-            //get all professors 'p' that are unactivated
-            using (var context = new FoogleContext())
-            {
-                //neaktivirani profesori
-                var professors = from a in context.Users
-                                 where a.confirmed.Equals(false)
-                                 where a.role.Equals("p")
-                                 select a;
+        
+        public ObservableCollection<UserMatch> _KorisnikCollection =
+            new ObservableCollection<UserMatch>();
 
 
-                foreach (var p in professors)
-                {
-                    _KorisnikCollection.Add(p);
-
-                }
-
-            }
-        }
-
-        public ObservableCollection<FoogleUser> KorisnikCollection
+        public ObservableCollection<UserMatch> KorisnikCollection
         {
             get
             {
@@ -57,12 +35,19 @@ namespace Foogle_WPF
                 return _KorisnikCollection;
 
             }
-        } */
+        }
 
 
 
-        public SearchBySkillResults()
+        public SearchBySkillResults(List<UserMatch> l)
         {
+
+            foreach (UserMatch u in l)
+            {
+                _KorisnikCollection.Add(u);
+            }
+
+
             InitializeComponent();
         }
     }
