@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Foogle_WPF
 {
+
+    //used for display query results
     public class UserMatch
     {
         public FoogleUser user;
