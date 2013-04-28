@@ -318,13 +318,15 @@ namespace Foogle_WPF
                 //the following two functions should be called periodically by the administrator
                 //in case the user adds/removes skills / employment history
 
-                //store skills
-                storeUserSkills();
 
                 //store years of experience (float)
                 double exp = getYearsOfExperience();
 
                 storeBasicUser(text, exp);
+
+
+                //store skills
+                storeUserSkills();
 
                 xml_page = false; 
                 return;
@@ -433,7 +435,6 @@ namespace Foogle_WPF
 
 
                         storeUniqueSkillToDatabase(sname);
-                        
 
                         storeUserSkill(sname);
 
@@ -451,8 +452,17 @@ namespace Foogle_WPF
             }
         }
 
-        private void storeUserSkill(String skill_id)
+        private void storeUserSkill(String skill)
         {
+            //get user id
+
+
+
+            //get skill id
+
+
+
+
 
         }
 
