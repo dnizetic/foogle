@@ -28,7 +28,7 @@ namespace Foogle_WPF
         public ObservableCollection<FoogleUser> _KorisnikCollection =
             new ObservableCollection<FoogleUser>();
 
-        private void populateCollection()
+        public void populateCollection()
         {
             _KorisnikCollection.Clear();
 
@@ -50,6 +50,8 @@ namespace Foogle_WPF
         }
 
 
+
+
         public ObservableCollection<FoogleUser> KorisnikCollection
         {
             get
@@ -64,6 +66,8 @@ namespace Foogle_WPF
         public Endorsement()
         {
             populateCollection();
+
+            populateEndorsedCollection();
 
             InitializeComponent();
         }
@@ -85,5 +89,76 @@ namespace Foogle_WPF
 
         }
 
+
+        //endorsed collection
+        public static ObservableCollection<Recommendation> _EndorsedCollection =
+            new ObservableCollection<Recommendation>();
+
+        public static void populateEndorsedCollection()
+        {
+            _EndorsedCollection.Clear();
+
+            int prof_id = MainWindow.professor_id;
+
+            //get all professors 'p' that are unactivated
+            using (var context = new FoogleContext())
+            {
+                //neaktivirani profesori
+                var recomms = from a in context.Recommendations
+                                 where a.teacher.id.Equals(prof_id)
+                                 select a;
+
+
+                foreach (var p in recomms)
+                {
+                    _EndorsedCollection.Add(p);
+                }
+
+            }
+        }
+
+
+
+
+        public ObservableCollection<Recommendation> EndorsedCollection
+        {
+            get
+            {
+
+                return _EndorsedCollection;
+
+            }
+        }
+
+        private void DeleteEndorse(object sender, RoutedEventArgs e)
+        {
+            var r = ((Button)sender).DataContext as Recommendation;
+
+            if (r == null)
+                throw new InvalidOperationException("Invalid DataContext");
+
+            try
+            {
+
+                using (var context = new FoogleContext())
+                {
+
+                    //MessageBox.Show(r.id.ToString());
+
+                    Recommendation re = context.Recommendations.SingleOrDefault(c => c.id == r.id);
+
+                    context.Recommendations.Remove(re);
+                    context.SaveChanges();
+                }
+
+                populateEndorsedCollection();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message + err.InnerException);
+            }
+
+
+        }
     }
 }

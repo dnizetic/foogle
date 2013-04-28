@@ -73,6 +73,10 @@ namespace Foogle_WPF
             // TODO: Provjeri login status, dozvoli samo ako je prijavljen
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
 
+            //simple sort: # of skills matched (no formula)
+
+
+
             /*string searchText = searchBox.Text;
 
             String[] skills = searchText.Split(' ');
@@ -428,8 +432,11 @@ namespace Foogle_WPF
                         String sname = reader.ReadElementContentAsString();
 
 
-                        storeUniqueSkill(sname);
-                        //MessageBox.Show(sname);
+                        storeUniqueSkillToDatabase(sname);
+                        
+
+                        storeUserSkill(sname);
+
                         if (sname == null)
                             break;
                     }
@@ -444,10 +451,13 @@ namespace Foogle_WPF
             }
         }
 
+        private void storeUserSkill(String skill_id)
+        {
+
+        }
 
 
-
-        private void storeUniqueSkill(String skill)
+        private void storeUniqueSkillToDatabase(String skill)
         {
             try
             {

@@ -49,6 +49,7 @@ namespace Foogle_WPF
 
         private int user_id = 0;
 
+
         public SelectCategory(int u_id)
         {
 
@@ -71,6 +72,11 @@ namespace Foogle_WPF
         {
             //current professor_id (logged in)
             int prof_id = MainWindow.professor_id;
+
+            if (prof_id == 0)
+            {
+                throw new NotImplementedException();
+            }
 
 
             //student id
@@ -99,13 +105,15 @@ namespace Foogle_WPF
 
                     context.SaveChanges();
                 }
+
+                MessageBox.Show("Endorse uspjesan.");
+                Endorsement.populateEndorsedCollection();
+                this.Close();
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message + "\n" + err.InnerException);
             }
-
-
 
 
         }
