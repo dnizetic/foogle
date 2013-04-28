@@ -62,7 +62,7 @@ namespace Foogle_WPF
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
 
             //simple sort: # of skills matched (no formula)
-            string searchText = searchBox.Text;
+            string searchText = searchBox.Text.Trim();
 
             String[] skills = searchText.Split(' ');
 
@@ -94,6 +94,9 @@ namespace Foogle_WPF
                                                      select d;
 
 
+                                //unsuccessfull map, continue
+                                if (matched_skills.Count() == 0)
+                                    continue;
 
                                 Skill mapped_skill = matched_skills.First();
 
@@ -408,8 +411,6 @@ namespace Foogle_WPF
                     //email
                     //webBrowser1.Navigate("https://api.linkedin.com/v1/people/~/email-address?oauth2_access_token=" + access_token);
                 
-                    
-
                     //skills
                     //webBrowser1.Navigate("https://api.linkedin.com/v1/people/~/skills?oauth2_access_token=" + access_token);
 

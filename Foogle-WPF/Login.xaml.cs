@@ -32,7 +32,7 @@ namespace Foogle_WPF
             lab = l;
         }
         Registration registration = new Registration();
-        Welcome welcome = new Welcome();
+        //Welcome welcome = new Welcome();
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
@@ -51,14 +51,7 @@ namespace Foogle_WPF
             {
                 string email = textBoxEmail.Text;
                 string password = passwordBox1.Password;
-                /* SqlConnection con = new SqlConnection("Data Source=TESTPURU;Initial Catalog=Data;User ID=sa;Password=wintellect");
-                con.Open();
-                SqlCommand cmd = new SqlCommand("Select * from Registration where Email='" + email + "'  and password='" + password + "'", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet); */
+  
 
 
 

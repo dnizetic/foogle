@@ -38,9 +38,10 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="25" Header="ID" DisplayMemberBinding="{Binding id}"  />
-                    <GridViewColumn Width="150" Header="Email"  DisplayMemberBinding="{Binding Path=student.email}" />
-                    <GridViewColumn Width="75" Header="Ime" DisplayMemberBinding="{Binding Path=student.firstname}"/>
-                    <GridViewColumn Width="75" Header="Prezime" DisplayMemberBinding="{Binding Path=student.lastname}"/>
+                    <GridViewColumn Width="150" Header="Email"  DisplayMemberBinding="{Binding email}" />
+                    <GridViewColumn Width="75" Header="Ime" DisplayMemberBinding="{Binding firstname}"/>
+                    <GridViewColumn Width="75" Header="Prezime" DisplayMemberBinding="{Binding lastname}"/>
+                    <GridViewColumn Width="125" Header="Kategorija" DisplayMemberBinding="{Binding catname}"/>
 
 
                     <GridViewColumn  Header="Akcije">

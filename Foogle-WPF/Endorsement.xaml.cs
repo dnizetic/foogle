@@ -21,10 +21,6 @@ namespace Foogle_WPF
     public partial class Endorsement : Window
     {
 
-
-
-
-
         public ObservableCollection<FoogleUser> _KorisnikCollection =
             new ObservableCollection<FoogleUser>();
 
@@ -90,9 +86,21 @@ namespace Foogle_WPF
         }
 
 
+        public class EndorsedView
+        {
+            public int id { get; set; }
+            public string email { get; set; }
+            public string firstname { get; set; }
+            public string lastname { get; set; }
+
+            public string catname { get; set; }
+
+            public int rid { get; set; }
+        }
+
         //endorsed collection
-        public static ObservableCollection<Recommendation> _EndorsedCollection =
-            new ObservableCollection<Recommendation>();
+        public static ObservableCollection<EndorsedView> _EndorsedCollection =
+            new ObservableCollection<EndorsedView>();
 
         public static void populateEndorsedCollection()
         {
@@ -108,10 +116,18 @@ namespace Foogle_WPF
                                  where a.teacher.id.Equals(prof_id)
                                  select a;
 
-
-                foreach (var p in recomms)
+                List<Recommendation> list = recomms.ToList();
+                
+                foreach (var p in list)
                 {
-                    _EndorsedCollection.Add(p);
+                    _EndorsedCollection.Add(new EndorsedView { 
+                        id = p.student.id,
+                        email = p.student.email,
+                        firstname = p.student.firstname,
+                        lastname = p.student.lastname,
+                        catname = p.category.name,
+                        rid = p.id
+                    });
                 }
 
             }
@@ -120,7 +136,7 @@ namespace Foogle_WPF
 
 
 
-        public ObservableCollection<Recommendation> EndorsedCollection
+        public ObservableCollection<EndorsedView> EndorsedCollection
         {
             get
             {
@@ -132,7 +148,7 @@ namespace Foogle_WPF
 
         private void DeleteEndorse(object sender, RoutedEventArgs e)
         {
-            var r = ((Button)sender).DataContext as Recommendation;
+            var r = ((Button)sender).DataContext as EndorsedView;
 
             if (r == null)
                 throw new InvalidOperationException("Invalid DataContext");
@@ -145,7 +161,7 @@ namespace Foogle_WPF
 
                     //MessageBox.Show(r.id.ToString());
 
-                    Recommendation re = context.Recommendations.SingleOrDefault(c => c.id == r.id);
+                    Recommendation re = context.Recommendations.SingleOrDefault(c => c.id == r.rid);
 
                     context.Recommendations.Remove(re);
                     context.SaveChanges();
