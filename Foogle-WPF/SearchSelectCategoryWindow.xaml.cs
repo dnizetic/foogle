@@ -100,8 +100,11 @@ namespace Foogle_WPF
                                                      select d;
 
 
+                            //recommendations adding
                             exp_translated += (matched_categories.Count() * 1.5);
 
+
+                            //# of skills adding
                             exp_translated += (usr_skills.Count() / 10);
 
 
@@ -127,7 +130,7 @@ namespace Foogle_WPF
 
                     foreach (UserMatch u in sortedList)
                     {
-                        MessageBox.Show("User: " + u.user.firstname + ", exp: " + u.exp);
+                        //MessageBox.Show("User: " + u.user.firstname + ", exp: " + u.exp);
                     }
 
                     SearchBySkillResults ssr = new SearchBySkillResults(sortedList);
