@@ -9,7 +9,7 @@ namespace Foogle_WPF
     public class Skill
     {
 
-        public int id { get; set; }
+        public Int64 id { get; set; }
         public string name { get; set; }
 
     }

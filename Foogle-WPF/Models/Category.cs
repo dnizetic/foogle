@@ -9,7 +9,11 @@ namespace Foogle_WPF
     public class Category
     {
 
-        public int id { get; set; }
+        public Int64 id
+        {
+            get;
+            set;
+        }
         public string name { get; set; }
 
         public int master_category { get; set; }

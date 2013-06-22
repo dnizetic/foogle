@@ -8,7 +8,7 @@ namespace Foogle_WPF
 {
     public class Recommendation
     {
-        public int id { get; set; }
+        public Int64 id { get; set; }
 
 
         public virtual Category category { get; set; }

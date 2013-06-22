@@ -71,7 +71,7 @@ namespace Foogle_WPF
             //get all students, calculate # of matched skills
             var user_info = new List<UserMatch>();
 
-            int cat_id = CategoryCombo.SelectedIndex;
+            int cat_id = CategoryCombo.SelectedIndex + 1;
 
             try
             {
@@ -99,6 +99,7 @@ namespace Foogle_WPF
                                                      where d.user.id.Equals(f.id)
                                                      select d;
 
+                            //MessageBox.Show("Matched cats: " + matched_categories.Count().ToString());
 
                             //recommendations adding
                             exp_translated += (matched_categories.Count() * 1.5);

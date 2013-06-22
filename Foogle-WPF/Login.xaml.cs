@@ -78,7 +78,7 @@ namespace Foogle_WPF
                         MainWindow.logged_in = true;
 
                         FoogleUser f = usrs.First();
-                        MainWindow.professor_id = f.id;
+                        MainWindow.professor_id = Convert.ToInt32(f.id);
 
                         Close();
 

@@ -21,6 +21,7 @@ using System.IO;
 using System.Xml;
 using System.Runtime.InteropServices;
 using mshtml;
+using System.Data.SQLite;
 
 
 
@@ -36,6 +37,113 @@ namespace Foogle_WPF
         public MainWindow()
         {
             InitializeComponent();
+
+            
+            SQLiteConnection m_dbConnection;
+
+            //SQLiteConnection.CreateFile("MyDatabase.sqlite");
+
+            m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
+            m_dbConnection.Open();
+            //MessageBox.Show( m_dbConnection.State.ToString());
+            
+
+            string sql = @"
+                CREATE TABLE IF NOT EXISTS category  (
+                    id integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+                    name character varying(50) NOT NULL,
+                    master_category integer
+                );
+
+
+                CREATE TABLE  IF NOT EXISTS  foogle_user (
+                    id integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+                    email character varying(50) NOT NULL,
+                    firstname character varying(50),
+                    lastname character varying(50),
+                    role character(1) DEFAULT 'S',
+                    activity character(1) DEFAULT 'P',
+                    password character varying(45),
+                    confirmed boolean,
+                    linkedin_id character varying(255),
+                    linkedin character varying(255),
+                    exp real
+                );
+
+                CREATE TABLE IF NOT EXISTS recommendation  (
+                    category_id integer NOT NULL,
+                    teacher_id integer NOT NULL,
+                    student_id integer  NOT NULL,
+                    id integer NOT NULL  PRIMARY KEY AUTOINCREMENT,
+                    FOREIGN KEY (teacher_id) REFERENCES foogle_user(id),
+                    FOREIGN KEY (student_id) REFERENCES foogle_user(id),
+                    FOREIGN KEY (category_id) REFERENCES category(id)
+                );
+
+
+
+
+                CREATE TABLE  IF NOT EXISTS skill  (
+                    id integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+                    name character varying(50) NOT NULL
+                );
+
+
+                CREATE TABLE IF NOT EXISTS user_skills  (
+                    id integer NOT NULL PRIMARY KEY AUTOINCREMENT,
+                    user_id integer,
+                    skill_id integer,
+                    FOREIGN KEY (user_id) REFERENCES foogle_user(id),
+                    FOREIGN KEY (skill_id) REFERENCES skill(id)
+                );
+          
+     
+                INSERT OR REPLACE INTO category VALUES (1, 'Web development', 1);
+                INSERT OR REPLACE INTO category VALUES (2, 'Web design', 1);
+                INSERT OR REPLACE INTO category VALUES (3, 'Web programming', 1);
+                INSERT OR REPLACE INTO category VALUES (4, 'Ecommerce', 1);
+                INSERT OR REPLACE INTO category VALUES (5, 'UI design', 1);
+                INSERT OR REPLACE INTO category VALUES (6, 'Website QA', 1);
+                INSERT OR REPLACE INTO category VALUES (7, 'Website project managment', 1);
+                INSERT OR REPLACE INTO category VALUES (8, 'Other - Web development', 1);
+                INSERT OR REPLACE INTO category VALUES (9, 'Software development', 2);
+                INSERT OR REPLACE INTO category VALUES (10, 'Desktop applications', 2);
+                INSERT OR REPLACE INTO category VALUES (11, 'Game development', 2);
+                INSERT OR REPLACE INTO category VALUES (12, 'Scripts and utilities', 2);
+                INSERT OR REPLACE INTO category VALUES (13, 'Software Plug-ins', 2);
+                INSERT OR REPLACE INTO category VALUES (14, 'Mobile apps', 2);
+                INSERT OR REPLACE INTO category VALUES (15, 'Application interface design', 2);
+                INSERT OR REPLACE INTO category VALUES (16, 'Software project managment', 2);
+                INSERT OR REPLACE INTO category VALUES (17, 'Software QA', 2);
+                INSERT OR REPLACE INTO category VALUES (18, 'VOIP', 2);
+                INSERT OR REPLACE INTO category VALUES (19, 'Other - Software Development', 2);
+                INSERT OR REPLACE INTO category VALUES (20, 'Networking and information systems', 3);
+                INSERT OR REPLACE INTO category VALUES (21, 'Network administration', 3);
+                INSERT OR REPLACE INTO category VALUES (22, 'DBA - Database administration', 3);
+                INSERT OR REPLACE INTO category VALUES (23, 'Server administration', 3);
+                INSERT OR REPLACE INTO category VALUES (24, 'Other - Networking and information systems', 3);
+                INSERT OR REPLACE INTO category VALUES (25, 'ERP / CRM Implementation', 3);
+                INSERT OR REPLACE INTO category VALUES (26, 'Design and multimedia', 4);
+                INSERT OR REPLACE INTO category VALUES (27, 'Graphic design', 4);
+                INSERT OR REPLACE INTO category VALUES (28, 'Logo design', 4);
+                INSERT OR REPLACE INTO category VALUES (29, 'Illustration', 4);
+                INSERT OR REPLACE INTO category VALUES (30, 'Print design', 4);
+                INSERT OR REPLACE INTO category VALUES (31, '3D modelling & CAD', 4);
+                INSERT OR REPLACE INTO category VALUES (32, 'Audio production', 4);
+                INSERT OR REPLACE INTO category VALUES (33, 'Video production', 4);
+                INSERT OR REPLACE INTO category VALUES (34, 'Voice talent', 4);
+                INSERT OR REPLACE INTO category VALUES (35, 'Animation', 4);
+                INSERT OR REPLACE INTO category VALUES (36, 'Other - design & multimedia', 4);
+                INSERT OR REPLACE INTO category VALUES (37, 'Presentations', 4);
+                INSERT OR REPLACE INTO category VALUES (38, 'Engineering and technical design', 4);
+
+
+
+
+            ";
+
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery();
 
         }
 
@@ -89,7 +197,7 @@ namespace Foogle_WPF
                     prefix = text.Substring(0, index1 + 1);
         
 
-                string[] arr = ss.SuggestSkills(lastWord, prefix);
+                string[] arr = ss.SuggestSkillsSqlite(lastWord, prefix);
 
                 AutoCompleteBox b = (AutoCompleteBox) sender;
                 

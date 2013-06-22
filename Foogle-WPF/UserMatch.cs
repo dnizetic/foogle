@@ -11,7 +11,7 @@ namespace Foogle_WPF
     public class UserMatch
     {
         public FoogleUser user;
-        public int id { get; set; }
+        public Int64 id { get; set; }
 
         public int num_matches { get; set; }
 

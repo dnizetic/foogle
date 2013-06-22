@@ -9,7 +9,7 @@ namespace Foogle_WPF
     public class FoogleUser
     {
 
-        public int id { get; set; }
+        public Int64 id { get; set; }
         public string email { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }

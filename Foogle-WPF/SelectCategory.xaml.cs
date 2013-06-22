@@ -81,7 +81,7 @@ namespace Foogle_WPF
             int student_id = user_id;
 
             //category_id
-            int cat_id = EndorseCombo.SelectedIndex;
+            int cat_id = EndorseCombo.SelectedIndex + 1;
 
             //MessageBox.Show("prof_id: " + prof_id + ", student_id" + student_id + "cat_id " + cat_id);
 

@@ -78,7 +78,7 @@ namespace Foogle_WPF
             if (usr == null)
                 throw new InvalidOperationException("Invalid DataContext");
 
-            SelectCategory sc = new SelectCategory(usr.id);
+            SelectCategory sc = new SelectCategory(Convert.ToInt32( usr.id ));
 
             sc.Show();
 
@@ -120,13 +120,13 @@ namespace Foogle_WPF
                 
                 foreach (var p in list)
                 {
-                    _EndorsedCollection.Add(new EndorsedView { 
-                        id = p.student.id,
+                    _EndorsedCollection.Add(new EndorsedView {
+                        id = Convert.ToInt32(p.student.id),
                         email = p.student.email,
                         firstname = p.student.firstname,
                         lastname = p.student.lastname,
                         catname = p.category.name,
-                        rid = p.id
+                        rid = Convert.ToInt32(p.id)
                     });
                 }
 
@@ -174,6 +174,17 @@ namespace Foogle_WPF
                 MessageBox.Show(err.Message + err.InnerException);
             }
 
+
+        }
+
+        private void ShowProfile(object sender, RoutedEventArgs e)
+        {
+            var usr = ((Button)sender).DataContext as FoogleUser;
+
+            if (usr == null)
+                throw new InvalidOperationException("Invalid DataContext");
+
+            System.Diagnostics.Process.Start(usr.linkedin);
 
         }
     }
