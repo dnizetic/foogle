@@ -34,7 +34,6 @@ C:\Users\denis\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Endorsement.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Login.baml
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\LoginWindow.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Registration.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchBySkillResults.baml
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchSelectCategoryWindow.baml
@@ -43,7 +42,6 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Endorsement.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Login.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\MainWindow.g.cs
-C:\Users\denis\foogle\Foogle-WPF\obj\Debug\LoginWindow.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Registration.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchBySkillResults.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\SearchSelectCategoryWindow.g.cs

@@ -21,8 +21,6 @@ namespace Foogle_WPF
     public partial class SelectCategory : Window
     {
 
-
-
         public ObservableCollection<Category> _CategoriesCollection =
             new ObservableCollection<Category>();
 
@@ -107,7 +105,7 @@ namespace Foogle_WPF
                 }
 
                 MessageBox.Show("Endorse uspjesan.");
-                Endorsement.populateEndorsedCollection();
+                Endorsement.PopulateEndorsedCollection();
                 this.Close();
             }
             catch (Exception err)

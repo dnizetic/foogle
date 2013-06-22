@@ -31,7 +31,7 @@ namespace Foogle_WPF
             InitializeComponent();
             lab = l;
         }
-        Registration registration = new Registration();
+
         //Welcome welcome = new Welcome();
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -95,6 +95,7 @@ namespace Foogle_WPF
 
         private void buttonRegister_Click(object sender, RoutedEventArgs e)
         {
+            Registration registration = new Registration();
             registration.Show();
             Close();
         }

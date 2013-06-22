@@ -11,13 +11,13 @@
         <Button x:Name="SearchButton" Content="Traži" HorizontalAlignment="Right" Margin="0,146,169,0" VerticalAlignment="Top" Width="80" TabIndex="3" BorderThickness="3" Height="25" Uid="SerchButton" Click="SearchButton_Click"/>
         <!-- Image x:Name="LogoImage" Margin="15,40,10,0" Tag="Logo" IsHitTestVisible="False" Uid="LogoImage" Height="99" VerticalAlignment="Top" ToolTip="TODO: Logo goes here :)"/> -->
         <Button x:Name="LoginButton" Content="Prijava (prof.)" HorizontalAlignment="Right" Margin="0,10,139,0" VerticalAlignment="Top" Width="90" TabIndex="1" BorderThickness="3" Height="22" Uid="LoginButton" Click="LoginButton_Click" RenderTransformOrigin="1.093,0.555"/>
-        <Controls:AutoCompleteBox FilterMode="None" Populating="searchBoxPopulating"  x:Name="searchBox"  HorizontalAlignment="Left" Margin="128,146,0,0" VerticalAlignment="Top" Width="208"/>
+        <Controls:AutoCompleteBox FilterMode="None" Populating="SearchBoxPopulating"  x:Name="searchBox"  HorizontalAlignment="Left" Margin="128,146,0,0" VerticalAlignment="Top" Width="208"/>
         <Image Margin="111,52,234,459" Source="foogle.png" Stretch="Fill"/>
         <Button Content="Registracija (korisnik)" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="118" Click="UserRegisterButton"/>
         <Button Content="Registracija (prof.)" HorizontalAlignment="Left" Margin="143,10,0,0" VerticalAlignment="Top" Width="119" Click="RegistracijaProfesor"/>
         <Button x:Name="PrijavaAdminButton" Content="Administrator" HorizontalAlignment="Left" Margin="475,10,0,0" VerticalAlignment="Top" Width="105" Click="PrijavaAdminButton_Click" />
 
-        <WebBrowser Source="http://www.google.com" LoadCompleted="wbCompleted" x:Name="webBrowser1" HorizontalAlignment="Left" Height="401" Margin="10,189,0,0" VerticalAlignment="Top" Width="570"/>
+        <WebBrowser Source="http://www.google.com" LoadCompleted="WbCompleted" x:Name="webBrowser1" HorizontalAlignment="Left" Height="401" Margin="10,189,0,0" VerticalAlignment="Top" Width="570"/>
         <Label  x:Name="LoggedInLabel" HorizontalAlignment="Left" Margin="500,37,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="EndorsementButton" Content="Endorsement" HorizontalAlignment="Left" Margin="371,37,0,0" VerticalAlignment="Top" Width="90" Click="EndorsementButton_Click"/>
         <Button Content="Traži (kategorijski)" HorizontalAlignment="Left" Margin="445,146,0,0" VerticalAlignment="Top" Width="111" Height="25" Click="SearchByCategory"/>

@@ -32,7 +32,6 @@ namespace Foogle_WPF
     public partial class MainWindow : Window
     {
 
-        private static string mode = "dev";
 
         public MainWindow()
         {
@@ -72,7 +71,7 @@ namespace Foogle_WPF
 
         StudentSearch ss = new StudentSearch();
         //called on every character deletion / add
-        private void searchBoxPopulating(object sender, 
+        private void SearchBoxPopulating(object sender, 
                 System.Windows.Controls.PopulatingEventArgs e)
         {
             string text = searchBox.Text;
@@ -122,7 +121,7 @@ namespace Foogle_WPF
         bool xml_page = false;
         string access_token = "";
 
-        private void wbCompleted(object sender, NavigationEventArgs e)
+        private void WbCompleted(object sender, NavigationEventArgs e)
         {
             
 
@@ -148,7 +147,7 @@ namespace Foogle_WPF
                 //store years of experience (float)
                 double exp = sr.getYearsOfExperienceFromLinkedIn();
 
-                storeBasicUser(text, exp);
+                StoreBasicUser(text, exp);
 
 
                 //store skills
@@ -240,17 +239,10 @@ namespace Foogle_WPF
 
 
         StudentRegistration sr = new StudentRegistration();
-        private String getUserEmail()
-        {
-            return sr.getUserEmailFromLinkedIn();
-        }
 
 
 
-
-
-
-        private void storeBasicUser(String myXml, double exp)
+        private void StoreBasicUser(String myXml, double exp)
         {
             sr.saveIfUserDoesntExist(myXml, exp);
         }

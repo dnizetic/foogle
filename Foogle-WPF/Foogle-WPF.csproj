@@ -125,9 +125,6 @@
     <Compile Include="Models\UserSkills.cs" />
     <Compile Include="Models\FoogleContext.cs" />
     <Compile Include="Models\FoogleUser.cs" />
-    <Compile Include="LoginWindow.xaml.cs">
-      <DependentUpon>LoginWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\Recommendation.cs" />
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Registration.xaml.cs">
@@ -169,10 +166,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="LoginWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

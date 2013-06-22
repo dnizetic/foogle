@@ -24,7 +24,7 @@ namespace Foogle_WPF
         public ObservableCollection<FoogleUser> _KorisnikCollection =
             new ObservableCollection<FoogleUser>();
 
-        public void populateCollection()
+        public void PopulateCollection()
         {
             _KorisnikCollection.Clear();
 
@@ -61,9 +61,9 @@ namespace Foogle_WPF
 
         public Endorsement()
         {
-            populateCollection();
+            PopulateCollection();
 
-            populateEndorsedCollection();
+            PopulateEndorsedCollection();
 
             InitializeComponent();
         }
@@ -102,7 +102,7 @@ namespace Foogle_WPF
         public static ObservableCollection<EndorsedView> _EndorsedCollection =
             new ObservableCollection<EndorsedView>();
 
-        public static void populateEndorsedCollection()
+        public static void PopulateEndorsedCollection()
         {
             _EndorsedCollection.Clear();
 
@@ -167,7 +167,7 @@ namespace Foogle_WPF
                     context.SaveChanges();
                 }
 
-                populateEndorsedCollection();
+                PopulateEndorsedCollection();
             }
             catch (Exception err)
             {
