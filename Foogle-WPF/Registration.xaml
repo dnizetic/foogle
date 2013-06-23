@@ -2,10 +2,10 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Registration" Height="387" Width="528" Background="Black">
-    <Grid  Height="350" Width="525" Background="Bisque">
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registracija za profesore:" VerticalAlignment="Top" Width="212"  FontSize="17" FontStretch="ExtraCondensed"/>
+    <Grid  Height="350" Width="525" Background="#FF030011">
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,5,0,0" Name="textBlockHeading" Text="Registracija za profesore:" VerticalAlignment="Top" Width="212"  FontSize="17" FontStretch="ExtraCondensed" Foreground="White"/>
         <!--Button as a Link button using style-->
-        <Button Margin="451,5,12,288" Content="Login" Cursor="Hand" Click="Login_Click">
+        <Button Margin="451,5,12,322" Content="Login" Cursor="Hand" Click="Login_Click" Foreground="White">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <TextBlock TextDecorations="Underline"> 

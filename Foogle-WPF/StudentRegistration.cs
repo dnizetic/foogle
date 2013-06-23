@@ -195,8 +195,6 @@ namespace Foogle_WPF
 
                 }
 
-                //webBrowser1.Navigate("http://www.google.com");
-
                 MessageBox.Show("Uspjesno ste uneseni u bazu podataka.");
 
             }
@@ -363,11 +361,7 @@ namespace Foogle_WPF
                         if (usrs.Count() > 0)
                         {
                             MessageBox.Show("Vec ste registrirani.");
-
-                            //webBrowser1.Navigate("http://www.google.com");
-
                             return;
-
                         }
                     }
 
