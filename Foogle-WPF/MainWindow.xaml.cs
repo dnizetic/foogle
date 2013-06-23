@@ -43,7 +43,7 @@ namespace Foogle_WPF
             //SQLite support
             SQLiteConnection m_dbConnection;
 
-            //SQLiteConnection.CreateFile("MyDatabase.sqlite");
+           //SQLiteConnection.CreateFile("MyDatabase.sqlite");
 
             m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
             m_dbConnection.Open();
@@ -97,7 +97,8 @@ namespace Foogle_WPF
                     FOREIGN KEY (user_id) REFERENCES foogle_user(id),
                     FOREIGN KEY (skill_id) REFERENCES skill(id)
                 );
-          
+                
+               
                 drop trigger if exists provjera;
 
 
@@ -173,8 +174,7 @@ namespace Foogle_WPF
                 INSERT OR REPLACE INTO category VALUES (36, 'Other - design & multimedia', 4);
                 INSERT OR REPLACE INTO category VALUES (37, 'Presentations', 4);
                 INSERT OR REPLACE INTO category VALUES (38, 'Engineering and technical design', 4);
-
-
+                
             ";
 
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
@@ -443,10 +443,8 @@ namespace Foogle_WPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            IspisKorisnikaReport ik = new IspisKorisnikaReport();
-
-            
-            ik.Show();
+            Reports r = new Reports();
+            r.Show();
         }
 
     }

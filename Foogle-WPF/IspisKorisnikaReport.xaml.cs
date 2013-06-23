@@ -20,10 +20,11 @@ namespace Foogle_WPF
         {
             InitializeComponent();
             ispisKorisnika.Load += ispisKorisnika_Load;
+            ispisKorisnika.LocalReport.EnableHyperlinks = true;
         }
 
         private bool _isReportViewerLoaded;
-        void ispisKorisnika_Load(object sender, EventArgs e)
+        void ispisKorisnika_Load(object sender, EventArgs e)// ispisKorisnika = ReportViewer
         {
 
 

@@ -185,8 +185,14 @@
       <DependentUpon>FoogleDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="GifImage.cs" />
+    <Compile Include="IspisKategorijaReport.xaml.cs">
+      <DependentUpon>IspisKategorijaReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IspisKorisnikaReport.xaml.cs">
       <DependentUpon>IspisKorisnikaReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IspisSkillovaReport.xaml.cs">
+      <DependentUpon>IspisSkillovaReport.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -199,6 +205,9 @@
     <Compile Include="Models\Skill.cs" />
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.xaml.cs">
+      <DependentUpon>Reports.xaml</DependentUpon>
     </Compile>
     <Compile Include="SearchBySkillResults.xaml.cs">
       <DependentUpon>SearchBySkillResults.xaml</DependentUpon>
@@ -220,7 +229,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="IspisKategorijaReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="IspisKorisnikaReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IspisSkillovaReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -241,6 +258,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,7 +292,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="IspisKategorija_report.rdlc" />
     <EmbeddedResource Include="IspisKorisnika_report.rdlc" />
+    <EmbeddedResource Include="IspisSkillova_report.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
