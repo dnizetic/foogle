@@ -22,5 +22,16 @@ namespace Foogle_WPF.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=D:\\Users\\Ljiljana\\Documents\\GitHub\\foogle\\Foogle-WPF\\MyDatabase.sqlit" +
+            "e")]
+        public string MyDatabaseConnectionString {
+            get {
+                return ((string)(this["MyDatabaseConnectionString"]));
+            }
+        }
     }
 }

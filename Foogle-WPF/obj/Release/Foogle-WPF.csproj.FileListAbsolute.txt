@@ -72,3 +72,6 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Release\Foogle-WPF.application
 C:\Users\denis\foogle\Foogle-WPF\obj\Release\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\obj\Release\Foogle-WPF.pdb
 C:\Users\denis\foogle\Foogle-WPF\obj\Release\Foogle-WPF.csprojResolveAssemblyReference.cache
+D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\bin\Release\Foogle-WPF.exe.config
+D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Release\Foogle-WPF.exe
+D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Release\Foogle-WPF.pdb
