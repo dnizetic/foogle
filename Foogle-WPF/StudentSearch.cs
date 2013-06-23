@@ -13,13 +13,15 @@ namespace Foogle_WPF
     public class StudentSearch
     {
 
-        String[] suggs = new String[10];
+        public String[] suggs = new String[10];
         public string searchQuery = "";
         string prefix = "";
         public String[] SuggestSkillsSqlite(String searchText, String prefix)
         {
             suggs = new String[10];
-            this.searchQuery = searchText;
+            this.searchQuery = cleanString( searchText );
+
+
             this.prefix = prefix;
 
             Thread t2 = new Thread(new ThreadStart(PopulateSuggestSkills));
@@ -29,6 +31,15 @@ namespace Foogle_WPF
 
 
             return suggs;
+        }
+
+        public string cleanString(String input)
+        {
+            String new_str = "";
+
+            new_str = input.Trim().ToLower();
+
+            return new_str;
         }
 
         private void PopulateSuggestSkills()

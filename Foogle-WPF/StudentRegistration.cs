@@ -13,33 +13,52 @@ namespace Foogle_WPF
     public class StudentRegistration
     {
 
+
+        public bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public static String access_token = "";
 
 
         public String getUserEmailFromLinkedIn()
         {
 
-            string url = "https://api.linkedin.com/v1/people/~/email-address?oauth2_access_token=" + access_token;
-
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
-
-            Stream resStream = resp.GetResponseStream();
-            StreamReader rdr = new StreamReader(resStream);
-            string text = rdr.ReadToEnd();
-
-            //MessageBox.Show(text);
-
-
             try
             {
+
+                string url = "https://api.linkedin.com/v1/people/~/email-address?oauth2_access_token=" + access_token;
+
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
+
+                Stream resStream = resp.GetResponseStream();
+                StreamReader rdr = new StreamReader(resStream);
+                string text = rdr.ReadToEnd();
+
+                //MessageBox.Show(text);
+
+
+
                 using (XmlReader reader = XmlReader.Create(new StringReader(text)))
                 {
 
                     reader.ReadToFollowing("email-address");
                     String email = reader.ReadElementContentAsString();
 
-                    return email;
+                    if(IsValidEmail(email))
+                        return email;
+                    
+                    return "";
 
                 }
             }
@@ -53,24 +72,43 @@ namespace Foogle_WPF
 
         }
 
+
+        public double ConvertDifferenceToYears(DateTime a, DateTime b)
+        {
+            TimeSpan duration = b - a;
+
+            double days = duration.TotalDays;
+
+            double years = days / 365.242199;
+            int wholeYears = (int)Math.Floor(years);
+
+            double partYears = years - wholeYears;
+            double approxMonths = partYears * 12;
+
+            double total = wholeYears + (approxMonths / 12);
+
+            return total;
+        }
+
+
         public double getYearsOfExperienceFromLinkedIn()
         {
 
-            string url = "https://api.linkedin.com/v1/people/~/positions?oauth2_access_token=" + access_token;
-
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
-
-            Stream resStream = resp.GetResponseStream();
-            StreamReader rdr = new StreamReader(resStream);
-            string text = rdr.ReadToEnd();
-
-            //Positions output
-            //MessageBox.Show(text);
-
-
             try
             {
+                string url = "https://api.linkedin.com/v1/people/~/positions?oauth2_access_token=" + access_token;
+
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
+
+                Stream resStream = resp.GetResponseStream();
+                StreamReader rdr = new StreamReader(resStream);
+                string text = rdr.ReadToEnd();
+
+                //Positions output
+                //MessageBox.Show(text);
+
+
                 using (XmlReader reader = XmlReader.Create(new StringReader(text)))
                 {
 
@@ -100,22 +138,7 @@ namespace Foogle_WPF
                         DateTime a = new DateTime(start_year, start_month, 01);
                         DateTime b = new DateTime(end_year, end_month, 01);
 
-                        TimeSpan duration = b - a;
-
-                        double days = duration.TotalDays;
-
-                        double years = days / 365.242199;
-                        int wholeYears = (int)Math.Floor(years);
-
-                        double partYears = years - wholeYears;
-                        double approxMonths = partYears * 12;
-
-                        //MessageBox.Show("Years of exp in company: " 
-                        //    + wholeYears + ", months: " + approxMonths);
-
-
-                        double total = wholeYears + (approxMonths / 12);
-
+                        double total = ConvertDifferenceToYears(a, b);
 
                         sum += total;
                     }
@@ -304,23 +327,7 @@ namespace Foogle_WPF
 
         }
 
-        public string getNumberOfSkills()
-        {
-            try
-            {
-                using (var context = new FoogleContext())
-                {
-                    var skills = from b in context.Skills
-                                 select b;
-
-                    return skills.Count().ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
+        
 
 
         public void saveIfUserDoesntExist(String myXml, double exp)
