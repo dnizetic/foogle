@@ -71,3 +71,4 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe.manifest
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.application
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache

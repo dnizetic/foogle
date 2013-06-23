@@ -47,7 +47,6 @@ namespace Foogle_WPF
 
             m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
             m_dbConnection.Open();
-            //MessageBox.Show( m_dbConnection.State.ToString());
             
 
             string sql = @"
@@ -100,6 +99,24 @@ namespace Foogle_WPF
                 );
           
                 drop trigger if exists provjera;
+
+
+                CREATE TRIGGER provjera BEFORE INSERT 
+                ON foogle_user when
+                (
+                   select email  from foogle_user where email = NEW.email
+        
+                )
+
+                BEGIN
+                        delete from recommendation where student_id=(select id from foogle_user where email=NEW.email);
+	                    delete from recommendation where teacher_id=(select id from foogle_user where email=NEW.email);
+	                    delete from user_skills where user_id = (select id from foogle_user where email=NEW.email);
+	                    delete from foogle_user where email = NEW.email;
+                END;
+
+
+
                 /*create trigger provjera before insert on foogle_user 
                 when (
 	                select count(*) as postoji from (

@@ -16,6 +16,7 @@ namespace Foogle_WPF
         public String[] suggs = new String[10];
         public string searchQuery = "";
         string prefix = "";
+
         public String[] SuggestSkillsSqlite(String searchText, String prefix)
         {
             suggs = new String[10];
