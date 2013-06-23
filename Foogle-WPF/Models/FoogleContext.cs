@@ -20,7 +20,7 @@ namespace Foogle_WPF
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Recommendation> Recommendations { get; set; }
         public DbSet<UserSkills> UserSkills { get; set; }
-
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Map to the correct Chinook Database tables

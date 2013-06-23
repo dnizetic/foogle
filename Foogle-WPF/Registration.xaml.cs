@@ -129,11 +129,12 @@ namespace Foogle_WPF
                     mail.From = new MailAddress("fooglefoi@gmail.com");
                     mail.Subject = "Foogle - registracija";
                     mail.Body = "Kad vas admin potvrdi, poslat cemo vam email.";
+                    
 
                     try
                     {
-                        client.Send(mail);
-                        MessageBox.Show("Zahtjev za registracijom je primljen. Kad vas racun bude verificiran od strane administratora, o tome cete biti obavijesteni emailom.");
+                        //client.Send(mail);
+                        MessageBox.Show("Zahtjev za registracijom je primljen.");
 
                         using (var context = new FoogleContext())
                         {

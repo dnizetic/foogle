@@ -64,3 +64,10 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.application
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\PresentationCore.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\PresentationFramework.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.ComponentModel.DataAnnotations.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.Data.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.dll
+C:\Users\denis\foogle\Foogle-WPF\bin\Debug\System.Net.Http.dll

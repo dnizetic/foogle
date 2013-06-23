@@ -115,7 +115,7 @@ namespace Foogle_WPF
 
             try
             {
-                client.Send(mail);
+                //client.Send(mail);
             }
             catch (Exception err)
             {
@@ -125,7 +125,7 @@ namespace Foogle_WPF
             //update listview
             populateCollection();
             
-            MessageBox.Show("Success.");
+            MessageBox.Show("Uspjeh..");
         }
 
 

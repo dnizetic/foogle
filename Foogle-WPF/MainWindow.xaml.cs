@@ -22,6 +22,7 @@ using System.Xml;
 using System.Runtime.InteropServices;
 using mshtml;
 using System.Data.SQLite;
+using System.Threading;
 
 
 
@@ -138,8 +139,6 @@ namespace Foogle_WPF
                 INSERT OR REPLACE INTO category VALUES (38, 'Engineering and technical design', 4);
 
 
-
-
             ";
 
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
@@ -169,6 +168,11 @@ namespace Foogle_WPF
 
             //simple sort: # of skills matched (no formula)
             string searchText = searchBox.Text.Trim();
+
+
+            //put this into thread
+
+            
 
             ss.SearchByQuery(searchText);
 

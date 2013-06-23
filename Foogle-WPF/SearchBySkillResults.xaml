@@ -11,8 +11,8 @@
                     <GridViewColumn Width="150" Header="Email" DisplayMemberBinding="{Binding email}" />
                     <GridViewColumn Width="75" Header="Ime" DisplayMemberBinding="{Binding firstname}"/>
                     <GridViewColumn Width="75" Header="Prezime" DisplayMemberBinding="{Binding lastname}"/>
-                    <GridViewColumn Width="90" Header="Skills matched" DisplayMemberBinding="{Binding num_matches}"/>
-                    <GridViewColumn Width="90" Header="Experience" DisplayMemberBinding="{Binding exp}"/>
+                    <GridViewColumn Width="160" Header="Broj podudaranih vještina" DisplayMemberBinding="{Binding num_matches}"/>
+                    <GridViewColumn Width="60" Header="Experience" DisplayMemberBinding="{Binding exp}"/>
 
                   
 
