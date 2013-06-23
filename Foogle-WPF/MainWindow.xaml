@@ -41,11 +41,11 @@
         <Rectangle Height="32" VerticalAlignment="Top" IsHitTestVisible="False" Fill="#FF1F1F1F"/>
         <Button x:Name="SearchButton" Content="Pretraživanje" HorizontalAlignment="Right" Margin="0,150,124,0" VerticalAlignment="Top" Width="80" TabIndex="3" BorderThickness="1" Height="25" Uid="SerchButton" Click="SearchButton_Click"/>
         <!-- Image x:Name="LogoImage" Margin="15,40,10,0" Tag="Logo" IsHitTestVisible="False" Uid="LogoImage" Height="99" VerticalAlignment="Top" ToolTip="TODO: Logo goes here :)"/> -->
-        <Button x:Name="LoginButton" Style="{StaticResource TopMenuButton}" Content="Prijava (prof.)" HorizontalAlignment="Right" Margin="0,0,105,0" VerticalAlignment="Top" Width="90" TabIndex="1" BorderThickness="1,4,1,0" Height="32" Uid="LoginButton" Click="LoginButton_Click" RenderTransformOrigin="1.093,0.555" Background="#00000000" Foreground="White"/>
+        <Button x:Name="LoginButton" Style="{StaticResource TopMenuButton}" Content="Prijava" HorizontalAlignment="Right" Margin="0,0,217,0" VerticalAlignment="Top" Width="85" TabIndex="1" BorderThickness="1,4,1,0" Height="32" Uid="LoginButton" Click="LoginButton_Click" RenderTransformOrigin="1.093,0.555" Background="#00000000" Foreground="White"/>
         <Controls:AutoCompleteBox FilterMode="None" Populating="SearchBoxPopulating"  x:Name="searchBox" Margin="76,150,209,0" VerticalAlignment="Top" Height="25"/>
-        <Button Content="Registracija (korisnik)" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Click="UserRegisterButton" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" Margin="0"/>
-        <Button Content="Registracija (prof.)" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Left" Margin="123,0,0,0" VerticalAlignment="Top" Width="119" Click="RegistracijaProfesor" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White"/>
-        <Button x:Name="PrijavaAdminButton" Style="{StaticResource TopMenuButton}" Content="Administrator" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Width="105" Click="PrijavaAdminButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" />
+        <Button Content="Studenti - LinkedIn prijava" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Click="UserRegisterButton" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" Margin="0"/>
+        <Button Content="Registracija za profesore" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Left" Margin="173,0,0,0" VerticalAlignment="Top" Width="151" Click="RegistracijaProfesor" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White"/>
+        <Button x:Name="PrijavaAdminButton" Style="{StaticResource TopMenuButton}" Content="Administracija" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Width="105" Click="PrijavaAdminButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" />
 
         <WebBrowser Source="http://www.google.com/" LoadCompleted="WbCompleted" x:Name="webBrowser1" Margin="8,180,8,8">
             <WebBrowser.OpacityMask>
@@ -56,7 +56,7 @@
             </WebBrowser.OpacityMask>
         </WebBrowser>
         <Label  x:Name="LoggedInLabel" HorizontalAlignment="Right" Margin="0,30,10,0" VerticalAlignment="Top" Width="95" Height="25"/>
-        <Button x:Name="EndorsementButton" Style="{StaticResource TopMenuButton}" Content="Endorsement" HorizontalAlignment="Right" Margin="0,0,195,0" VerticalAlignment="Top" Width="90" Click="EndorsementButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White"/>
+        <Button x:Name="EndorsementButton" Style="{StaticResource TopMenuButton}" Content="Potvrda vještina" HorizontalAlignment="Right" Margin="0,0,105,0" VerticalAlignment="Top" Width="112" Click="EndorsementButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White"/>
         <Button Content="Traži po kategoriji" HorizontalAlignment="Right" Margin="0,150,8,0" VerticalAlignment="Top" Width="111" Height="25" Click="SearchByCategory"/>
         <Button Visibility="Hidden" Click="TestDataButton" Content="Testni podaci (pretr.)" HorizontalAlignment="Left" Margin="445,119,0,0" VerticalAlignment="Top" Width="111"/>
         <controls:GifImage x:Name="gifImage" Stretch="None" GifSource="/page-loader.gif" AutoStart="True" HorizontalAlignment="Stretch" Height="300" Margin="144,180,144,8" VerticalAlignment="Stretch" Width="300" IsHitTestVisible="False"   />
