@@ -1,0 +1,598 @@
+commit 41cb88a59e6e914440649a65e6a8cb579c7dcb0d
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Jun 23 09:51:29 2013 +0200
+
+    final touches
+
+commit 8b388062b7f60822ad6a1ef47d373fd10c9ae3ec
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Jun 23 09:00:09 2013 +0200
+
+    Unit tests added
+
+commit ecaea7613eac434b641af5f3f52879993a2b49c7
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Jun 23 07:58:22 2013 +0200
+
+    references update
+
+commit c0e90bd4b15c96cfd4ed558f2207e9291f6c9ca8
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Jun 23 06:06:05 2013 +0200
+
+    copy local true
+
+commit 8673b0675a376843e29c43e8d511d9b115db636b
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Sat Jun 22 15:00:20 2013 +0200
+
+    tehnička
+
+commit 28483d85fd1be8378971b948c1c7e69aef1cf554
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Sat Jun 22 14:24:36 2013 +0200
+
+    korisnička + tehnička
+    
+    dodati priču s izvještajima kod administratora (korisnička)
+
+commit ac55e7bc7c0b3c75b34a672d4d38670f2666e971
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sat Jun 22 09:53:28 2013 +0200
+
+    sqlite support
+
+commit 75e2752c831ec54e3410c321321270f94d5451eb
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sat Jun 22 04:33:05 2013 +0200
+
+    class d.
+
+commit 1c4252526f5289a9a1b9916a4dbc0dbc496b4dd6
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sat Jun 22 01:24:57 2013 +0200
+
+    Dijagrami, refactoring, optimizacija
+
+commit 591e8a67e1869a0ab1f46c90b3dd6433ea46222d
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 23:19:38 2013 +0200
+
+    Cleanup
+
+commit 05a313389e75944d062002551d6efb64ebcf1c53
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 23:14:07 2013 +0200
+
+    Endorse list bug fixed.
+
+commit ebbe8c0df861d9d53a79dc68939dfc1b1daf6075
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 22:28:23 2013 +0200
+
+    Search by category implemented.
+
+commit f31359712f12291b8020370ee8015d468f8eacbc
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 20:35:21 2013 +0200
+
+    Cleanup, db change
+
+commit 7ce1c96e0d6ab76307717dcfe8cca5867a1d417d
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 20:27:17 2013 +0200
+
+    user email fetched from linkedin. search results displayed OK.
+
+commit 5395189dbd27efe6292a359937df4af2b34e2850
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 19:41:12 2013 +0200
+
+    Search by skill algorithm OK. TODO: display results.
+
+commit 8ee4db4b66451b47dc594c62d18929997ec6b578
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 18:42:36 2013 +0200
+
+    user skills stored upon registration.
+
+commit 52253b1b22dee55a508a4d6c44e5db7f6d72b56d
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 04:07:31 2013 +0200
+
+    DB change, etc. cleanup
+
+commit 4788ec49d529d089988fee1234835ad27426bfeb
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 03:50:41 2013 +0200
+
+    Remove endorses added
+
+commit 088c8d9ab38685188bfa4127a272cf8cb05b501a
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 02:49:50 2013 +0200
+
+    Prvi uspjesni endorse.
+
+commit 85d738bb4f54780203321c5106c54363b89b00a7
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 01:53:18 2013 +0200
+
+    SelectCategory modified
+
+commit 7a8ac23a86daa012edd7124209dbe00e32ad3219
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 01:26:13 2013 +0200
+
+    Years of experience extraction added.
+
+commit 1e76bae2c2ac136bb18d0935366a010b66f6d031
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 28 00:40:43 2013 +0200
+
+    Dinamicki unos skillova na temelju Linkedin profila
+
+commit c82b7fc3988b03ff716cff3a284717f64fbf12b6
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Sat Apr 27 20:03:11 2013 +0200
+
+    promjena baze
+    
+    dodani password, linkedin, linkedin_id
+
+commit fee6928d0615b5aba8515e41c1cd87eb3f5cfd05
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sat Apr 27 19:17:00 2013 +0200
+
+    code[1] bug fix.
+
+commit 38629bb24361a0fc06484822c8396cc997116ffe
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sat Apr 27 18:26:35 2013 +0200
+
+    Professor login OK. Endorsement: initial phase.
+
+commit 6b1ab4c519feda9a978b9f354e1a514d7141e765
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sat Apr 27 17:18:52 2013 +0200
+
+    Admin - authorize professors completed.
+
+commit 6a79dfabdf166a22eada76f4d78a9d750449c8dd
+Author: zv3rk4 <zv3rk4@gmail.com>
+Date:   Sat Apr 27 12:13:11 2013 +0200
+
+    Connection string promijenen na miro.foi.hr
+    
+    Ako vam ne radi povezivanje, zapamtite error i javite mi se osobno preko
+    skypa, fejsa ili maila!
+
+commit 82a786dfb2f9c34fdecab0125526f3c94a6a7d13
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Sat Apr 27 11:31:28 2013 +0200
+
+    UML - use case
+
+commit c46ad0d74165de474a67282225af6400cb3b0707
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 26 19:25:54 2013 +0200
+
+    DB added: latest.pdd
+
+commit be709e9a9cb079f28c2416cc373cb4abe7446a75
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 26 19:21:48 2013 +0200
+
+    Linkedin authorization complete: testing needed.
+
+commit e279a9c369466b59f17f6e58b651a943ffde2735
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 26 17:27:59 2013 +0200
+
+    Layout updated. TODO: extract XML (firstname, lastname)
+
+commit 946bc810e2db4c198cc9b118e59ff57ef2a1be92
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Fri Apr 26 07:17:22 2013 +0200
+
+    Brisanje constraintova
+    
+    Nova foogle.dump nema podataka i koristite je za restore baze na
+    linuxima, foogle.backup koristite za restore na windowsima (desni klik,
+    restore, .backup, restore), mislim da i nova skripta radi... ugl. ove
+    nove datoteke nemaju check constrainte ni unešene podatke. Constraintove
+    mogu naknadno dodati.  foogle-sfia.dump je stari file sa constraintevima
+    i sfia podacima. Mislim da treba ispraviti neke sql naredbe u projektu
+    koje koriste tablice koje ne postoje u finalnoj verziji baze...
+
+commit 701467329ab717312aba6a15acd576d06b32bf46
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Thu Apr 25 21:25:56 2013 +0200
+
+    bit u boolean - foogle.dump
+
+commit adb80411af24e4dbb9fef26efdd216d5ab8027c7
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Thu Apr 25 04:39:09 2013 +0200
+
+    Linkedin Autorizacija: uspjesna integracija, vidi kod
+
+commit 11d8aefb26fbfad705f9a7443d5db0a7ebd89905
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Thu Apr 25 01:21:21 2013 +0200
+
+    Registration: fixed bugs, baza.pdd updated
+
+commit 14cd8adbfe62cd507b471457662d76f330551717
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Wed Apr 24 23:13:16 2013 +0200
+
+    Added project: Login_Register_WPF - integration required
+
+commit 0675933908d6a5adab5c7c463bd3c3a0def6b2a8
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Wed Apr 24 22:02:41 2013 +0200
+
+    Add: models seperated
+
+commit cf1750ce81235e98d0dd862b358f857e05ccd627
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Wed Apr 24 22:01:01 2013 +0200
+
+    Cleanup: models in root
+
+commit d03857b2531fea85b349b8d4134b986431565d8e
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Wed Apr 24 11:37:39 2013 +0200
+
+    FINAL FOOGLE_DB
+    
+    foogle.dump se restora u bazu... unijela sam svojih 22 skillova za 1.
+    kategoriju-nastavite unositi... možete postaviti bazu na server ...
+    psql<foogle.dump
+
+commit 81539daff78fff73059b0434d3fde6e0c83066fb
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 23 21:23:10 2013 +0200
+
+    Email sending working: fooglefoi@gmail.com
+
+commit 42e8afa77cb0606fa34d1d5c271c8af1fdd4438e
+Author: Anto <atomasfoi@live.com>
+Date:   Fri Apr 19 10:29:09 2013 +0200
+
+    ERA model up to date
+    
+    Eto malo razgovarali ja i Ljiljana pa je ona nešto našvrljala a ja
+    napravio, pa pogledajte valja li to i slobodno pitajte ukoliko nije
+    jasno, kako bi Žugec rekao: "Pitajte, ako nije jasno pitajte".
+    
+    Imate na slici komentare pa pročitajte
+
+commit 0cf88b8aab21c2aae83cd5d3d0b327aecfe4c4e8
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Thu Apr 18 20:35:32 2013 +0200
+
+    Professor registration
+
+commit 2b5c56286154cca32c0c7fcd48e104483b77de4e
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 16 11:29:33 2013 +0200
+
+    Cleanup folders
+
+commit d79598a8ab42749834c513c04da32345adabaac7
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 16 11:26:03 2013 +0200
+
+    Test commit
+
+commit 86008f5c5426e7edf3dbcde393dbdcf37d66c236
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 16 11:25:39 2013 +0200
+
+    Test commit
+
+commit 9d71913bd8dac66284ae63665eeb421dc1224c98
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 16 11:17:55 2013 +0200
+
+    Dodan projekt za LinkedIn autorizaciju.
+    
+    Treba ga integrirat u glavni projekt.
+    
+    Isto tak, vjerojatno cemo trebat migrirat na WindowsForms jer je LinkedIn
+    autorizacija napisana u WinForms.
+    
+    LP
+
+commit 5f4b060eb8c99db9921727fbfca0b008ab736053
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 16 11:09:44 2013 +0200
+
+    Dodan je projekt "LinkedIn-Windows-Client-Master"
+    Rjesenje u tom projektu treba integrirat u glavnu aplikaciju.
+    
+    Vjerojatno cemo trebat se prebacit na windows forms zato sto je LinkedIn
+    projekt WindowsForm aplikaicija.
+    
+    TODO: prouciti kak funkcionira autorizacija u kodu, i nakon uspjesne
+    autorizacije sa Linkedinom, korisnika spremit u bazu.
+
+commit ebbbc99f5690e7661e9d3916775b9e1aeca8cbb5
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 14 19:42:49 2013 +0200
+
+    Added Entity Framework support for PostgreSQL
+
+commit 5fcc4127fc1a8cdf046f91ca267e3fe95946da90
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 14 18:53:46 2013 +0200
+
+    SearchButton_Click() upgraded
+
+commit 5fb50f05eadf6419afa0e730c876d72273e59a6b
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 14 18:42:33 2013 +0200
+
+    Build bug fixed
+
+commit c4aa0ac1d473faf8801ebe60520f750c39a2032b
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Sun Apr 14 18:25:59 2013 +0200
+
+    Fixed loading issue
+
+commit 4cb3b4db1f83fddf949aabcb67b96a072764f74c
+Merge: da34fb1 5364d75
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Tue Apr 9 11:22:04 2013 +0200
+
+    Merge branch 'master' of https://github.com/dnizetic/foogle
+    
+    Conflicts:
+    	Foogle-WPF/bin/Debug/Foogle-WPF.exe
+    	Foogle-WPF/bin/Debug/Foogle-WPF.pdb
+    	Foogle-WPF/obj/Debug/Foogle-WPF.exe
+    	Foogle-WPF/obj/Debug/Foogle-WPF.g.resources
+    	Foogle-WPF/obj/Debug/Foogle-WPF.pdb
+    	etc/denis_prijedlog/student_ranking.txt
+    	foogle.v11.suo
+
+commit 5364d7553f00d7b19acb67d293fd41b43fee090d
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Mon Apr 8 14:28:00 2013 +0200
+
+    Logo/search finished
+
+commit da34fb101495fc2dac9a8c2f9413541a271dd7c0
+Author: Anto <atomasfoi@live.com>
+Date:   Sun Apr 7 04:33:08 2013 +0200
+
+    ERA model prijedlog
+    
+    Išao sam po Denisovom modelu i samo mijenjao prema onome što vidim te
+    uvodio svoju ideju.
+    Glavna razlika je u tome što sada možemo vidjeti koji skil spada pod
+    koju kategoriju te što studente i profesore isto tako razvrstavamo po
+    kategoriji.
+    Ono što sam dodao je rejting points. Gledamo koji profesor ima koji
+    skill te prema tome skillu, ali i prema title-u (prof, ass, dr.sc)
+    dodjeljujemo određene influence bodove koji će se razlikovati jer za
+    određeni skill dr. može dati manje bodova od prof. ako nema te skillove
+    evidentirane ili ne spada uopće u tu kategoriju skillova.
+    
+    Eto, nadam se da ste skužili na što sam ciljao, ponavljam nisam još ušao
+    detaljno u projekt pa gledajte kroz prste ovaj ERA.
+
+commit 3d3646bf9252f992590b87d5dc64edb4c00bb79e
+Merge: f3dc29e 70e80eb
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Fri Apr 5 22:21:25 2013 +0200
+
+    Merge branch 'master' of https://github.com/dnizetic/foogle
+    
+    Conflicts:
+    	Foogle-WPF/bin/Debug/Foogle-WPF.exe
+    	Foogle-WPF/bin/Debug/Foogle-WPF.pdb
+    	Foogle-WPF/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+    	Foogle-WPF/obj/Debug/Foogle-WPF.csproj.FileListAbsolute.txt
+    	Foogle-WPF/obj/Debug/Foogle-WPF.csprojResolveAssemblyReference.cache
+    	Foogle-WPF/obj/Debug/Foogle-WPF.exe
+    	Foogle-WPF/obj/Debug/Foogle-WPF.g.resources
+    	Foogle-WPF/obj/Debug/Foogle-WPF.pdb
+    	Foogle-WPF/obj/Debug/Foogle-WPF_MarkupCompile.cache
+    	Foogle-WPF/obj/Debug/Foogle-WPF_MarkupCompile.i.cache
+    	foogle.v11.suo
+
+commit 70e80ebd789e2c7ca8ce66631c62ffeb7648d1f9
+Author: dnizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 19:38:00 2013 +0300
+
+    Update student_ranking.txt
+
+commit de19e0aa9cee4b9c21c12884f706bbda60479d74
+Author: dnizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 19:32:39 2013 +0300
+
+    Update student_ranking.txt
+
+commit ddd21e1101fd238b1e3a19ccbb2c237ee3872d2e
+Author: dnizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 19:31:54 2013 +0300
+
+    Update student_ranking.txt
+
+commit d2550229779124394bf364d3abbb26ba05d56fb3
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 18:26:13 2013 +0200
+
+    Updated sistem rangiranja
+
+commit f7e3a124e713ce8a5f76c8c6b3a00bffc49b129c
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 18:22:43 2013 +0200
+
+    Prijedlog rangiranja studenata
+
+commit 0363e52e3bacbd83f3b624232befd048bd82d029
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 17:53:12 2013 +0200
+
+    Update: solution model
+
+commit 2befd184c0d86de674b6e32211a633d7049e4338
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 17:50:00 2013 +0200
+
+    Prijedlog projekta: ERA + screenshots
+
+commit 84568f9e87feef5c154266716ed2314444a2ed3a
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 17:17:28 2013 +0200
+
+    Fixing git errors.
+
+commit 875fb23f68dd4e289243d721949fbc6026d26d8f
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Apr 5 17:05:27 2013 +0200
+
+    Searchbox suggestions working.
+
+commit f3dc29e45870c79286b7ca39a9f67f861616acbb
+Author: Anto <atomasfoi@live.com>
+Date:   Thu Apr 4 04:21:28 2013 +0200
+
+    Dodan CheckBox i novi Label
+    
+    Dodao sam checkbox radi pamćenja prijave, to je sve još samo tek toliko
+    da nešto imamo za početak, Žan je rekao da se na kraju tek igramo sa
+    dizajnom
+
+commit ecbc73f2fc0445661705f2f0dae4b175c0d7a6b5
+Author: Anto <atomasfoi@live.com>
+Date:   Thu Apr 4 05:03:21 2013 +0300
+
+    Update README_baza.txt
+    
+    Malo sam dešifrirao neke riječi koje je koristila Ljiljana, a nisu bile potpune jasne u tekstu.
+
+commit 398d9586ad2c31053e632fb78793e7eb2dc686b3
+Author: Anto <atomasfoi@live.com>
+Date:   Wed Apr 3 19:37:16 2013 +0200
+
+    Log in forma je dodana u sustav
+    
+    Dodatni komentar: Znam da je ružno to je samo za početak.
+
+commit a8d51b16bc7257f97fe93d666b7af50f66807cda
+Author: Anto <atomasfoi@live.com>
+Date:   Wed Apr 3 19:07:52 2013 +0200
+
+    Anto: moj prvi doprinos
+
+commit 66c1a04da169348b59a75ab6c446f4b765831357
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Wed Apr 3 13:40:38 2013 +0200
+
+    odg
+
+commit 260d6fbb854e409368b628a076b3fbf44c19c022
+Author: ldetic <ljdetic@gmail.com>
+Date:   Wed Apr 3 11:43:24 2013 +0300
+
+    Update README_baza.txt
+
+commit 24c29b7119a36ef1e4713b3122488b1f70b375be
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Wed Apr 3 10:08:28 2013 +0200
+
+    Opis baze OBAVEZNO PROČITATI:)
+
+commit 5e75cebad041ac643c77b81ffd511e7f6c5cbc57
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Wed Apr 3 10:05:56 2013 +0200
+
+    ERA made by Ljiljana
+
+commit 222d28ab523cacb05a0bbfaa2e871b6b6110f116
+Author: Ljiljana Pintarić <ljdetic@gmail.com>
+Date:   Tue Apr 2 23:25:52 2013 +0200
+
+    ljiljana: prvi commit :)
+
+commit c3e41f7051cfbd75f91e44c0611e647bdd418cd4
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 2 19:59:14 2013 +0200
+
+    Added OnSearchBoxTextChanged func.
+
+commit 4e9b7dcd555c6d5b104b3d688a5085a797c45792
+Author: zv3rk4 <zv3rk4@gmail.com>
+Date:   Tue Apr 2 18:22:36 2013 +0200
+
+    Changed UserLabel style
+    
+    Promjenjen izgled korisničke labele i nazivi nekih varijabli.
+    Dodana nova TODO lista kod nekih funkcija.
+    
+    Baza trenutno ne radi jer se connection string povezuje na lokalnu bazu
+    koja ne postoji u Git direktoriju. We wait for Mr.D :)
+
+commit b3dbf96b563769f895cfc91c17602dded29346c5
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 2 16:44:25 2013 +0200
+
+    Added PGSQL support / DB funcs to WPF.
+
+commit 3c65fd23911b38a7fa38f8ba8fb78ba7786e4735
+Merge: 07cc0e0 301c42d
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 2 16:02:59 2013 +0200
+
+    Test commit
+
+commit 07cc0e04fedeaf25ff3009f856f2243e83733ce7
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 2 15:41:52 2013 +0200
+
+    Merging before pulling
+
+commit 301c42d15d8a0b5382b9767f63b63d0d12e48b60
+Merge: 7ab4aeb 06f3862
+Author: dnizetic <denis_nizetic@hotmail.com>
+Date:   Tue Apr 2 06:35:58 2013 -0700
+
+    Merge pull request #1 from zv3rk4/master
+    
+    Novi projekt (WPF)
+
+commit 06f386233ebc75a288ed74ba6c6eafe3f39265c4
+Author: zv3rk4 <zv3rk4@gmail.com>
+Date:   Tue Apr 2 15:13:25 2013 +0200
+
+    Promjena sa WinForms na WPF
+    
+    Dodan je novi projekt, ostavljen je stari da bi se kod mogao ponovno
+    iskoristiti.
+    Dodan je TODO u funkciju LoginButton_Click.
+    
+    TODO: Dodati sliku u Image objekt na glavnoj formi!
+
+commit 7ab4aeb59a64b37b28b72256f0d7e7e1f6504dee
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Mar 29 19:04:28 2013 +0100
+
+    Added PGSQL support
+
+commit 6f0c41d65d6d0bce8ea9817c0a6fb5a97621d016
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Mar 29 15:44:40 2013 +0100
+
+    29.3.2013 [Denis] Added database scheme under /foogle/etc
+
+commit 449a770e87813eadf78db223f64fd9ca731e8f83
+Author: Denis Nizetic <denis_nizetic@hotmail.com>
+Date:   Fri Mar 29 15:27:08 2013 +0100
+
+    29.3.2013 [Denis] - first commit
