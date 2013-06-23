@@ -1,0 +1,14 @@
+C:\Users\denis\foogle\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\denis\foogle\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\denis\foogle\UnitTest\bin\Debug\Foogle-WPF.exe
+C:\Users\denis\foogle\UnitTest\bin\Debug\EntityFramework.dll
+C:\Users\denis\foogle\UnitTest\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\denis\foogle\UnitTest\bin\Debug\System.Data.SQLite.dll
+C:\Users\denis\foogle\UnitTest\bin\Debug\WPFToolkit.dll
+C:\Users\denis\foogle\UnitTest\bin\Debug\Foogle-WPF.pdb
+C:\Users\denis\foogle\UnitTest\bin\Debug\EntityFramework.xml
+C:\Users\denis\foogle\UnitTest\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\denis\foogle\UnitTest\bin\Debug\WPFToolkit.pdb
+C:\Users\denis\foogle\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\denis\foogle\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\denis\foogle\UnitTest\obj\Debug\UnitTest.pdb

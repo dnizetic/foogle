@@ -125,7 +125,7 @@ namespace Foogle_WPF
             //update listview
             populateCollection();
             
-            MessageBox.Show("Uspjeh..");
+            MessageBox.Show("Uspjeh.");
         }
 
 

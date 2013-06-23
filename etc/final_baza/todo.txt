@@ -1,0 +1,6 @@
+smartbox:
+ - ime prezime; ime prezime; ...
+ - "pomoc" za koristenje
+
+professor:
+ - "Kontakti" - zabiljezeni studenti (napr. za kasniji kontakt)

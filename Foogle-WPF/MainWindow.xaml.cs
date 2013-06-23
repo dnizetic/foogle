@@ -40,6 +40,7 @@ namespace Foogle_WPF
             InitializeComponent();
 
             
+            //SQLite support
             SQLiteConnection m_dbConnection;
 
             //SQLiteConnection.CreateFile("MyDatabase.sqlite");
@@ -98,7 +99,25 @@ namespace Foogle_WPF
                     FOREIGN KEY (skill_id) REFERENCES skill(id)
                 );
           
-     
+                drop trigger if exists provjera;
+                /*create trigger provjera before insert on foogle_user 
+                when (
+	                select count(*) as postoji from (
+	                    select * from foogle_user where email=NEW.email
+	                ) 
+                    where postoji>0
+                   
+                )
+
+                begin
+	                delete from recommendation where student_id=(select id from foogle_user where email=NEW.email);
+	                delete from recommendation where teacher_id=(select id from foogle_user where email=NEW.email);
+	                delete from user_skills where user_id = (select id from foogle_user where email=NEW.email);
+	                delete from foogle_user where email = NEW.email;
+
+                end;*/
+
+
                 INSERT OR REPLACE INTO category VALUES (1, 'Web development', 1);
                 INSERT OR REPLACE INTO category VALUES (2, 'Web design', 1);
                 INSERT OR REPLACE INTO category VALUES (3, 'Web programming', 1);

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<DBMODEL Version="1.5" TYPE="PostgreSQL">
+
+<MODELSETTINGS MDDVERSION="1.3.1 (build 737)" ModelProject="" ModelName="baza" ModelCompany="" ModelAuthor="" ModelCopyright="" ModelVersion="" ModelVersionAI="0" ModelCreated="2013-06-21 01:51:46" ModelUpdated="2013-06-22 04:14:27" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" GenSettings="object GenSettings1: TGenSettings\n  TextCharCase = tccMixed\n  ModelCheck = True\n  DropIfExists = True\n  ISQL = False\n  DBOptions = [dbgoCreate, dbgoBeginScript, dbgoEndScript]\n  ViewOptions = [viewgoCreate, viewgoCreateRule]\n  SPOptions = [spgoCreate]\n  TableOptions = [tblgoCreate, tblgoBeginScript, tblgoEndScript, tblgoComment, tblgoCreatePK, tblgoCreateFK, tblgoCreateIndex, tblgoCreateRule, tblgoCreateTrigger, tblgoCreateCHECK, tblgoFieldDefault]\n  OwnerOptions = [owngoSchema, owngoTable, owngoView, owngoSP, owngoSequence, owngoUDT]\n  ACLOptions = [aclgoSchema, aclgoTable, aclgoView, aclgoSP, aclgoSequence]\n  ModifyOptions = [mgoKeepTbls, mgoBackupTbls, mgoTraceRenaming]\n  RoleCreate = True\n  RoleWhenCreate = rocrInScript\n  SQLTypeNames = False\nend\n" DisplaySettings="object DisplaySettings1: TDisplaySettings\n  ObjectsDisplay = [edoColumns, edoInhColumns, edoIndices, edoConstraints, edoTriggers, edoRules, edoColTypes, edoFKs, rdoRefName, spdoParameters, spdoResult, spdoParamTypes, spdoParamKind, vdoAttributes, vdoTargets, vdoRules]\n  Color = clWhite\n  ShowIcons = True\n  SnapGrid = True\n  DisplaySnap = True\n  SnapSize = 10\n  ShowPages = True\n  EntityFillColor = clWhite\n  EntityLineColor = clNavy\n  SPFillColor = 13499135\n  SPLineColor = clNavy\n  ViewFillColor = 3329434\n  ViewLineColor = clNavy\n  RefNotation = 0\n  RefColor = clNavy\n  RefLabelColor = clWhite\n  MinimapShapesStyle = mmssFillAndBorder\n  MinimapVisibleAreaStyle = mmvasBitmapShading\n  MinimapBackColor = clWhite\nend\n" DefaultDelete="3" DefaultUpdate="3" DefaultDataType="23" DefaultSchemaID="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\A" EncloseNames="1" HPageCount="5" VPageCount="5" />
+
+<DATABASE Name="Database_1" CharacterSet="" Collate="" CType="" Tablespace="" Owner="" Template="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="0" />
+
+<STAMPS>
+</STAMPS>
+
+<ROLES>
+<ROLE ID="10" Name="postgres" Roles="" Admins="" Generate="0" Comments="" Password="md5611a3d434d17078a66cb746c7c3a142a" CreateDB="1" SuperUser="1" CreateRole="1" Inherit="1" UpdateCatalogs="1" Login="1" PassEncrypted="1" Valid="2958465.99999"></ROLE>
+</ROLES>
+
+<SCHEMAS>
+<SCHEMA ID="0" Name="public" Owner="" Generate="0" Comments="" System="1"></SCHEMA>
+</SCHEMAS>
+
+<SEQUENCES>
+</SEQUENCES>
+
+<DOMAINS>
+</DOMAINS>
+
+<COMPOSITES>
+<COMPOSITE ID="17806" Name="category" SchemaName="public" OwnerName="" Comments="" MasterTableOID="17614">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="17808" Name="foogle_user" SchemaName="public" OwnerName="" Comments="" MasterTableOID="17622">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="17809" Name="recommendation" SchemaName="public" OwnerName="" Comments="" MasterTableOID="17672">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="17810" Name="skill" SchemaName="public" OwnerName="" Comments="" MasterTableOID="17659">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+<COMPOSITE ID="17814" Name="user_skills" SchemaName="public" OwnerName="" Comments="" MasterTableOID="17804">
+	<COLUMNS>
+	</COLUMNS>
+</COMPOSITE>
+</COMPOSITES>
+
+<SCALARS>
+<SCALAR ID="17607" Name="_title" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17615" Name="_category" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17623" Name="_foogle_user" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17642" Name="_user_category" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17660" Name="_skill" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17673" Name="_recommendation" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17694" Name="_student" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17708" Name="_experience" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+<SCALAR ID="17805" Name="_user_skills" SchemaName="public" Comments="" Input="750" Output="751" Send="2401" Receive="2400" Analyze="0" ModInput="0" ModOutput="0" Alignment="CHAR" Length="0" Storage="EXTENDED" PassedByVal="0" Delimiter="," DefaultValue="" OwnerName="postgres"></SCALAR> 
+</SCALARS>
+
+<ENUMS>
+</ENUMS>
+
+<TABLESPACES>
+</TABLESPACES>
+
+<METADATA>
+<ENTITIES>
+<ENTITY ID="17614" Name="category" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="180" YPos="380" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
+	<COLUMNS>
+		<COLUMN ID="81" Name="id" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="82" Name="name" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="17872" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+		<CONSTRAINT ID="17619" Name="category_pkey" Kind="2" Expression="" ReferenceIndex="17873" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+			<CONSTRAINTCOLUMNS COMMATEXT="81"></CONSTRAINTCOLUMNS>
+			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="17873" Name="category_pkey_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17619" StorageParams="" Comments="">
+			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+
+<ENTITY ID="17622" Name="foogle_user" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="460" YPos="230" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
+	<COLUMNS>
+		<COLUMN ID="88" Name="id" Pos="0" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="89" Name="email" Pos="1" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="90" Name="firstname" Pos="2" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="91" Name="lastname" Pos="3" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="92" Name="role" Pos="4" Datatype="1042" Type="char" Width="1" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="\aS\a::bpchar" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="94" Name="password" Pos="5" Datatype="1043" Type="varchar" Width="45" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="95" Name="confirmed" Pos="6" Datatype="16" Type="bool" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="96" Name="linkedin_id" Pos="7" Datatype="1043" Type="varchar" Width="255" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="97" Name="linkedin" Pos="8" Datatype="1043" Type="varchar" Width="255" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="98" Name="exp" Pos="9" Datatype="700" Type="float4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="17882" />
+		<REFERENCE_BEGIN ID="17877" />
+		<REFERENCE_BEGIN ID="17810" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+		<CONSTRAINT ID="17631" Name="foogle_user_pkey" Kind="2" Expression="" ReferenceIndex="17874" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+			<CONSTRAINTCOLUMNS COMMATEXT="88"></CONSTRAINTCOLUMNS>
+			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="17874" Name="foogle_user_pkey_idx_pk" Unique="1" Method="0" Predicate="" TablespaceID="0" ReferenceConstraint="17631" StorageParams="" Comments="">
+			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+
+<ENTITY ID="17672" Name="recommendation" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="380" YPos="540" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
+	<COLUMNS>
+		<COLUMN ID="99" Name="category_id" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="100" Name="teacher_id" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="101" Name="student_id" Pos="3" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="102" Name="id" Pos="4" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="17872" />
+		<REFERENCE_END ID="17882" />
+		<REFERENCE_END ID="17877" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+		<CONSTRAINT ID="17871" Name="recommendation_pkey" Kind="2" Expression="" ReferenceIndex="17870" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+			<CONSTRAINTCOLUMNS COMMATEXT="102"></CONSTRAINTCOLUMNS>
+			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="17870" Name="recommendation_pkey_idx_pk" Unique="1" Method="1" Predicate="" TablespaceID="0" ReferenceConstraint="17871" StorageParams="" Comments="">
+			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+
+<ENTITY ID="17659" Name="skill" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="670" YPos="370" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
+	<COLUMNS>
+		<COLUMN ID="103" Name="id" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="104" Name="name" Pos="2" Datatype="1043" Type="varchar" Width="50" Prec="0" NotNull="1" AutoInc="0" PrimaryKey="0" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_BEGIN>
+		<REFERENCE_BEGIN ID="17815" />
+	</REFERENCES_BEGIN>
+	<CONSTRAINTS>
+		<CONSTRAINT ID="17664" Name="skill_pkey" Kind="2" Expression="" ReferenceIndex="17663" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+			<CONSTRAINTCOLUMNS COMMATEXT="103"></CONSTRAINTCOLUMNS>
+			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="17663" Name="skill_pkey_idx_pk" Unique="1" Method="1" Predicate="" TablespaceID="0" ReferenceConstraint="17664" StorageParams="" Comments="">
+			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+
+<ENTITY ID="17804" Name="user_skills" SchemaOID="0" SchemaName="public" OwnerID="10" OwnerName="postgres" TablespaceID="0" XPos="650" YPos="530" Temporary="0" OnCommit="" Inherits="" DelayKeyTblUpdates="0" FillColor="16777215" LineColor="8388608" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" ACL="" StorageParams="OIDS=False\n" >
+	<COLUMNS>
+		<COLUMN ID="114" Name="id" Pos="1" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="1" AutoInc="1" PrimaryKey="1" IsFKey="0" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="115" Name="user_id" Pos="2" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+		<COLUMN ID="116" Name="skill_id" Pos="3" Datatype="23" Type="int4" Width="0" Prec="0" NotNull="0" AutoInc="0" PrimaryKey="0" IsFKey="1" DefaultValue="" QuoteDefault="0" Comments=""></COLUMN>
+	</COLUMNS>
+	<REFERENCES_END>
+		<REFERENCE_END ID="17810" />
+		<REFERENCE_END ID="17815" />
+	</REFERENCES_END>
+	<CONSTRAINTS>
+		<CONSTRAINT ID="17809" Name="user_skills_pkey" Kind="2" Expression="" ReferenceIndex="17808" FillFactor="" Comments="" TablespaceID="0" Deferrable="0" Method="0">
+			<CONSTRAINTCOLUMNS COMMATEXT="114"></CONSTRAINTCOLUMNS>
+			<CONSTRAINTOPERATORS COMMATEXT=""></CONSTRAINTOPERATORS>
+		</CONSTRAINT>
+	</CONSTRAINTS>
+	<INDEXES>
+		<INDEX ID="17808" Name="user_skills_pkey_idx_pk" Unique="1" Method="1" Predicate="" TablespaceID="0" ReferenceConstraint="17809" StorageParams="" Comments="">
+			<INDEXCOLUMNS COMMATEXT="id"></INDEXCOLUMNS>
+			<INDEXSORTS COMMATEXT=""></INDEXSORTS>
+			<INDEXNULLS COMMATEXT=""></INDEXNULLS>
+		</INDEX>
+	</INDEXES>
+</ENTITY>
+
+</ENTITIES>
+
+<REFERENCES>
+<REFERENCE ID="17872" Name="Ref_recommendation_to_category" SOURCE="17614" DESTINATION="17672" FKIDS="81=99\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17619" />
+
+<REFERENCE ID="17882" Name="recommendation_teacher_fkey" SOURCE="17622" DESTINATION="17672" FKIDS="88=100\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="1" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17631" />
+
+<REFERENCE ID="17877" Name="recommendation_student_fkey" SOURCE="17622" DESTINATION="17672" FKIDS="88=101\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="0" OnUpdate="1" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17631" />
+
+<REFERENCE ID="17810" Name="Ref_user_skills_to_foogle_user" SOURCE="17622" DESTINATION="17804" FKIDS="88=115\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17631" />
+
+<REFERENCE ID="17815" Name="Ref_user_skills_to_skill" SOURCE="17659" DESTINATION="17804" FKIDS="103=116\n" Direction="0" RefColor="8388608" RefLabelColor="16777215" OnDelete="3" OnUpdate="3" Deferrable="0" MatchType="0" Comments="" Description="" Annotation="" Generate="1" FKConstraint_ID="17664" />
+
+</REFERENCES>
+
+<NOTES>
+</NOTES>
+
+<STOREDPROCES>
+</STOREDPROCES>
+
+<VIEWS>
+</VIEWS>
+
+</METADATA>
+</DBMODEL>
