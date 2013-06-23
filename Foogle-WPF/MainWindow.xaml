@@ -35,19 +35,20 @@
     </Window.Resources>
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="304*"/>
+            <ColumnDefinition Width="91*"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Height="32" VerticalAlignment="Top" IsHitTestVisible="False" Fill="#FF1F1F1F"/>
-        <Button x:Name="SearchButton" Content="Pretraživanje" HorizontalAlignment="Right" Margin="0,150,124,0" VerticalAlignment="Top" Width="80" TabIndex="3" BorderThickness="1" Height="25" Uid="SerchButton" Click="SearchButton_Click"/>
+        <Rectangle Height="32" VerticalAlignment="Top" IsHitTestVisible="False" Fill="#FF1F1F1F" Grid.ColumnSpan="2"/>
+        <Button x:Name="SearchButton" Content="Pretraživanje" HorizontalAlignment="Right" Margin="0,150,124,0" VerticalAlignment="Top" Width="80" TabIndex="3" BorderThickness="1" Height="25" Uid="SerchButton" Click="SearchButton_Click" Grid.ColumnSpan="2"/>
         <!-- Image x:Name="LogoImage" Margin="15,40,10,0" Tag="Logo" IsHitTestVisible="False" Uid="LogoImage" Height="99" VerticalAlignment="Top" ToolTip="TODO: Logo goes here :)"/> -->
-        <Button x:Name="LoginButton" Style="{StaticResource TopMenuButton}" Content="Prijava" HorizontalAlignment="Right" Margin="0,0,217,0" VerticalAlignment="Top" Width="85" TabIndex="1" BorderThickness="1,4,1,0" Height="32" Uid="LoginButton" Click="LoginButton_Click" RenderTransformOrigin="1.093,0.555" Background="#00000000" Foreground="White"/>
-        <Controls:AutoCompleteBox FilterMode="None" Populating="SearchBoxPopulating"  x:Name="searchBox" Margin="76,150,209,0" VerticalAlignment="Top" Height="25"/>
+        <Button x:Name="LoginButton" Style="{StaticResource TopMenuButton}" Content="Prijava" HorizontalAlignment="Right" Margin="0,0,35.333,0" VerticalAlignment="Top" Width="85" TabIndex="1" BorderThickness="1,4,1,0" Height="32" Uid="LoginButton" Click="LoginButton_Click" RenderTransformOrigin="1.093,0.555" Background="#00000000" Foreground="White"/>
+        <Controls:AutoCompleteBox FilterMode="None" Populating="SearchBoxPopulating"  x:Name="searchBox" Margin="76,150,27.333,0" VerticalAlignment="Top" Height="25"/>
         <Button Content="Studenti - LinkedIn prijava" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Click="UserRegisterButton" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" Margin="0"/>
         <Button Content="Registracija za profesore" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Left" Margin="173,0,0,0" VerticalAlignment="Top" Width="151" Click="RegistracijaProfesor" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White"/>
-        <Button x:Name="PrijavaAdminButton" Style="{StaticResource TopMenuButton}" Content="Administracija" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Width="105" Click="PrijavaAdminButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" />
+        <Button x:Name="PrijavaAdminButton" Style="{StaticResource TopMenuButton}" Content="Administracija" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Width="105" Click="PrijavaAdminButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" Grid.Column="1" />
 
-        <WebBrowser Source="http://www.google.com/" LoadCompleted="WbCompleted" x:Name="webBrowser1" Margin="8,180,8,8">
+        <WebBrowser Source="http://www.google.com/" LoadCompleted="WbCompleted" x:Name="webBrowser1" Margin="8,180,8,8" Grid.ColumnSpan="2">
             <WebBrowser.OpacityMask>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -55,12 +56,13 @@
                 </LinearGradientBrush>
             </WebBrowser.OpacityMask>
         </WebBrowser>
-        <Label  x:Name="LoggedInLabel" HorizontalAlignment="Right" Margin="0,30,10,0" VerticalAlignment="Top" Width="95" Height="25"/>
-        <Button x:Name="EndorsementButton" Style="{StaticResource TopMenuButton}" Content="Potvrda vještina" HorizontalAlignment="Right" Margin="0,0,105,0" VerticalAlignment="Top" Width="112" Click="EndorsementButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White"/>
-        <Button Content="Traži po kategoriji" HorizontalAlignment="Right" Margin="0,150,8,0" VerticalAlignment="Top" Width="111" Height="25" Click="SearchByCategory"/>
+        <Label  x:Name="LoggedInLabel" HorizontalAlignment="Right" Margin="0,30,10,0" VerticalAlignment="Top" Width="95" Height="25" Grid.Column="1"/>
+        <Button x:Name="EndorsementButton" Style="{StaticResource TopMenuButton}" Content="Potvrda vještina" HorizontalAlignment="Right" Margin="0,0,105,0" VerticalAlignment="Top" Width="112" Click="EndorsementButton_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White" Grid.ColumnSpan="2"/>
+        <Button Content="Traži po kategoriji" HorizontalAlignment="Right" Margin="0,150,8,0" VerticalAlignment="Top" Width="111" Height="25" Click="SearchByCategory" Grid.Column="1"/>
         <Button Visibility="Hidden" Click="TestDataButton" Content="Testni podaci (pretr.)" HorizontalAlignment="Left" Margin="445,119,0,0" VerticalAlignment="Top" Width="111"/>
-        <controls:GifImage x:Name="gifImage" Stretch="None" GifSource="/page-loader.gif" AutoStart="True" HorizontalAlignment="Stretch" Height="300" Margin="144,180,144,8" VerticalAlignment="Stretch" Width="300" IsHitTestVisible="False"   />
+        <controls:GifImage x:Name="gifImage" Stretch="None" GifSource="/page-loader.gif" AutoStart="True" HorizontalAlignment="Stretch" Height="300" Margin="245,220,63.333,48" VerticalAlignment="Stretch" Width="300" IsHitTestVisible="False"   />
         <Label  x:Name="SearchLabel" HorizontalAlignment="Left" Margin="0,144,0,0" VerticalAlignment="Top" Width="76" Height="36" Content="Pretraži:" FontSize="18" Padding="8,4,4,4"/>
-        <Label x:Name="Logo" Content="Foogle" Margin="0,32,0,0" Background="#00000000" Foreground="#FF1A1B23" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Height="113" VerticalAlignment="Top" FontSize="112" FontWeight="Bold" FontFamily="Parchment" Padding="0"/>
+        <Label x:Name="Logo" Content="Foogle" Margin="0,32,0,0" Background="#00000000" Foreground="#FF1A1B23" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Height="113" VerticalAlignment="Top" FontSize="112" FontWeight="Bold" FontFamily="Parchment" Padding="0" Grid.ColumnSpan="2"/>
+        <Button Content="Izvještaji" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Left" Margin="337,0,0,0" VerticalAlignment="Top" Width="151" Click="Button_Click" Height="32" BorderThickness="1,4,1,0" Background="#00000000" Foreground="White"/>
     </Grid>
 </Window>
