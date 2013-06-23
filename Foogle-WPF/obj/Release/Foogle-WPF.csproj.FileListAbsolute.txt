@@ -141,3 +141,7 @@ D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Release\RdlCompile.cach
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Release\RdlCompile.compiled
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Release\Foogle-WPF.exe.manifest
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Release\Foogle-WPF.application
+C:\Users\denis\foogle\Foogle-WPF\obj\Release\IspisKorisnikaReport.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Release\IspisKorisnikaReport.g.cs
+C:\Users\denis\foogle\Foogle-WPF\obj\Release\RdlCompile.cache
+C:\Users\denis\foogle\Foogle-WPF\obj\Release\RdlCompile.compiled

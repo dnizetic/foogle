@@ -72,3 +72,7 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.application
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.exe
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.pdb
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\IspisKorisnikaReport.baml
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\IspisKorisnikaReport.g.cs
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\RdlCompile.cache
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\RdlCompile.compiled

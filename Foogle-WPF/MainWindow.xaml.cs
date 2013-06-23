@@ -444,6 +444,8 @@ namespace Foogle_WPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             IspisKorisnikaReport ik = new IspisKorisnikaReport();
+
+            
             ik.Show();
         }
 

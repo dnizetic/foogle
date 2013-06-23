@@ -965,7 +965,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>FoogleDS</rd:DataSetName>
-        <rd:SchemaPath>D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\FoogleDS.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\denis\foogle\Foogle-WPF\FoogleDS.xsd</rd:SchemaPath>
         <rd:TableName>foogle_user</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
