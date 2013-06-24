@@ -159,3 +159,5 @@ C:\Users\denis\foogle\Foogle-WPF\obj\Debug\IspisSkillovaReport.g.cs
 C:\Users\denis\foogle\Foogle-WPF\obj\Debug\Reports.g.cs
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisSkillovaUseraReport.baml
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisSkillovaUseraReport.g.cs
+D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisPreporukaReport.baml
+D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisPreporukaReport.g.cs

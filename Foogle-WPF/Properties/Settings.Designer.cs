@@ -33,5 +33,16 @@ namespace Foogle_WPF.Properties {
                 return ((string)(this["MyDatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=D:\\Users\\Ljiljana\\Documents\\GitHub\\foogle\\Foogle-WPF\\bin\\Debug\\MyData" +
+            "base.sqlite")]
+        public string MyDatabaseConnectionString1 {
+            get {
+                return ((string)(this["MyDatabaseConnectionString1"]));
+            }
+        }
     }
 }

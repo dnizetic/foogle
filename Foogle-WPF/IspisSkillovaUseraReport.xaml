@@ -9,8 +9,8 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <WindowsFormsHost HorizontalAlignment="Left" Height="387" Margin="10,10,0,0" VerticalAlignment="Top" Width="861">
-        <viewer:ReportViewer x:Name="ispisSkillovaUsera" ZoomChange="viewerInstance_ZoomChange">
-        </viewer:ReportViewer>
+            <viewer:ReportViewer x:Name="ispisSkillovaUsera" ZoomChange="viewerInstance_ZoomChange">
+            </viewer:ReportViewer>
         </WindowsFormsHost>
     </Grid>
 </Window>

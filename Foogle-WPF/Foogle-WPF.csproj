@@ -191,6 +191,9 @@
     <Compile Include="IspisKorisnikaReport.xaml.cs">
       <DependentUpon>IspisKorisnikaReport.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IspisPreporukaReport.xaml.cs">
+      <DependentUpon>IspisPreporukaReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IspisSkillovaReport.xaml.cs">
       <DependentUpon>IspisSkillovaReport.xaml</DependentUpon>
     </Compile>
@@ -238,6 +241,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="IspisKorisnikaReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IspisPreporukaReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -302,6 +309,7 @@
     </Compile>
     <EmbeddedResource Include="IspisKategorija_report.rdlc" />
     <EmbeddedResource Include="IspisKorisnika_report.rdlc" />
+    <EmbeddedResource Include="IspisPreporuka_report.rdlc" />
     <EmbeddedResource Include="IspisSkillovaUsera_report.rdlc" />
     <EmbeddedResource Include="IspisSkillova_report.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">

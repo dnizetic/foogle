@@ -8,8 +8,8 @@ namespace Foogle_WPF
 {
     class UserSkillView
     {
-        public string ime;
-        public string prezime;
-        public string naziv;
+        public string firstname;
+        public string lastname;
+        public string name;
     }
 }

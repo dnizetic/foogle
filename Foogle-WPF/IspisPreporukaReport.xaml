@@ -1,0 +1,12 @@
+﻿<Window x:Class="Foogle_WPF.IspisPreporukaReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewer="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        Title="IspisPreporukaReport" Height="352.863" Width="745.374" Loaded="Window_Loaded">
+    <Grid>
+        <WindowsFormsHost HorizontalAlignment="Left" Height="303" Margin="10,10,0,0" VerticalAlignment="Top" Width="717">
+            <viewer:ReportViewer x:Name="ispisPreporuka"  ZoomChange="viewerInstance_ZoomChange">
+            </viewer:ReportViewer>
+        </WindowsFormsHost>
+    </Grid>
+</Window>

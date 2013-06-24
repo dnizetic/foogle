@@ -105,8 +105,7 @@ namespace Foogle_WPF
                 CREATE TRIGGER provjera BEFORE INSERT 
                 ON foogle_user when
                 (
-                   select email  from foogle_user where email = NEW.email
-        
+                   select email  from foogle_user where email = NEW.email        
                 )
 
                 BEGIN
@@ -182,8 +181,8 @@ namespace Foogle_WPF
                 user_skills.skill_id=skill.id;
 
                 create view if not exists recommendation_view as
-                select s.firstname as 'Ime studenta', s.lastname as 'Prezime studenta', 
-                p.firstname as 'Ime profesora', p.lastname as 'Prezime profesora', name 
+                select s.firstname as 'ime_studenta', s.lastname as 'prezime_studenta', 
+                p.firstname as 'ime_profesora', p.lastname as 'prezime_profesora', name 
                 from foogle_user s join recommendation on s.id=recommendation.student_id 
                 join foogle_user p on recommendation.teacher_id=p.id join category on 
                 recommendation.category_id=category.id;

@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Foogle-WPF.exe" size="349696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Foogle-WPF.exe" size="360448">
       <assemblyIdentity name="Foogle-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PRFbNxSc6BUCTdMg8EvcRQyXXZtYJcneZrhIwYWe3mw=</dsig:DigestValue>
+        <dsig:DigestValue>8nbeOLPEKnc8HvBjOMbYF3D2ManhU9EZoC7AAGkkijg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -438,13 +438,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Foogle-WPF.exe.config" size="1836">
+  <file name="Foogle-WPF.exe.config" size="2075">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>H4BgFeZGlXWeKvSrFIUvaooL79dQB53VdQFUmZxy3Uo=</dsig:DigestValue>
+      <dsig:DigestValue>wMWYa+UiIY96wNamo7LJngRfoRD1kDYod2lb8muZd7A=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -7,8 +7,8 @@
             <MenuItem x:Name="korisnici_report" Header="Korisnici" Click="korisnici_report_Click"/>
             <MenuItem x:Name="kategorije" Header="Kategorije" Click="kategorije_Click"/>
             <MenuItem x:Name="skillovi" Header="Vještine" Click="skillovi_Click"/>
-            <MenuItem Header="Vještine korisnika" Click="MenuItem_Click"/>
-            <MenuItem Header="Preporuke"/>
+            <MenuItem x:Name="user_skills" Header="Vještine korisnika" Click="MenuItem_Click"/>
+            <MenuItem x:Name="preporuke" Header="Preporuke" Click="MenuItem_Click_1"/>
         </Menu>
 
     </Grid>

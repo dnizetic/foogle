@@ -47,5 +47,11 @@ namespace Foogle_WPF
             IspisSkillovaUseraReport isu = new IspisSkillovaUseraReport();
             isu.Show();
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            IspisPreporukaReport ip = new IspisPreporukaReport();
+            ip.Show();
+        }
     }
 }

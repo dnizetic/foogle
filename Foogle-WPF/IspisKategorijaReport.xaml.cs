@@ -36,41 +36,56 @@ namespace Foogle_WPF
             dataset.BeginInit();
 
             reportDataSource1.Name = "ispis_kategorija_report"; //Name of the report dataset in our .RDLC file
-
             reportDataSource1.Value = dataset.category;
 
-            ObservableCollection<Category> _KategorijaCollection =
-            new ObservableCollection<Category>();
-            _KategorijaCollection.Clear();
-
-            using (var context = new FoogleContext())
-            {
-                var cat = from a in context.Categories
-                          select a;
-
-                //var cat = context.Categories.SqlQuery("Select cat.id, cat.name, (select c.name from category c where c.id=cat.master_category) from category cat").ToList();
-
-                foreach (var p in cat)
-                {
-                    _KategorijaCollection.Add(p);
-                }
-
-            }
-            ReportDataSource reportDataSource = new ReportDataSource("ispis_kategorija_report", _KategorijaCollection);
-
-            this.ispisKategorija.LocalReport.DataSources.Add(reportDataSource);
-
-
-            //correct path
+            this.ispisKategorija.LocalReport.DataSources.Add(reportDataSource1);
             this.ispisKategorija.LocalReport.ReportPath = "../../IspisKategorija_report.rdlc";
-
-            using (StreamReader rdlcSR = new StreamReader("../../IspisKategorija_report.rdlc"))
-            {
-                ispisKategorija.LocalReport.LoadReportDefinition(rdlcSR);
-
-            }
-
             dataset.EndInit();
+
+            FoogleDSTableAdapters.categoryTableAdapter
+            catategory_table_adapter = new
+            FoogleDSTableAdapters.categoryTableAdapter();
+
+            catategory_table_adapter.ClearBeforeFill = true;
+            catategory_table_adapter.Fill(dataset.category);  
+
+
+            //reportDataSource1.Name = "ispis_kategorija_report"; //Name of the report dataset in our .RDLC file
+
+            //reportDataSource1.Value = dataset.category;
+
+            //ObservableCollection<Category> _KategorijaCollection =
+            //new ObservableCollection<Category>();
+            //_KategorijaCollection.Clear();
+
+            //using (var context = new FoogleContext())
+            //{
+            //    var cat = from a in context.Categories
+            //              select a;
+
+            //    //var cat = context.Categories.SqlQuery("Select cat.id, cat.name, (select c.name from category c where c.id=cat.master_category) from category cat").ToList();
+
+            //    foreach (var p in cat)
+            //    {
+            //        _KategorijaCollection.Add(p);
+            //    }
+
+            //}
+            //ReportDataSource reportDataSource = new ReportDataSource("ispis_kategorija_report", _KategorijaCollection);
+
+            //this.ispisKategorija.LocalReport.DataSources.Add(reportDataSource);
+
+
+            ////correct path
+            //this.ispisKategorija.LocalReport.ReportPath = "../../IspisKategorija_report.rdlc";
+
+            //using (StreamReader rdlcSR = new StreamReader("../../IspisKategorija_report.rdlc"))
+            //{
+            //    ispisKategorija.LocalReport.LoadReportDefinition(rdlcSR);
+
+            //}
+
+            //dataset.EndInit();
         }
 
         private void viewerInstance_ZoomChange(object sender, ZoomChangeEventArgs e)
