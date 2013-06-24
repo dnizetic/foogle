@@ -20,7 +20,8 @@ namespace Foogle_WPF
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Recommendation> Recommendations { get; set; }
         public DbSet<UserSkills> UserSkills { get; set; }
-        
+       
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Map to the correct Chinook Database tables
@@ -30,7 +31,7 @@ namespace Foogle_WPF
             modelBuilder.Entity<Skill>().ToTable("skill", "public");
             modelBuilder.Entity<Recommendation>().ToTable("recommendation", "public");
             modelBuilder.Entity<UserSkills>().ToTable("user_skills", "public");
-
+            
             // Chinook Database for PostgreSQL doesn't auto-increment Ids
             //modelBuilder.Conventions
             //    .Remove<StoreGeneratedIdentityKeyConvention>();

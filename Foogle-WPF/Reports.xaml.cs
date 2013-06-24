@@ -41,5 +41,11 @@ namespace Foogle_WPF
             IspisSkillovaReport iskill = new IspisSkillovaReport();
             iskill.Show();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            IspisSkillovaUseraReport isu = new IspisSkillovaUseraReport();
+            isu.Show();
+        }
     }
 }

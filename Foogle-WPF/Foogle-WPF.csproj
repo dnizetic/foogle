@@ -194,6 +194,9 @@
     <Compile Include="IspisSkillovaReport.xaml.cs">
       <DependentUpon>IspisSkillovaReport.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IspisSkillovaUseraReport.xaml.cs">
+      <DependentUpon>IspisSkillovaUseraReport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -221,6 +224,7 @@
     <Compile Include="StudentRegistration.cs" />
     <Compile Include="StudentSearch.cs" />
     <Compile Include="UserMatch.cs" />
+    <Compile Include="UserSkillView.cs" />
     <Page Include="AdminUserConfirmationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -238,6 +242,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="IspisSkillovaReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IspisSkillovaUseraReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -294,6 +302,7 @@
     </Compile>
     <EmbeddedResource Include="IspisKategorija_report.rdlc" />
     <EmbeddedResource Include="IspisKorisnika_report.rdlc" />
+    <EmbeddedResource Include="IspisSkillovaUsera_report.rdlc" />
     <EmbeddedResource Include="IspisSkillova_report.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

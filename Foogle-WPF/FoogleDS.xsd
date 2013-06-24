@@ -316,6 +316,62 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="category_viewTableAdapter" GeneratorDataComponentClassName="category_viewTableAdapter" Name="category_view" UserDataComponentName="category_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyDatabaseConnectionString (Settings)" DbObjectName="main.category_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [id], [name], [(select c.name from category c where c.id=cat.master_category)] FROM [category_view]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="(select c.name from category c where c.id=cat.master_category)" DataSetColumn="(select c_name from category c where c_id=cat_master_category)" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="recommendation_viewTableAdapter" GeneratorDataComponentClassName="recommendation_viewTableAdapter" Name="recommendation_view" UserDataComponentName="recommendation_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyDatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Ime studenta], [Prezime studenta], [Ime profesora], [Prezime profesora], [name] FROM [recommendation_view]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ime studenta" DataSetColumn="Ime studenta" />
+              <Mapping SourceColumn="Prezime studenta" DataSetColumn="Prezime studenta" />
+              <Mapping SourceColumn="Ime profesora" DataSetColumn="Ime profesora" />
+              <Mapping SourceColumn="Prezime profesora" DataSetColumn="Prezime profesora" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="user_skills_viewTableAdapter" GeneratorDataComponentClassName="user_skills_viewTableAdapter" Name="user_skills_view" UserDataComponentName="user_skills_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyDatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [firstname], [lastname], [name] FROM [user_skills_view]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="firstname" DataSetColumn="firstname" />
+              <Mapping SourceColumn="lastname" DataSetColumn="lastname" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -324,7 +380,7 @@
   <xs:element name="FoogleDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FoogleDS" msprop:Generator_UserDSName="FoogleDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="category" msprop:Generator_TableClassName="categoryDataTable" msprop:Generator_TableVarName="tablecategory" msprop:Generator_RowChangedName="categoryRowChanged" msprop:Generator_TablePropName="category" msprop:Generator_RowDeletingName="categoryRowDeleting" msprop:Generator_RowChangingName="categoryRowChanging" msprop:Generator_RowEvHandlerName="categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="categoryRowDeleted" msprop:Generator_RowClassName="categoryRow" msprop:Generator_UserTableName="category" msprop:Generator_RowEvArgName="categoryRowChangeEvent">
+        <xs:element name="category" msprop:Generator_TableClassName="categoryDataTable" msprop:Generator_TableVarName="tablecategory" msprop:Generator_TablePropName="category" msprop:Generator_RowDeletingName="categoryRowDeleting" msprop:Generator_RowChangingName="categoryRowChanging" msprop:Generator_RowEvHandlerName="categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="categoryRowDeleted" msprop:Generator_UserTableName="category" msprop:Generator_RowChangedName="categoryRowChanged" msprop:Generator_RowEvArgName="categoryRowChangeEvent" msprop:Generator_RowClassName="categoryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />
@@ -333,7 +389,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="foogle_user" msprop:Generator_TableClassName="foogle_userDataTable" msprop:Generator_TableVarName="tablefoogle_user" msprop:Generator_RowChangedName="foogle_userRowChanged" msprop:Generator_TablePropName="foogle_user" msprop:Generator_RowDeletingName="foogle_userRowDeleting" msprop:Generator_RowChangingName="foogle_userRowChanging" msprop:Generator_RowEvHandlerName="foogle_userRowChangeEventHandler" msprop:Generator_RowDeletedName="foogle_userRowDeleted" msprop:Generator_RowClassName="foogle_userRow" msprop:Generator_UserTableName="foogle_user" msprop:Generator_RowEvArgName="foogle_userRowChangeEvent">
+        <xs:element name="foogle_user" msprop:Generator_TableClassName="foogle_userDataTable" msprop:Generator_TableVarName="tablefoogle_user" msprop:Generator_TablePropName="foogle_user" msprop:Generator_RowDeletingName="foogle_userRowDeleting" msprop:Generator_RowChangingName="foogle_userRowChanging" msprop:Generator_RowEvHandlerName="foogle_userRowChangeEventHandler" msprop:Generator_RowDeletedName="foogle_userRowDeleted" msprop:Generator_UserTableName="foogle_user" msprop:Generator_RowChangedName="foogle_userRowChanged" msprop:Generator_RowEvArgName="foogle_userRowChangeEvent" msprop:Generator_RowClassName="foogle_userRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />
@@ -350,7 +406,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="recommendation" msprop:Generator_TableClassName="recommendationDataTable" msprop:Generator_TableVarName="tablerecommendation" msprop:Generator_RowChangedName="recommendationRowChanged" msprop:Generator_TablePropName="recommendation" msprop:Generator_RowDeletingName="recommendationRowDeleting" msprop:Generator_RowChangingName="recommendationRowChanging" msprop:Generator_RowEvHandlerName="recommendationRowChangeEventHandler" msprop:Generator_RowDeletedName="recommendationRowDeleted" msprop:Generator_RowClassName="recommendationRow" msprop:Generator_UserTableName="recommendation" msprop:Generator_RowEvArgName="recommendationRowChangeEvent">
+        <xs:element name="recommendation" msprop:Generator_TableClassName="recommendationDataTable" msprop:Generator_TableVarName="tablerecommendation" msprop:Generator_TablePropName="recommendation" msprop:Generator_RowDeletingName="recommendationRowDeleting" msprop:Generator_RowChangingName="recommendationRowChanging" msprop:Generator_RowEvHandlerName="recommendationRowChangeEventHandler" msprop:Generator_RowDeletedName="recommendationRowDeleted" msprop:Generator_UserTableName="recommendation" msprop:Generator_RowChangedName="recommendationRowChanged" msprop:Generator_RowEvArgName="recommendationRowChangeEvent" msprop:Generator_RowClassName="recommendationRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="category_id" msprop:Generator_ColumnVarNameInTable="columncategory_id" msprop:Generator_ColumnPropNameInRow="category_id" msprop:Generator_ColumnPropNameInTable="category_idColumn" msprop:Generator_UserColumnName="category_id" type="xs:long" />
@@ -360,7 +416,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="skill" msprop:Generator_TableClassName="skillDataTable" msprop:Generator_TableVarName="tableskill" msprop:Generator_RowChangedName="skillRowChanged" msprop:Generator_TablePropName="skill" msprop:Generator_RowDeletingName="skillRowDeleting" msprop:Generator_RowChangingName="skillRowChanging" msprop:Generator_RowEvHandlerName="skillRowChangeEventHandler" msprop:Generator_RowDeletedName="skillRowDeleted" msprop:Generator_RowClassName="skillRow" msprop:Generator_UserTableName="skill" msprop:Generator_RowEvArgName="skillRowChangeEvent">
+        <xs:element name="skill" msprop:Generator_TableClassName="skillDataTable" msprop:Generator_TableVarName="tableskill" msprop:Generator_TablePropName="skill" msprop:Generator_RowDeletingName="skillRowDeleting" msprop:Generator_RowChangingName="skillRowChanging" msprop:Generator_RowEvHandlerName="skillRowChangeEventHandler" msprop:Generator_RowDeletedName="skillRowDeleted" msprop:Generator_UserTableName="skill" msprop:Generator_RowChangedName="skillRowChanged" msprop:Generator_RowEvArgName="skillRowChangeEvent" msprop:Generator_RowClassName="skillRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />
@@ -368,12 +424,41 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="user_skills" msprop:Generator_TableClassName="user_skillsDataTable" msprop:Generator_TableVarName="tableuser_skills" msprop:Generator_RowChangedName="user_skillsRowChanged" msprop:Generator_TablePropName="user_skills" msprop:Generator_RowDeletingName="user_skillsRowDeleting" msprop:Generator_RowChangingName="user_skillsRowChanging" msprop:Generator_RowEvHandlerName="user_skillsRowChangeEventHandler" msprop:Generator_RowDeletedName="user_skillsRowDeleted" msprop:Generator_RowClassName="user_skillsRow" msprop:Generator_UserTableName="user_skills" msprop:Generator_RowEvArgName="user_skillsRowChangeEvent">
+        <xs:element name="user_skills" msprop:Generator_TableClassName="user_skillsDataTable" msprop:Generator_TableVarName="tableuser_skills" msprop:Generator_TablePropName="user_skills" msprop:Generator_RowDeletingName="user_skillsRowDeleting" msprop:Generator_RowChangingName="user_skillsRowChanging" msprop:Generator_RowEvHandlerName="user_skillsRowChangeEventHandler" msprop:Generator_RowDeletedName="user_skillsRowDeleted" msprop:Generator_UserTableName="user_skills" msprop:Generator_RowChangedName="user_skillsRowChanged" msprop:Generator_RowEvArgName="user_skillsRowChangeEvent" msprop:Generator_RowClassName="user_skillsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />
               <xs:element name="user_id" msprop:Generator_ColumnVarNameInTable="columnuser_id" msprop:Generator_ColumnPropNameInRow="user_id" msprop:Generator_ColumnPropNameInTable="user_idColumn" msprop:Generator_UserColumnName="user_id" type="xs:long" minOccurs="0" />
               <xs:element name="skill_id" msprop:Generator_ColumnVarNameInTable="columnskill_id" msprop:Generator_ColumnPropNameInRow="skill_id" msprop:Generator_ColumnPropNameInTable="skill_idColumn" msprop:Generator_UserColumnName="skill_id" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="category_view" msprop:Generator_TableClassName="category_viewDataTable" msprop:Generator_TableVarName="tablecategory_view" msprop:Generator_TablePropName="category_view" msprop:Generator_RowDeletingName="category_viewRowDeleting" msprop:Generator_RowChangingName="category_viewRowChanging" msprop:Generator_RowEvHandlerName="category_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="category_viewRowDeleted" msprop:Generator_UserTableName="category_view" msprop:Generator_RowChangedName="category_viewRowChanged" msprop:Generator_RowEvArgName="category_viewRowChangeEvent" msprop:Generator_RowClassName="category_viewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />
+              <xs:element name="name" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:anyType" />
+              <xs:element name="_x0028_select_x0020_c_name_x0020_from_x0020_category_x0020_c_x0020_where_x0020_c_id_x003D_cat_master_category_x0029_" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="_column_select_c_name_from_category_c_where_c_id_cat_master_category_" msprop:Generator_ColumnPropNameInRow="__select_c_name_from_category_c_where_c_id_cat_master_category_" msprop:Generator_ColumnPropNameInTable="__select_c_name_from_category_c_where_c_id_cat_master_category_Column" msprop:Generator_UserColumnName="(select c_name from category c where c_id=cat_master_category)" type="xs:anyType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="recommendation_view" msprop:Generator_TableClassName="recommendation_viewDataTable" msprop:Generator_TableVarName="tablerecommendation_view" msprop:Generator_TablePropName="recommendation_view" msprop:Generator_RowDeletingName="recommendation_viewRowDeleting" msprop:Generator_RowChangingName="recommendation_viewRowChanging" msprop:Generator_RowEvHandlerName="recommendation_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="recommendation_viewRowDeleted" msprop:Generator_UserTableName="recommendation_view" msprop:Generator_RowChangedName="recommendation_viewRowChanged" msprop:Generator_RowEvArgName="recommendation_viewRowChangeEvent" msprop:Generator_RowClassName="recommendation_viewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ime_x0020_studenta" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnIme_studenta" msprop:Generator_ColumnPropNameInRow="Ime_studenta" msprop:Generator_ColumnPropNameInTable="Ime_studentaColumn" msprop:Generator_UserColumnName="Ime studenta" type="xs:anyType" minOccurs="0" />
+              <xs:element name="Prezime_x0020_studenta" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPrezime_studenta" msprop:Generator_ColumnPropNameInRow="Prezime_studenta" msprop:Generator_ColumnPropNameInTable="Prezime_studentaColumn" msprop:Generator_UserColumnName="Prezime studenta" type="xs:anyType" minOccurs="0" />
+              <xs:element name="Ime_x0020_profesora" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnIme_profesora" msprop:Generator_ColumnPropNameInRow="Ime_profesora" msprop:Generator_ColumnPropNameInTable="Ime_profesoraColumn" msprop:Generator_UserColumnName="Ime profesora" type="xs:anyType" minOccurs="0" />
+              <xs:element name="Prezime_x0020_profesora" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnPrezime_profesora" msprop:Generator_ColumnPropNameInRow="Prezime_profesora" msprop:Generator_ColumnPropNameInTable="Prezime_profesoraColumn" msprop:Generator_UserColumnName="Prezime profesora" type="xs:anyType" minOccurs="0" />
+              <xs:element name="name" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:anyType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="user_skills_view" msprop:Generator_TableClassName="user_skills_viewDataTable" msprop:Generator_TableVarName="tableuser_skills_view" msprop:Generator_TablePropName="user_skills_view" msprop:Generator_RowDeletingName="user_skills_viewRowDeleting" msprop:Generator_RowChangingName="user_skills_viewRowChanging" msprop:Generator_RowEvHandlerName="user_skills_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="user_skills_viewRowDeleted" msprop:Generator_UserTableName="user_skills_view" msprop:Generator_RowChangedName="user_skills_viewRowChanged" msprop:Generator_RowEvArgName="user_skills_viewRowChangeEvent" msprop:Generator_RowClassName="user_skills_viewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="firstname" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnfirstname" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn" msprop:Generator_UserColumnName="firstname" type="xs:anyType" minOccurs="0" />
+              <xs:element name="lastname" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnlastname" msprop:Generator_ColumnPropNameInRow="lastname" msprop:Generator_ColumnPropNameInTable="lastnameColumn" msprop:Generator_UserColumnName="lastname" type="xs:anyType" minOccurs="0" />
+              <xs:element name="name" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:anyType" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -399,14 +484,18 @@
       <xs:selector xpath=".//mstns:user_skills" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
+    <xs:unique name="category_view_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:category_view" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_user_skills_0_0" msdata:parent="skill" msdata:child="user_skills" msdata:parentkey="id" msdata:childkey="skill_id" msprop:Generator_UserChildTable="user_skills" msprop:Generator_ChildPropName="Getuser_skillsRows" msprop:Generator_UserRelationName="FK_user_skills_0_0" msprop:Generator_RelationVarName="relationFK_user_skills_0_0" msprop:Generator_UserParentTable="skill" msprop:Generator_ParentPropName="skillRow" />
-      <msdata:Relationship name="FK_recommendation_0_0" msdata:parent="category" msdata:child="recommendation" msdata:parentkey="id" msdata:childkey="category_id" msprop:Generator_UserChildTable="recommendation" msprop:Generator_ChildPropName="GetrecommendationRows" msprop:Generator_UserRelationName="FK_recommendation_0_0" msprop:Generator_RelationVarName="relationFK_recommendation_0_0" msprop:Generator_UserParentTable="category" msprop:Generator_ParentPropName="categoryRow" />
-      <msdata:Relationship name="FK_recommendation_1_0" msdata:parent="foogle_user" msdata:child="recommendation" msdata:parentkey="id" msdata:childkey="student_id" msprop:Generator_UserChildTable="recommendation" msprop:Generator_ChildPropName="GetrecommendationRowsByFK_recommendation_1_0" msprop:Generator_UserRelationName="FK_recommendation_1_0" msprop:Generator_RelationVarName="relationFK_recommendation_1_0" msprop:Generator_UserParentTable="foogle_user" msprop:Generator_ParentPropName="foogle_userRowByFK_recommendation_1_0" />
-      <msdata:Relationship name="FK_recommendation_2_0" msdata:parent="foogle_user" msdata:child="recommendation" msdata:parentkey="id" msdata:childkey="teacher_id" msprop:Generator_UserChildTable="recommendation" msprop:Generator_ChildPropName="GetrecommendationRowsByFK_recommendation_2_0" msprop:Generator_UserRelationName="FK_recommendation_2_0" msprop:Generator_RelationVarName="relationFK_recommendation_2_0" msprop:Generator_UserParentTable="foogle_user" msprop:Generator_ParentPropName="foogle_userRowByFK_recommendation_2_0" />
-      <msdata:Relationship name="FK_user_skills_1_0" msdata:parent="foogle_user" msdata:child="user_skills" msdata:parentkey="id" msdata:childkey="user_id" msprop:Generator_UserChildTable="user_skills" msprop:Generator_ChildPropName="Getuser_skillsRows" msprop:Generator_UserRelationName="FK_user_skills_1_0" msprop:Generator_RelationVarName="relationFK_user_skills_1_0" msprop:Generator_UserParentTable="foogle_user" msprop:Generator_ParentPropName="foogle_userRow" />
+      <msdata:Relationship name="FK_user_skills_0_0" msdata:parent="skill" msdata:child="user_skills" msdata:parentkey="id" msdata:childkey="skill_id" msprop:Generator_UserChildTable="user_skills" msprop:Generator_ChildPropName="Getuser_skillsRows" msprop:Generator_UserRelationName="FK_user_skills_0_0" msprop:Generator_ParentPropName="skillRow" msprop:Generator_RelationVarName="relationFK_user_skills_0_0" msprop:Generator_UserParentTable="skill" />
+      <msdata:Relationship name="FK_recommendation_0_0" msdata:parent="category" msdata:child="recommendation" msdata:parentkey="id" msdata:childkey="category_id" msprop:Generator_UserChildTable="recommendation" msprop:Generator_ChildPropName="GetrecommendationRows" msprop:Generator_UserRelationName="FK_recommendation_0_0" msprop:Generator_ParentPropName="categoryRow" msprop:Generator_RelationVarName="relationFK_recommendation_0_0" msprop:Generator_UserParentTable="category" />
+      <msdata:Relationship name="FK_recommendation_1_0" msdata:parent="foogle_user" msdata:child="recommendation" msdata:parentkey="id" msdata:childkey="student_id" msprop:Generator_UserChildTable="recommendation" msprop:Generator_ChildPropName="GetrecommendationRowsByFK_recommendation_1_0" msprop:Generator_UserRelationName="FK_recommendation_1_0" msprop:Generator_ParentPropName="foogle_userRowByFK_recommendation_1_0" msprop:Generator_RelationVarName="relationFK_recommendation_1_0" msprop:Generator_UserParentTable="foogle_user" />
+      <msdata:Relationship name="FK_recommendation_2_0" msdata:parent="foogle_user" msdata:child="recommendation" msdata:parentkey="id" msdata:childkey="teacher_id" msprop:Generator_UserChildTable="recommendation" msprop:Generator_ChildPropName="GetrecommendationRowsByFK_recommendation_2_0" msprop:Generator_UserRelationName="FK_recommendation_2_0" msprop:Generator_ParentPropName="foogle_userRowByFK_recommendation_2_0" msprop:Generator_RelationVarName="relationFK_recommendation_2_0" msprop:Generator_UserParentTable="foogle_user" />
+      <msdata:Relationship name="FK_user_skills_1_0" msdata:parent="foogle_user" msdata:child="user_skills" msdata:parentkey="id" msdata:childkey="user_id" msprop:Generator_UserChildTable="user_skills" msprop:Generator_ChildPropName="Getuser_skillsRows" msprop:Generator_UserRelationName="FK_user_skills_1_0" msprop:Generator_ParentPropName="foogle_userRow" msprop:Generator_RelationVarName="relationFK_user_skills_1_0" msprop:Generator_UserParentTable="foogle_user" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

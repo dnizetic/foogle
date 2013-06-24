@@ -3,10 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Reports" Height="467.67" Width="776.136">
     <Grid Margin="0,0,0,191">
-        <Menu HorizontalAlignment="Left" Height="339" Margin="10,10,0,-102" VerticalAlignment="Top" Width="103">
+        <Menu HorizontalAlignment="Left" Height="339" Margin="10,10,0,-102" VerticalAlignment="Top" Width="117">
             <MenuItem x:Name="korisnici_report" Header="Korisnici" Click="korisnici_report_Click"/>
             <MenuItem x:Name="kategorije" Header="Kategorije" Click="kategorije_Click"/>
             <MenuItem x:Name="skillovi" Header="Vještine" Click="skillovi_Click"/>
+            <MenuItem Header="Vještine korisnika" Click="MenuItem_Click"/>
+            <MenuItem Header="Preporuke"/>
         </Menu>
 
     </Grid>
