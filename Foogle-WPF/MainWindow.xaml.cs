@@ -175,6 +175,19 @@ namespace Foogle_WPF
                 INSERT OR REPLACE INTO category VALUES (37, 'Presentations', 4);
                 INSERT OR REPLACE INTO category VALUES (38, 'Engineering and technical design', 4);
                 
+
+                Create view if not exists user_skills_view as
+                select firstname, lastname, name from foogle_user join user_skills on 
+                foogle_user.id=user_skills.user_id join skill on 
+                user_skills.skill_id=skill.id;
+
+                create view if not exists recommendation_view as
+                select s.firstname as 'Ime studenta', s.lastname as 'Prezime studenta', 
+                p.firstname as 'Ime profesora', p.lastname as 'Prezime profesora', name 
+                from foogle_user s join recommendation on s.id=recommendation.student_id 
+                join foogle_user p on recommendation.teacher_id=p.id join category on 
+                recommendation.category_id=category.id;
+
             ";
 
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);

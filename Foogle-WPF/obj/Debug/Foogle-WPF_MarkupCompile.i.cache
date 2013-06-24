@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\
+C:\Users\denis\foogle\Foogle-WPF\obj\Debug\
 Foogle_WPF
 none
 false
 DEBUG;TRACE
-D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\App.xaml
+C:\Users\denis\foogle\Foogle-WPF\App.xaml
 12-1561647496
 
-31-1799649865
-34-535432846
+31756929783
+34-1362874867
 AdminUserConfirmationWindow.xaml;Endorsement.xaml;IspisKategorijaReport.xaml;IspisKorisnikaReport.xaml;IspisSkillovaReport.xaml;Login.xaml;MainWindow.xaml;Registration.xaml;Reports.xaml;SearchBySkillResults.xaml;SearchSelectCategoryWindow.xaml;SelectCategory.xaml;
 
-False
+True
 
