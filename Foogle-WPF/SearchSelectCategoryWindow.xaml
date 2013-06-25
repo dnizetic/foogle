@@ -1,8 +1,8 @@
 ﻿<Window x:Class="Foogle_WPF.SearchSelectCategoryWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="SearchSelectWindow" Height="131.701" Width="300"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+        Title="Odabir kategorije" Height="131.701" Width="300"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}" ResizeMode="CanMinimize">
     <Grid>
         <ComboBox Name="CategoryCombo" SelectedValuePath="id" DisplayMemberPath="name" ItemsSource="{Binding CategoriesCollection}" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="266" RenderTransformOrigin="0.077,0.679"/>
         <Label Content="Odaberite kategoriju:" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="266"/>

@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Foogle_WPF" x:Class="Foogle_WPF.Users"
-        Title="Korisnici" Height="320" Width="800" Loaded="Window_Loaded">
+        Title="Korisnici" Height="320" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize">
     <Window.Resources>
         <local:FoogleDS x:Key="foogleDS"/>
         <CollectionViewSource x:Key="foogle_userViewSource" Source="{Binding foogle_user, Source={StaticResource foogleDS}}"/>
@@ -23,7 +23,7 @@
                 <DataGridTextColumn x:Name="linkedinColumn" Binding="{Binding linkedin}" Header="LinkedIn" Width="256"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="update" Content="Ažuriraj" HorizontalAlignment="Left" Margin="170,242,0,0" VerticalAlignment="Top" Width="75" Click="update_Click" RenderTransformOrigin="0.87,0.301"/>
+        <Button x:Name="update" Content="Ažuriraj" HorizontalAlignment="Left" Margin="207,242,0,0" VerticalAlignment="Top" Width="75" Click="update_Click"/>
         <Image x:Name="BackgroundImageDL" HorizontalAlignment="Left" Height="400" VerticalAlignment="Bottom" Width="380" Panel.ZIndex="-1" Source="background _DR.jpg" Opacity="0.88" Margin="400,-41,0,-69" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -34,7 +34,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="osvjezi" Content="Osvježi" HorizontalAlignment="Left" Margin="250,242,0,0" VerticalAlignment="Top" Width="75" Click="osvjezi_Click"/>
 
     </Grid>
 </Window>

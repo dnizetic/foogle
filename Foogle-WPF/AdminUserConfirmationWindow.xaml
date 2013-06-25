@@ -1,8 +1,8 @@
 ﻿<Window x:Class="Foogle_WPF.AdminUserConfirmationWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AdminUserConfirmationWindow" Height="300" Width="582.4"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+        Title="Neautorizirani profesori" Height="300" Width="582.4"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}" ResizeMode="CanMinimize">
     <Grid Margin="0,0,2,0">
         <ListView Name="MyListView" ItemsSource="{Binding KorisnikCollection}" HorizontalAlignment="Left" Height="210" Margin="10,52,0,0" VerticalAlignment="Top" Width="558">
             <ListView.View>
