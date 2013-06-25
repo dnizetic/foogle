@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Foogle_WPF.AdminUserConfirmationWindow" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAQAAAAAAAAA=</HashCode>
+      <FileName>AdminUserConfirmationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.App" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Endorsement" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAIAAAAAAgAACABAEAAIAAAAAUAAAAA=</HashCode>
+      <FileName>Endorsement.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDS" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAhAAAxAUgENABAAAQAgAIAwCwRgAGAAJAIMABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.IspisKategorijaReport" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IspisKategorijaReport.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.IspisKorisnikaReport" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgCAAAAAAAAAAAEAAAAgAAAAAAAiAAAAAAAAAAAA=</HashCode>
+      <FileName>IspisKorisnikaReport.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.IspisPreporukaReport" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IspisPreporukaReport.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.IspisSkillovaReport" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IspisSkillovaReport.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.IspisSkillovaUseraReport" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IspisSkillovaUseraReport.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Login" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAgAAAAA=</HashCode>
+      <FileName>Login.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.MainWindow" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAAIAIAQAAAQMgKIAYEAAggAIEAAAAAAQABAAAFYA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Category" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAgAAAAAAAgA=</HashCode>
+      <FileName>Models\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleContext" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAACAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Models\FoogleContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleUser" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAgAAAhAAAAgAAACABAAAAAAAAAAQAAAAgAAIgA=</HashCode>
+      <FileName>Models\FoogleUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Recommendation" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEACAAAAAAAAAAAAAACAAAAIAAABAgA=</HashCode>
+      <FileName>Models\Recommendation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Skill" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Skill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.UserSkills" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwA=</HashCode>
+      <FileName>Models\UserSkills.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Registration" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAABAAAAAAgAAAAAAADBAAAAAAAA=</HashCode>
+      <FileName>Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Reports" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAACAAAAAAAAAAAAAAAAAAAABAAAAAAEAAAAg=</HashCode>
+      <FileName>Reports.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.SearchBySkillResults" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SearchBySkillResults.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.SearchSelectCategoryWindow" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAgAAgAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>SearchSelectCategoryWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.SelectCategory" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAACAgAAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SelectCategory.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.StudentRegistration" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAAAAAIAAABAAgAQACAAAAAIABAAAAQEAA=</HashCode>
+      <FileName>StudentRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.StudentSearch" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQABAAAAQCAAAAAAAAAQAAAhAAgIAAAIAAAgAAAA=</HashCode>
+      <FileName>StudentSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.UserMatch" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAhAAAAgAAAABAAAAAAAAAAAAAAAAAAAAwA=</HashCode>
+      <FileName>UserMatch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Users" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAA4AAAAA=</HashCode>
+      <FileName>Users.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.categoryTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.foogle_userTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.recommendationTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.skillTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.userSkillsMenuItemTableAdapter" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.recommendation_viewTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.userSkillsMenuItem_viewTableAdapter" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.FoogleDSTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQSAQSIAIABARAEBAAAAcAAgACACgAAAAAQAAAAABQQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="controls.GifImage" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQQAMIASIAAAAEAMAAgACAAAAAAgAAAAAAACA=</HashCode>
+      <FileName>GifImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foogle_WPF.Properties.Settings" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABIAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
