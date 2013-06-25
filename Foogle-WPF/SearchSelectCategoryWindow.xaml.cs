@@ -61,6 +61,8 @@ namespace Foogle_WPF
             populateCollection();
 
             InitializeComponent();
+            trazi.IsDefault = true;
+            
         }
 
 

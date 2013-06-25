@@ -6,7 +6,7 @@
     <Grid>
         <ComboBox Name="CategoryCombo" SelectedValuePath="id" DisplayMemberPath="name" ItemsSource="{Binding CategoriesCollection}" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="266" RenderTransformOrigin="0.077,0.679"/>
         <Label Content="Odaberite kategoriju:" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="266"/>
-        <Button Content="Traži" HorizontalAlignment="Left" Margin="201,64,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.296,0.009" Click="SearchButton"/>
+        <Button x:Name="trazi" Content="Traži" HorizontalAlignment="Left" Margin="201,64,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.296,0.009" Click="SearchButton"/>
         <Image x:Name="BackgroundImageDL" HorizontalAlignment="Left" Height="400" VerticalAlignment="Bottom" Width="380" Panel.ZIndex="-1" Source="background _DR.jpg" Opacity="0.88" Margin="90,-233,-178,-65" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>

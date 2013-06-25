@@ -27,6 +27,7 @@ namespace Foogle_WPF
         public Registration()
         {
             InitializeComponent();
+            Submit.IsDefault = true;
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)

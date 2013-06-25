@@ -25,6 +25,12 @@ namespace Foogle_WPF
         public Login()
         {
             InitializeComponent();
+            this.Loaded += Login_Loaded;
+        }
+
+        void Login_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoginButton.IsDefault = true;
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)

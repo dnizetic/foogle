@@ -55,6 +55,7 @@ namespace Foogle_WPF
             user_id = u_id;
 
             InitializeComponent();
+            endorse.IsDefault = true;
         }
 
         public ObservableCollection<Category> CategoriesCollection

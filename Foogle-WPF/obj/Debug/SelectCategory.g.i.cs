@@ -49,6 +49,14 @@ namespace Foogle_WPF {
         #line hidden
         
         
+        #line 9 "..\..\SelectCategory.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button endorse;
+        
+        #line default
+        #line hidden
+        
+        
         #line 10 "..\..\SelectCategory.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image BackgroundImageDL;
@@ -90,9 +98,10 @@ namespace Foogle_WPF {
             this.EndorseCombo = ((System.Windows.Controls.ComboBox)(target));
             return;
             case 2:
+            this.endorse = ((System.Windows.Controls.Button)(target));
             
             #line 9 "..\..\SelectCategory.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.EndorseButton);
+            this.endorse.Click += new System.Windows.RoutedEventHandler(this.EndorseButton);
             
             #line default
             #line hidden

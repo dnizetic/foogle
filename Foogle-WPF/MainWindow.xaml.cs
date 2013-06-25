@@ -44,6 +44,8 @@ namespace Foogle_WPF
             InitializeComponent();
             SetupMenuByAuthLevel(0);
 
+            SearchButton.IsDefault = true;
+
             animateBackgroundThread = new Thread(new ThreadStart(AnimateBackground));
             animateBackgroundThread.Priority = ThreadPriority.BelowNormal;
             animateBackgroundThread.Start();
