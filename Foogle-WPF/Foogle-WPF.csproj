@@ -182,6 +182,7 @@
     <Compile Include="AdminUserConfirmationWindow.xaml.cs">
       <DependentUpon>AdminUserConfirmationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FoogleDS.Designer.cs" />
     <Compile Include="Users.xaml.cs">
       <DependentUpon>Users.xaml</DependentUpon>
     </Compile>

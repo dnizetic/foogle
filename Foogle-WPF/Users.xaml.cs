@@ -40,7 +40,6 @@ namespace Foogle_WPF
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             RefreshDataGrid();
-           
         }
 
         private void obrisi_Click(object sender, RoutedEventArgs e)
