@@ -31,7 +31,7 @@ namespace Foogle_WPF
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login(null);
+            Login login = new Login();
             login.Show();
             Close();
         }

@@ -23,6 +23,7 @@ using System.Runtime.InteropServices;
 using mshtml;
 using System.Data.SQLite;
 using System.Threading;
+using System.ComponentModel;
 
 
 
@@ -33,14 +34,18 @@ namespace Foogle_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static short authLevel = 1337;
+        public static short authLevel = 0;
         public static int userID = 0;
 
         public MainWindow()
         {
             InitializeComponent();
-            SetupMenuByAuthLevel(authLevel);
-            this.Activated += new System.EventHandler(this.MainWindow_Activated);
+            SetupMenuByAuthLevel(0);
+
+            Thread animateBackgroundThread = new Thread(new ThreadStart(AnimateBackground));
+            animateBackgroundThread.Priority = ThreadPriority.Lowest;
+            animateBackgroundThread.Start();
+            //animateBackgroundThread.Join();
 
             //SQLite support
             SQLiteConnection m_dbConnection;
@@ -190,16 +195,20 @@ namespace Foogle_WPF
             SetupMenuByAuthLevel(authLevel);
         }
 
+        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            windowExists = false;
+        }
+
         private void AuthButton_Click(object sender, RoutedEventArgs e)
         {
             if (authLevel > 0)
             {
-                authLevel = 0;
                 SetupMenuByAuthLevel(0);
                 return;
             }
 
-            Login loginWindow = new Login(LoggedInLabel);
+            Login loginWindow = new Login();
             loginWindow.Show();
         }
 
@@ -263,6 +272,7 @@ namespace Foogle_WPF
             }
 
             webBrowser.Visibility = Visibility.Hidden;
+            webBrowserBorder.Visibility = Visibility.Hidden;
             loadingImage.Visibility = Visibility.Visible;
 
             //r_fullprofile & r_emailaddress
@@ -277,6 +287,7 @@ namespace Foogle_WPF
             if (xmlFound)
             {
                 webBrowser.Visibility = Visibility.Hidden;
+                webBrowserBorder.Visibility = Visibility.Hidden;
                 loadingImage.Visibility = Visibility.Visible;
 
                 string url = "https://api.linkedin.com/v1/people/~?oauth2_access_token=" + accessToken;
@@ -298,6 +309,7 @@ namespace Foogle_WPF
                 webBrowser.Navigate("http://www.google.com");
 
                 webBrowser.Visibility = Visibility.Visible;
+                webBrowserBorder.Visibility = Visibility.Visible;
                 loadingImage.Visibility = Visibility.Hidden;
 
                 return;
@@ -320,6 +332,7 @@ namespace Foogle_WPF
             if (uri.Contains("code="))
             {
                 webBrowser.Visibility = Visibility.Hidden;
+                webBrowserBorder.Visibility = Visibility.Hidden;
 
                 HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create("https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&code="
                                                                                 + final_code
@@ -361,6 +374,7 @@ namespace Foogle_WPF
             else
             {
                 webBrowser.Visibility = Visibility.Visible;
+                webBrowserBorder.Visibility = Visibility.Visible;
             }
         }
 
@@ -431,11 +445,14 @@ namespace Foogle_WPF
 
         public void SetupMenuByAuthLevel(short level)
         {
+            authLevel = level;
             if (level <= 0)
             {
                 LinkedInButton.Visibility = Visibility.Visible;
                 ProfesorButton.Visibility = Visibility.Visible;
                 AuthButton.Content = "Prijava";
+                BlankField.Content = "";
+                BlankField.Margin = new Thickness(324, 0, 86, 0);
                 UsersButton.Visibility = Visibility.Hidden;
                 EndorsementButton.Visibility = Visibility.Hidden;
                 ReportsButton.Visibility = Visibility.Hidden;
@@ -445,7 +462,8 @@ namespace Foogle_WPF
 
             LinkedInButton.Visibility = Visibility.Hidden;
             ProfesorButton.Visibility = Visibility.Hidden;
-            AuthButton.Content = "Odjava";
+            AuthButton.Content = "Odjava"; 
+            BlankField.Content = "Dobrodošli u Foogle!";
 
             switch (level)
             {
@@ -454,6 +472,7 @@ namespace Foogle_WPF
                     EndorsementButton.Visibility = Visibility.Hidden;
                     ReportsButton.Visibility = Visibility.Hidden;
                     AdministrationButton.Visibility = Visibility.Hidden;
+                    BlankField.Margin = new Thickness(0, 0, 86, 0);
                     break;
                 case 333:
                 case 666:
@@ -461,16 +480,66 @@ namespace Foogle_WPF
                     EndorsementButton.Visibility = Visibility.Visible;
                     ReportsButton.Visibility = Visibility.Hidden;
                     AdministrationButton.Visibility = Visibility.Hidden;
+                    BlankField.Margin = new Thickness(0, 0, 194, 0);
+                    EndorsementButton.Margin = new Thickness(0, 0, 86, 0);
                     break;
                 case 1337:
                     UsersButton.Visibility = Visibility.Visible;
                     EndorsementButton.Visibility = Visibility.Visible;
                     ReportsButton.Visibility = Visibility.Visible;
                     AdministrationButton.Visibility = Visibility.Visible;
+                    BlankField.Margin = new Thickness(0, 0, 427, 0);
+                    EndorsementButton.Margin = new Thickness(0, 0, 256, 0);
                     break;
-                default:
-                    // ForceLogout
+                default:               
+                    SetupMenuByAuthLevel(0);
                     break;
+            }
+        }
+
+        short backgroundAnimationPhase = 0;
+        float backgroundAnimationOffset = 0.0031f;
+        bool windowExists = true;
+        Random random = new Random(13891);
+        private void AnimateBackground()
+        {
+            while (windowExists)
+            {
+                if (!Dispatcher.CheckAccess())
+                {
+                    switch (backgroundAnimationPhase)
+                    {
+                        case 1:
+                            Dispatcher.Invoke((Action)delegate()
+                            {
+                                BackgroundImageUL.Opacity += backgroundAnimationOffset;
+                            });
+
+                            if (backgroundAnimationOffset >= 0.3f)
+                            {
+                                backgroundAnimationPhase++;
+                            }
+                            break;
+                        case 2:
+                            Dispatcher.Invoke((Action)delegate()
+                            {
+                                BackgroundImageUL.Opacity -= backgroundAnimationOffset;
+                            });
+
+                            if (backgroundAnimationOffset <= 0.0f)
+                            {
+                                backgroundAnimationPhase++;
+                            }
+                            break;
+                        default:
+                            backgroundAnimationPhase = 1;
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.Write("Cannot access");
+                }
             }
         }
     }

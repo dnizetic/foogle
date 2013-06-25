@@ -20,30 +20,23 @@ namespace Foogle_WPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-
-
     public partial class Login : Window
     {
-
-        Label lab;
-        public Login(Label l)
+        public Login()
         {
             InitializeComponent();
-            lab = l;
         }
-
-        //Welcome welcome = new Welcome();
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             if (textBoxEmail.Text.Length == 0)
             {
-                errormessage.Text = "Enter an email.";
+                errormessage.Text = "Unesite e-mail!";
                 textBoxEmail.Focus();
             }
             else if (!Regex.IsMatch(textBoxEmail.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
             {
-                errormessage.Text = "Enter a valid email.";
+                errormessage.Text = "Unesite valjani e-mail!";
                 textBoxEmail.Select(0, textBoxEmail.Text.Length);
                 textBoxEmail.Focus();
             }
@@ -55,21 +48,31 @@ namespace Foogle_WPF
                 //check if lid already exists
                 using (var context = new FoogleContext())
                 {
-                    var usrs = from b in context.Users
-                               where b.email.Equals(email)
-                               where b.password.Equals(password)
-                               where b.confirmed.Equals(true)
-                               select b;
+                    var users = from user in context.Users
+                               where user.email.Equals(email)
+                               where user.password.Equals(password)
+                               where user.confirmed.Equals(true)
+                               select user;
 
-
-                    
-
-                    if (usrs.Count() == 1)
+                    if (users.Count() == 1)
                     {
-                        MainWindow.authLevel = 1337; // TODO: Postavi prema tipu korisnika!
-
-                        FoogleUser f = usrs.First();
-                        MainWindow.userID = Convert.ToInt32(f.id);
+                        FoogleUser user = users.First();
+                        MainWindow.userID = Convert.ToInt32(user.id);
+                        switch (user.role[0])
+                        {
+                            case 's':
+                                MainWindow.authLevel = 1;
+                                break;
+                            case 'p':
+                                MainWindow.authLevel = 666;
+                                break;
+                            case 'a':
+                                MainWindow.authLevel = 1337;
+                                break;
+                            default:
+                                MainWindow.authLevel = 0;
+                                break;
+                        }
 
                         Close();
                         return;
@@ -79,7 +82,6 @@ namespace Foogle_WPF
                         errormessage.Text = "Krivi e-mail i/ili lozinka!";
                     }
                 }
-                //con.Close();
             }
         }
 
@@ -89,6 +91,5 @@ namespace Foogle_WPF
             registration.Show();
             Close();
         }
-
     }
 }
