@@ -272,7 +272,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>FoogleDS</rd:DataSetName>
-        <rd:SchemaPath>D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\FoogleDS.xsd</rd:SchemaPath>
+        <rd:SchemaPath>|DataDirectory|FoogleDS.xsd</rd:SchemaPath>
         <rd:TableName>skill</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
