@@ -219,13 +219,6 @@ namespace Foogle_WPF
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            if (authLevel < 333)
-            {
-                MessageBox.Show("Niste ulogirani ili nemate pravo pristupa tražilici!");
-                AuthButton.Focus();
-                return;
-            }
-
             // Tražilica bi trebala raditi i na način da se mogu pretražiti korisnici po imenu ili bilo čemu drugome
 
             //simple sort: # of skills matched (no formula)
@@ -238,14 +231,6 @@ namespace Foogle_WPF
         //called on every character deletion / add
         private void SearchBoxPopulating(object sender, System.Windows.Controls.PopulatingEventArgs e)
         {
-            if (authLevel < 333)
-            {
-                MessageBox.Show("Niste ulogirani ili nemate pravo pristupa tražilici!");
-                AuthButton.Focus();
-                searchBox.Text = "";
-                return;
-            }
-
             string text = searchBox.Text;
 
             if (text.Length > 0)
@@ -426,12 +411,6 @@ namespace Foogle_WPF
 
         private void SearchByCategory(object sender, RoutedEventArgs e)
         {
-            if (authLevel < 333)
-            {
-                MessageBox.Show("Niste ulogirani ili nemate pravo pristupa!");
-                return;
-            }
-
             SearchSelectCategoryWindow categorySearchWindow = new SearchSelectCategoryWindow();
             categorySearchWindow.Show();
         }
