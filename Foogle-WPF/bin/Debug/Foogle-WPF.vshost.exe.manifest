@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Foogle-WPF.exe" size="489984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Foogle-WPF.exe" size="492032">
       <assemblyIdentity name="Foogle-WPF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LLbBaFFt/7LLKZCbgXDcFtbwYs3B5BwDrgrMej0XIRQ=</dsig:DigestValue>
+        <dsig:DigestValue>fjttbFgNPZ/nImMP8j9Cq2Iph9TKdAtz8EenDlTVoZA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

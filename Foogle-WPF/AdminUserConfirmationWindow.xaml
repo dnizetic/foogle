@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="AdminUserConfirmationWindow" Height="300" Width="582.4"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
-    <Grid Margin="0,0,-69.2,0">
+    <Grid Margin="0,0,2,0">
         <ListView Name="MyListView" ItemsSource="{Binding KorisnikCollection}" HorizontalAlignment="Left" Height="210" Margin="10,52,0,0" VerticalAlignment="Top" Width="558">
             <ListView.View>
                 <GridView>
@@ -32,7 +32,17 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Lista profesora koji čekaju autorizaciju." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="37" Width="226"/>
+        <Label Content="Lista profesora koji čekaju autorizaciju:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="37" Width="302" FontSize="16"/>
+        <Image x:Name="BackgroundImageDL" HorizontalAlignment="Left" Height="400" VerticalAlignment="Bottom" Width="380" Panel.ZIndex="-1" Source="background _DR.jpg" Opacity="0.88" Margin="244,0,-52,-132" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>

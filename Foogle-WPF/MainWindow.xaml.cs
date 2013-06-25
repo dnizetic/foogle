@@ -32,6 +32,8 @@ namespace Foogle_WPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
         public static short authLevel = 0;
@@ -42,8 +44,8 @@ namespace Foogle_WPF
             InitializeComponent();
             SetupMenuByAuthLevel(0);
 
-            Thread animateBackgroundThread = new Thread(new ThreadStart(AnimateBackground));
-            animateBackgroundThread.Priority = ThreadPriority.Lowest;
+            animateBackgroundThread = new Thread(new ThreadStart(AnimateBackground));
+            animateBackgroundThread.Priority = ThreadPriority.BelowNormal;
             animateBackgroundThread.Start();
             //animateBackgroundThread.Join();
 
@@ -189,6 +191,7 @@ namespace Foogle_WPF
 
         StudentSearch studentSearch = new StudentSearch();
         StudentRegistration studentRegistration = new StudentRegistration();
+        Thread animateBackgroundThread;
 
         private void MainWindow_Activated(object sender, EventArgs e)
         {
@@ -397,7 +400,7 @@ namespace Foogle_WPF
 
         private void PrijavaAdminButton_Click(object sender, RoutedEventArgs e)
         {
-            if (authLevel < 1337) 
+            if (authLevel < 1337)
             {
                 MessageBox.Show("Niste ulogirani ili nemate pravo pristupa!");
                 return;
@@ -462,7 +465,7 @@ namespace Foogle_WPF
 
             LinkedInButton.Visibility = Visibility.Hidden;
             ProfesorButton.Visibility = Visibility.Hidden;
-            AuthButton.Content = "Odjava"; 
+            AuthButton.Content = "Odjava";
             BlankField.Content = "Dobrodošli u Foogle!";
 
             switch (level)
@@ -491,14 +494,14 @@ namespace Foogle_WPF
                     BlankField.Margin = new Thickness(0, 0, 427, 0);
                     EndorsementButton.Margin = new Thickness(0, 0, 256, 0);
                     break;
-                default:               
+                default:
                     SetupMenuByAuthLevel(0);
                     break;
             }
         }
 
         short backgroundAnimationPhase = 0;
-        float backgroundAnimationOffset = 0.0031f;
+        float backgroundAnimationOffset = 0.0000033f;
         bool windowExists = true;
         Random random = new Random(13891);
         private void AnimateBackground()
@@ -507,38 +510,35 @@ namespace Foogle_WPF
             {
                 if (!Dispatcher.CheckAccess())
                 {
-                    switch (backgroundAnimationPhase)
+                    Dispatcher.Invoke((Action)delegate()
                     {
-                        case 1:
-                            Dispatcher.Invoke((Action)delegate()
-                            {
+                        switch (backgroundAnimationPhase)
+                        {
+                            case 1:
                                 BackgroundImageUL.Opacity += backgroundAnimationOffset;
-                            });
+                                BackgroundImageDL.Opacity -= backgroundAnimationOffset;
+                                BackgroundImageUR.Opacity -= backgroundAnimationOffset;
 
-                            if (backgroundAnimationOffset >= 0.3f)
-                            {
-                                backgroundAnimationPhase++;
-                            }
-                            break;
-                        case 2:
-                            Dispatcher.Invoke((Action)delegate()
-                            {
+                                if (BackgroundImageUL.Opacity >= 0.75f)
+                                {
+                                    backgroundAnimationPhase++;
+                                }
+                                break;
+                            case 2:
                                 BackgroundImageUL.Opacity -= backgroundAnimationOffset;
-                            });
+                                BackgroundImageDL.Opacity += backgroundAnimationOffset;
+                                BackgroundImageUR.Opacity += backgroundAnimationOffset;
 
-                            if (backgroundAnimationOffset <= 0.0f)
-                            {
-                                backgroundAnimationPhase++;
-                            }
-                            break;
-                        default:
-                            backgroundAnimationPhase = 1;
-                            break;
-                    }
-                }
-                else
-                {
-                    Console.Write("Cannot access");
+                                if (BackgroundImageUL.Opacity <= 0.10f)
+                                {
+                                    backgroundAnimationPhase++;
+                                }
+                                break;
+                            default:
+                                backgroundAnimationPhase = 1;
+                                break;
+                        }
+                    });
                 }
             }
         }

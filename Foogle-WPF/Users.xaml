@@ -2,35 +2,38 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Foogle_WPF" x:Class="Foogle_WPF.Users"
-        Title="Users" Height="321.145" Width="674.009" Loaded="Window_Loaded">
+        Title="Korisnici" Height="320" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
         <local:FoogleDS x:Key="foogleDS"/>
         <CollectionViewSource x:Key="foogle_userViewSource" Source="{Binding foogle_user, Source={StaticResource foogleDS}}"/>
     </Window.Resources>
-    <Grid DataContext="{StaticResource foogle_userViewSource}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="85*"/>
-            <ColumnDefinition Width="121*"/>
-            <ColumnDefinition Width="38*"/>
-        </Grid.ColumnDefinitions>
-        <Button x:Name="obrisi" Content="Obriši" Grid.Column="1" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top" Width="75" Click="obrisi_Click"/>
-        <Button x:Name="unesi" Content="Unesi" Grid.Column="2" HorizontalAlignment="Left" Margin="0,238,0,0" VerticalAlignment="Top" Width="75" Click="unesi_Click"/>
+    <Grid DataContext="{StaticResource foogle_userViewSource}" Margin="0,0,2,0">
+        <Button x:Name="obrisi" Content="Obriši" HorizontalAlignment="Left" Margin="90,242,0,0" VerticalAlignment="Top" Width="75" Click="obrisi_Click"/>
+        <Button x:Name="unesi" Content="Unesi" HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top" Width="75" Click="unesi_Click"/>
         <DataGrid x:Name="foogle_userDataGrid" AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Column="1" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,10,27,75" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding email}" Header="email" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="firstnameColumn" Binding="{Binding firstname}" Header="firstname" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="lastnameColumn" Binding="{Binding lastname}" Header="lastname" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="roleColumn" Binding="{Binding role}" Header="role" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="passwordColumn" Binding="{Binding password}" Header="password" Width="SizeToHeader"/>
-                <DataGridCheckBoxColumn x:Name="confirmedColumn" Binding="{Binding confirmed}" Header="confirmed" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="linkedinColumn" Binding="{Binding linkedin}" Header="linkedin" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="expColumn" Binding="{Binding exp}" Header="exp" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="ID" Width="24"/>
+                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding email}" Header="E-mail" Width="128"/>
+                <DataGridTextColumn x:Name="firstnameColumn" Binding="{Binding firstname}" Header="Ime" Width="64"/>
+                <DataGridTextColumn x:Name="lastnameColumn" Binding="{Binding lastname}" Header="Prezime" Width="96"/>
+                <DataGridTextColumn x:Name="roleColumn" Binding="{Binding role}" Header="Uloga" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="passwordColumn" Binding="{Binding password}" Header="Lozinka" Width="96"/>
+                <DataGridCheckBoxColumn x:Name="confirmedColumn" Binding="{Binding confirmed}" Header="Aktivan" Width="50"/>
+                <DataGridTextColumn x:Name="expColumn" Binding="{Binding exp}" Header="Iskustvo" Width="54"/>
+                <DataGridTextColumn x:Name="linkedinColumn" Binding="{Binding linkedin}" Header="LinkedIn" Width="256"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="update" Content="Ažuriraj" Grid.Column="2" HorizontalAlignment="Left" Margin="95,238,0,0" VerticalAlignment="Top" Width="75" Click="update_Click"/>
+        <Button x:Name="update" Content="Ažuriraj" HorizontalAlignment="Left" Margin="207,242,0,0" VerticalAlignment="Top" Width="75" Click="update_Click"/>
+        <Image x:Name="BackgroundImageDL" HorizontalAlignment="Left" Height="400" VerticalAlignment="Bottom" Width="380" Panel.ZIndex="-1" Source="background _DR.jpg" Opacity="0.88" Margin="400,-41,0,-69" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
     </Grid>
 </Window>
