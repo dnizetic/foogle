@@ -161,3 +161,5 @@ D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisSkillovaUser
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisSkillovaUseraReport.g.cs
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisPreporukaReport.baml
 D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\IspisPreporukaReport.g.cs
+D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\BrisanjeKorisnika.g.cs
+D:\Users\Ljiljana\Documents\GitHub\foogle\Foogle-WPF\obj\Debug\BrisanjeKorisnika.baml

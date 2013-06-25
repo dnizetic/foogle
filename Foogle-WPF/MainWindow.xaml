@@ -59,6 +59,6 @@
         <Label  x:Name="SearchLabel" HorizontalAlignment="Left" Margin="0,144,0,0" VerticalAlignment="Top" Width="76" Height="36" Content="Pretraži:" FontSize="18" Padding="8,4,4,4"/>
         <Label x:Name="Logo" Content="Foogle" Margin="0,32,0,0" Background="#00000000" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Height="113" VerticalAlignment="Top" FontSize="112" FontWeight="Bold" FontFamily="Parchment" Padding="0"/>
         <Button Content="Izvještaji" Style="{StaticResource TopMenuButton}" HorizontalAlignment="Right" Margin="0,0,105,0" VerticalAlignment="Top" Width="70" Click="Button_Click" Height="32" BorderThickness="0,4,0,0" Background="#00000000" Foreground="White"/>
-        <Button Content="" Style="{StaticResource TopMenuButton}" Margin="324,0,372,0" VerticalAlignment="Top" Click="RegistracijaProfesor" Height="32" BorderThickness="0,4,0,0" Background="#00000000" Foreground="White" IsEnabled="False"/>
+        <Button x:Name="brisi" Content="Button" HorizontalAlignment="Left" Margin="329,0,0,0" VerticalAlignment="Top" Width="75" Click="brisi_Click"/>
     </Grid>
 </Window>

@@ -1,0 +1,35 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Foogle_WPF" x:Class="Foogle_WPF.BrisanjeKorisnika"
+        Title="BrisanjeKorisnika" Height="321.145" Width="674.009" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:FoogleDS x:Key="foogleDS"/>
+        <CollectionViewSource x:Key="foogle_userViewSource" Source="{Binding foogle_user, Source={StaticResource foogleDS}}"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource foogle_userViewSource}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="85*"/>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="foogle_userDataGrid" AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Column="1" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="3,10,25,81" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding email}" Header="email" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="firstnameColumn" Binding="{Binding firstname}" Header="firstname" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="lastnameColumn" Binding="{Binding lastname}" Header="lastname" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="roleColumn" Binding="{Binding role}" Header="role" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="activityColumn" Binding="{Binding activity}" Header="activity" Width="SizeToHeader"/>
+                <DataGridCheckBoxColumn x:Name="confirmedColumn" Binding="{Binding confirmed}" Header="confirmed" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="linkedin_idColumn" Binding="{Binding linkedin_id}" Header="linkedin id" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="linkedinColumn" Binding="{Binding linkedin}" Header="linkedin" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="expColumn" Binding="{Binding exp}" Header="exp" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="obrisi" Content="Obriši" Grid.Column="1" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top" Width="75" Click="obrisi_Click"/>
+
+    </Grid>
+</Window>

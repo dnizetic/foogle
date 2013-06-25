@@ -459,6 +459,14 @@ namespace Foogle_WPF
             r.Show();
         }
 
+        
+
+        private void brisi_Click(object sender, RoutedEventArgs e)
+        {
+            BrisanjeKorisnika bk = new BrisanjeKorisnika();
+            bk.Show();
+        }
+
     }
 
 
