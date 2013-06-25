@@ -188,11 +188,6 @@
     <Compile Include="Endorsement.xaml.cs">
       <DependentUpon>Endorsement.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FoogleDS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FoogleDS.xsd</DependentUpon>
-    </Compile>
     <Compile Include="GifImage.cs" />
     <Compile Include="IspisKategorijaReport.xaml.cs">
       <DependentUpon>IspisKategorijaReport.xaml</DependentUpon>
@@ -328,6 +323,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Foogle-WPF_TemporaryKey.pfx" />
     <None Include="FoogleDS.xsc">
       <DependentUpon>FoogleDS.xsd</DependentUpon>
@@ -335,7 +331,6 @@
     <None Include="FoogleDS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FoogleDS.Designer.cs</LastGenOutput>
     </None>
     <None Include="FoogleDS.xss">
       <DependentUpon>FoogleDS.xsd</DependentUpon>

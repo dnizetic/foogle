@@ -34,7 +34,7 @@ namespace Foogle_WPF
 
         //Welcome welcome = new Welcome();
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             if (textBoxEmail.Text.Length == 0)
             {
@@ -52,9 +52,6 @@ namespace Foogle_WPF
                 string email = textBoxEmail.Text;
                 string password = passwordBox1.Password;
   
-
-
-
                 //check if lid already exists
                 using (var context = new FoogleContext())
                 {
@@ -69,19 +66,12 @@ namespace Foogle_WPF
 
                     if (usrs.Count() == 1)
                     {
-                        MessageBox.Show("Dobrodosli!");
-
-                        //Label l = this.FindName("LoggedInLabel") as Label;
-                        //l.Content = "Dobrodosli!";
-                        lab.Content = "Dobrodosli!";
-
-                        MainWindow.authLevel = 1; // TODO: Postavi prema tipu korisnika!
+                        MainWindow.authLevel = 1337; // TODO: Postavi prema tipu korisnika!
 
                         FoogleUser f = usrs.First();
-                        MainWindow.professor_id = Convert.ToInt32(f.id);
+                        MainWindow.userID = Convert.ToInt32(f.id);
 
                         Close();
-
                         return;
                     }
                     else

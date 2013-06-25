@@ -33,9 +33,14 @@ namespace Foogle_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static short authLevel = 1337;
+        public static int userID = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+            SetupMenuByAuthLevel(authLevel);
+            this.Activated += new System.EventHandler(this.MainWindow_Activated);
 
             //SQLite support
             SQLiteConnection m_dbConnection;
@@ -177,17 +182,20 @@ namespace Foogle_WPF
             command.ExecuteNonQuery();
         }
 
-        public static short authLevel = 0;
-        public static int professor_id = 0;
-
         StudentSearch studentSearch = new StudentSearch();
         StudentRegistration studentRegistration = new StudentRegistration();
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void MainWindow_Activated(object sender, EventArgs e)
+        {
+            SetupMenuByAuthLevel(authLevel);
+        }
+
+        private void AuthButton_Click(object sender, RoutedEventArgs e)
         {
             if (authLevel > 0)
             {
-                MessageBox.Show("Već ste ulogirani!");
+                authLevel = 0;
+                SetupMenuByAuthLevel(0);
                 return;
             }
 
@@ -200,7 +208,7 @@ namespace Foogle_WPF
             if (authLevel < 333)
             {
                 MessageBox.Show("Niste ulogirani ili nemate pravo pristupa tražilici!");
-                LoginButton.Focus();
+                AuthButton.Focus();
                 return;
             }
 
@@ -219,7 +227,7 @@ namespace Foogle_WPF
             if (authLevel < 333)
             {
                 MessageBox.Show("Niste ulogirani ili nemate pravo pristupa tražilici!");
-                LoginButton.Focus();
+                AuthButton.Focus();
                 searchBox.Text = "";
                 return;
             }
@@ -375,7 +383,7 @@ namespace Foogle_WPF
 
         private void PrijavaAdminButton_Click(object sender, RoutedEventArgs e)
         {
-            if (authLevel < 1337)
+            if (authLevel < 1337) 
             {
                 MessageBox.Show("Niste ulogirani ili nemate pravo pristupa!");
                 return;
@@ -414,13 +422,56 @@ namespace Foogle_WPF
             Reports reportsWindow = new Reports();
             reportsWindow.Show();
         }
+
         private void UsersButton_Click(object sender, RoutedEventArgs e)
         {
             Users usersWindow = new Users();
             usersWindow.Show();
         }
 
+        public void SetupMenuByAuthLevel(short level)
+        {
+            if (level <= 0)
+            {
+                LinkedInButton.Visibility = Visibility.Visible;
+                ProfesorButton.Visibility = Visibility.Visible;
+                AuthButton.Content = "Prijava";
+                UsersButton.Visibility = Visibility.Hidden;
+                EndorsementButton.Visibility = Visibility.Hidden;
+                ReportsButton.Visibility = Visibility.Hidden;
+                AdministrationButton.Visibility = Visibility.Hidden;
+                return;
+            }
+
+            LinkedInButton.Visibility = Visibility.Hidden;
+            ProfesorButton.Visibility = Visibility.Hidden;
+            AuthButton.Content = "Odjava";
+
+            switch (level)
+            {
+                case 1:
+                    UsersButton.Visibility = Visibility.Hidden;
+                    EndorsementButton.Visibility = Visibility.Hidden;
+                    ReportsButton.Visibility = Visibility.Hidden;
+                    AdministrationButton.Visibility = Visibility.Hidden;
+                    break;
+                case 333:
+                case 666:
+                    UsersButton.Visibility = Visibility.Hidden;
+                    EndorsementButton.Visibility = Visibility.Visible;
+                    ReportsButton.Visibility = Visibility.Hidden;
+                    AdministrationButton.Visibility = Visibility.Hidden;
+                    break;
+                case 1337:
+                    UsersButton.Visibility = Visibility.Visible;
+                    EndorsementButton.Visibility = Visibility.Visible;
+                    ReportsButton.Visibility = Visibility.Visible;
+                    AdministrationButton.Visibility = Visibility.Visible;
+                    break;
+                default:
+                    // ForceLogout
+                    break;
+            }
+        }
     }
-
-
 }

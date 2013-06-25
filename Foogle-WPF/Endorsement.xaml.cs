@@ -106,7 +106,7 @@ namespace Foogle_WPF
         {
             _EndorsedCollection.Clear();
 
-            int prof_id = MainWindow.professor_id;
+            int prof_id = MainWindow.userID;
 
             //get all professors 'p' that are unactivated
             using (var context = new FoogleContext())

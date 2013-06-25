@@ -69,7 +69,7 @@ namespace Foogle_WPF
         private void EndorseButton(object sender, RoutedEventArgs e)
         {
             //current professor_id (logged in)
-            int prof_id = MainWindow.professor_id;
+            int prof_id = MainWindow.userID;
 
             if (prof_id == 0)
             {

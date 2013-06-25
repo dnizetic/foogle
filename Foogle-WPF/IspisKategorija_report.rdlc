@@ -6,10 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.7259cm</Width>
+              <Width>1.54905cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.7259cm</Width>
+              <Width>5.90275cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -61,7 +61,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Naziv categoriesMenuItem</Value>
+                              <Value>Naziv </Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -189,13 +189,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>1.94792in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>2.93378in</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>1.24354cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -206,7 +206,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Ispis Foogle kategorija</Value>
+                  <Value>Kategorije:</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -214,8 +214,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox7</rd:DefaultName>
-          <Top>0.86995cm</Top>
-          <Left>0.65828cm</Left>
+          <Top>0.28787cm</Top>
+          <Left>0.31432cm</Left>
           <Height>0.6cm</Height>
           <Width>5.41042cm</Width>
           <Style>

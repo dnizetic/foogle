@@ -17,13 +17,13 @@ namespace UnitTest
 
             String t1 = "Uppercase letter";
 
-            String tt1 = ss.cleanString(t1);
+            String tt1 = ss.CleanString(t1);
 
             Assert.AreEqual("uppercase letter", tt1);
 
             t1 = "  trim   ";
 
-            tt1 = ss.cleanString(t1);
+            tt1 = ss.CleanString(t1);
 
             Assert.AreEqual("trim", tt1);
 
