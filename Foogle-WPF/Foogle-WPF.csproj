@@ -325,7 +325,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram.cd" />
     <None Include="Foogle-WPF_TemporaryKey.pfx" />
     <None Include="FoogleDS.xsc">
       <DependentUpon>FoogleDS.xsd</DependentUpon>

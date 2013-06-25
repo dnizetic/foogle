@@ -134,7 +134,6 @@ F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fi\Npgsql.resources.dll
 F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\fr\Npgsql.resources.dll
 F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\ja\Npgsql.resources.dll
 F:\Dropbox\GitHub\foogle\Foogle-WPF\bin\Debug\zh-CN\Npgsql.resources.dll
-F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Foogle-WPF.csprojResolveAssemblyReference.cache
 F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\AdminUserConfirmationWindow.baml
 F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\Endorsement.baml
 F:\Dropbox\GitHub\foogle\Foogle-WPF\obj\Debug\IspisKategorijaReport.baml
