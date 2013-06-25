@@ -44,16 +44,23 @@ namespace Foogle_WPF
 
         private void obrisi_Click(object sender, RoutedEventArgs e)
         {
-            DataRowView row = (DataRowView)foogle_userDataGrid.SelectedItems[0];
-            string id = row["id"].ToString(); 
-            
-            using (var context = new FoogleContext())
-                        {
-                            context.Database.ExecuteSqlCommand("DELETE FROM foogle_user WHERE id ="+id+"");
-                            context.SaveChanges();
-                        }
+            try
+            {
+                DataRowView row = (DataRowView)foogle_userDataGrid.SelectedItems[0];
+                string id = row["id"].ToString();
 
-            RefreshDataGrid();
+                using (var context = new FoogleContext())
+                {
+                    context.Database.ExecuteSqlCommand("DELETE FROM foogle_user WHERE id =" + id + "");
+                    context.SaveChanges();
+                }
+
+                RefreshDataGrid();
+            }
+            catch
+            {
+                RefreshDataGrid();
+            }
         }
 
         private void unesi_Click(object sender, RoutedEventArgs e)
@@ -71,7 +78,7 @@ namespace Foogle_WPF
                 bool confirmed = bool.Parse(row["confirmed"].ToString());               
                 string linkedin = row["linkedin"].ToString();
                 float exp = float.Parse(row["exp"].ToString());
-                MessageBox.Show(confirmed.ToString());
+                
 
 
                 using (var context = new FoogleContext())
@@ -97,6 +104,7 @@ namespace Foogle_WPF
             }
             catch {
                 MessageBox.Show("Neispravni podaci!");
+                RefreshDataGrid();
             }
 
         }
@@ -112,16 +120,19 @@ namespace Foogle_WPF
                 string lastname = row["lastname"].ToString();
                 string password = row["password"].ToString();
                 string role = row["role"].ToString();
-                if (row["confirmed"].ToString() == "") { row["confirmed"] = "False"; }
-                bool confirmed = bool.Parse(row["confirmed"].ToString());
+
+                int confirmed = 0;
+                if (row["confirmed"].ToString() == "" || row["confirmed"].ToString() == "False") { confirmed = 0; }
+                else confirmed = 1;
                 string linkedin = row["linkedin"].ToString();
                 float exp = float.Parse(row["exp"].ToString());
-                
+
+                MessageBox.Show(confirmed.ToString());
 
 
                 using (var context = new FoogleContext())
                 {
-                    context.Database.ExecuteSqlCommand("Update foogle_user set email='" + email + "', firstname='" + firstname + "', lastname='" + lastname + "', password='" + password + "', role='" + role + "', confirmed='" + confirmed + "', linkedin='" + linkedin + "', exp=" + exp + " WHERE id =" + id + "");
+                    context.Database.ExecuteSqlCommand("Update foogle_user set email='" + email + "', firstname='" + firstname + "', lastname='" + lastname + "', password='" + password + "', role='" + role + "', confirmed=" + confirmed.ToString() + ", linkedin='" + linkedin + "', exp=" + exp + " WHERE id =" + id + "");
                     context.SaveChanges();
                 }
 
@@ -130,8 +141,14 @@ namespace Foogle_WPF
             catch
             {
                 MessageBox.Show("Neispravni podaci!");
+                RefreshDataGrid();
             }
 
+        }
+
+        private void osvjezi_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshDataGrid();
         }
     }
 }
