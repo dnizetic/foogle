@@ -15,21 +15,22 @@
             <ColumnDefinition Width="121*"/>
             <ColumnDefinition Width="38*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="foogle_userDataGrid" AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Column="1" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="3,10,25,81" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <Button x:Name="obrisi" Content="Obriši" Grid.Column="1" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top" Width="75" Click="obrisi_Click"/>
+        <Button x:Name="unesi" Content="Unesi" Grid.Column="2" HorizontalAlignment="Left" Margin="0,238,0,0" VerticalAlignment="Top" Width="75" Click="unesi_Click"/>
+        <DataGrid x:Name="foogle_userDataGrid" AutoGenerateColumns="False" Grid.ColumnSpan="4" Grid.Column="1" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,10,27,75" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="emailColumn" Binding="{Binding email}" Header="email" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="firstnameColumn" Binding="{Binding firstname}" Header="firstname" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="lastnameColumn" Binding="{Binding lastname}" Header="lastname" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="roleColumn" Binding="{Binding role}" Header="role" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="activityColumn" Binding="{Binding activity}" Header="activity" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="passwordColumn" Binding="{Binding password}" Header="password" Width="SizeToHeader"/>
                 <DataGridCheckBoxColumn x:Name="confirmedColumn" Binding="{Binding confirmed}" Header="confirmed" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="linkedin_idColumn" Binding="{Binding linkedin_id}" Header="linkedin id" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="linkedinColumn" Binding="{Binding linkedin}" Header="linkedin" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="expColumn" Binding="{Binding exp}" Header="exp" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="obrisi" Content="Obriši" Grid.Column="1" HorizontalAlignment="Left" Margin="20,238,0,0" VerticalAlignment="Top" Width="75" Click="obrisi_Click"/>
+        <Button x:Name="update" Content="Ažuriraj" Grid.Column="2" HorizontalAlignment="Left" Margin="95,238,0,0" VerticalAlignment="Top" Width="75" Click="update_Click"/>
 
     </Grid>
 </Window>

@@ -25,6 +25,7 @@ namespace Foogle_WPF
         public BrisanjeKorisnika()
         {
             InitializeComponent();
+           
         }
 
         private void RefreshDataGrid() {
@@ -54,6 +55,84 @@ namespace Foogle_WPF
                         }
 
             RefreshDataGrid();
+        }
+
+        private void unesi_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DataRowView row = (DataRowView)foogle_userDataGrid.SelectedItems[0];
+                string id = row["id"].ToString();
+                string email = row["email"].ToString();
+                string firstname = row["firstname"].ToString();
+                string lastname = row["lastname"].ToString();
+                string password = row["password"].ToString();
+                string role = row["role"].ToString();
+                if (row["confirmed"].ToString() == "") { row["confirmed"] = "False"; }
+                bool confirmed = bool.Parse(row["confirmed"].ToString());               
+                string linkedin = row["linkedin"].ToString();
+                float exp = float.Parse(row["exp"].ToString());
+                MessageBox.Show(confirmed.ToString());
+
+
+                using (var context = new FoogleContext())
+                {
+                    context.Users.Add(
+                        new FoogleUser
+                        {
+                            email = email,
+                            confirmed = confirmed,
+                            firstname = firstname,
+                            lastname = lastname,
+                            role = role,
+                            activity = null,
+                            password = password,
+                            linkedin = linkedin,
+                            exp = exp
+                        });
+
+                    context.SaveChanges();
+                }
+
+                RefreshDataGrid();
+            }
+            catch {
+                MessageBox.Show("Neispravni podaci!");
+            }
+
+        }
+
+        private void update_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DataRowView row = (DataRowView)foogle_userDataGrid.SelectedItems[0];
+                string id = row["id"].ToString();
+                string email = row["email"].ToString();
+                string firstname = row["firstname"].ToString();
+                string lastname = row["lastname"].ToString();
+                string password = row["password"].ToString();
+                string role = row["role"].ToString();
+                if (row["confirmed"].ToString() == "") { row["confirmed"] = "False"; }
+                bool confirmed = bool.Parse(row["confirmed"].ToString());
+                string linkedin = row["linkedin"].ToString();
+                float exp = float.Parse(row["exp"].ToString());
+                
+
+
+                using (var context = new FoogleContext())
+                {
+                    context.Database.ExecuteSqlCommand("Update foogle_user set email='" + email + "', firstname='" + firstname + "', lastname='" + lastname + "', password='" + password + "', role='" + role + "', confirmed='" + confirmed + "', linkedin='" + linkedin + "', exp=" + exp + " WHERE id =" + id + "");
+                    context.SaveChanges();
+                }
+
+                RefreshDataGrid();
+            }
+            catch
+            {
+                MessageBox.Show("Neispravni podaci!");
+            }
+
         }
     }
 }

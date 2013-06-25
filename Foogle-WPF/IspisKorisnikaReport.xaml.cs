@@ -33,40 +33,56 @@ namespace Foogle_WPF
             
             dataset.BeginInit();
 
+
             reportDataSource1.Name = "ispis_korisnika_report"; //Name of the report dataset in our .RDLC file
-
             reportDataSource1.Value = dataset.foogle_user;
+
+            this.ispisKorisnika.LocalReport.DataSources.Add(reportDataSource1);
+            this.ispisKorisnika.LocalReport.ReportPath = "../../IspisKorisnika_report.rdlc";
+            dataset.EndInit();
+
+            FoogleDSTableAdapters.foogle_userTableAdapter
+            foogle_user_table_adapter = new
+            FoogleDSTableAdapters.foogle_userTableAdapter();
+
+            foogle_user_table_adapter.ClearBeforeFill = true;
+            foogle_user_table_adapter.Fill(dataset.foogle_user);  
+
+
+            //reportDataSource1.Name = "ispis_korisnika_report"; //Name of the report dataset in our .RDLC file
+
+            //reportDataSource1.Value = dataset.foogle_user;
                 
-            ObservableCollection<FoogleUser> _KorisnikCollection =
-            new ObservableCollection<FoogleUser>();
-            _KorisnikCollection.Clear();
+            //ObservableCollection<FoogleUser> _KorisnikCollection =
+            //new ObservableCollection<FoogleUser>();
+            //_KorisnikCollection.Clear();
 
-            using (var context = new FoogleContext())
-            {
-                var usrs = from a in context.Users
-                                select a;
+            //using (var context = new FoogleContext())
+            //{
+            //    var usrs = from a in context.Users
+            //                    select a;
 
-                foreach (var p in usrs)
-                {
-                    _KorisnikCollection.Add(p);
-                }
+            //    foreach (var p in usrs)
+            //    {
+            //        _KorisnikCollection.Add(p);
+            //    }
 
-            }
-            ReportDataSource reportDataSource = new ReportDataSource("ispis_korisnika_report", _KorisnikCollection);
+            //}
+            //ReportDataSource reportDataSource = new ReportDataSource("ispis_korisnika_report", _KorisnikCollection);
 
-            this.ispisKorisnika.LocalReport.DataSources.Add(reportDataSource);
+            //this.ispisKorisnika.LocalReport.DataSources.Add(reportDataSource);
 
         
-            //correct path
-            this.ispisKorisnika.LocalReport.ReportPath = "../../IspisKorisnika_report.rdlc";
+            ////correct path
+            //this.ispisKorisnika.LocalReport.ReportPath = "../../IspisKorisnika_report.rdlc";
 
-            using (StreamReader rdlcSR = new StreamReader("../../IspisKorisnika_report.rdlc"))
-            {
-                ispisKorisnika.LocalReport.LoadReportDefinition(rdlcSR);
+            //using (StreamReader rdlcSR = new StreamReader("../../IspisKorisnika_report.rdlc"))
+            //{
+            //    ispisKorisnika.LocalReport.LoadReportDefinition(rdlcSR);
 
-            }
+            //}
             
-            dataset.EndInit();
+            //dataset.EndInit();
 
             _isReportViewerLoaded = true;
             
