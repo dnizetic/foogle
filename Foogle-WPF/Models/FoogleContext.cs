@@ -30,7 +30,7 @@ namespace Foogle_WPF
             modelBuilder.Entity<Category>().ToTable("category", "public");
             modelBuilder.Entity<Skill>().ToTable("skill", "public");
             modelBuilder.Entity<Recommendation>().ToTable("recommendation", "public");
-            modelBuilder.Entity<UserSkills>().ToTable("user_skills", "public");
+            modelBuilder.Entity<UserSkills>().ToTable("userSkillsMenuItem", "public");
             
             // Chinook Database for PostgreSQL doesn't auto-increment Ids
             //modelBuilder.Conventions

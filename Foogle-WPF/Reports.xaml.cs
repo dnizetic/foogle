@@ -24,34 +24,34 @@ namespace Foogle_WPF
             InitializeComponent();
         }
 
-        private void korisnici_report_Click(object sender, RoutedEventArgs e)
+        private void usersReport_Click(object sender, RoutedEventArgs e)
         {
-            IspisKorisnikaReport ik = new IspisKorisnikaReport();
-            ik.Show();
+            IspisKorisnikaReport usersReportWindow = new IspisKorisnikaReport();
+            usersReportWindow.Show();
         }
 
-        private void kategorije_Click(object sender, RoutedEventArgs e)
+        private void categoryReport_Click(object sender, RoutedEventArgs e)
         {
-            IspisKategorijaReport ikat = new IspisKategorijaReport();
-            ikat.Show();
+            IspisKategorijaReport categoryReportWindow = new IspisKategorijaReport();
+            categoryReportWindow.Show();
         }
 
-        private void skillovi_Click(object sender, RoutedEventArgs e)
+        private void skillsReport_Click(object sender, RoutedEventArgs e)
         {
-            IspisSkillovaReport iskill = new IspisSkillovaReport();
-            iskill.Show();
+            IspisSkillovaReport skillsReportWindow = new IspisSkillovaReport();
+            skillsReportWindow.Show();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void userSkillsReport_Click(object sender, RoutedEventArgs e)
         {
-            IspisSkillovaUseraReport isu = new IspisSkillovaUseraReport();
-            isu.Show();
+            IspisSkillovaUseraReport userSkillsReportWindow = new IspisSkillovaUseraReport();
+            userSkillsReportWindow.Show();
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void endorsementsReport_Click(object sender, RoutedEventArgs e)
         {
-            IspisPreporukaReport ip = new IspisPreporukaReport();
-            ip.Show();
+            IspisPreporukaReport endoresementsReportWindow = new IspisPreporukaReport();
+            endoresementsReportWindow.Show();
         }
     }
 }

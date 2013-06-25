@@ -75,7 +75,7 @@ namespace Foogle_WPF
                         //l.Content = "Dobrodosli!";
                         lab.Content = "Dobrodosli!";
 
-                        MainWindow.logged_in = true;
+                        MainWindow.authLevel = 1; // TODO: Postavi prema tipu korisnika!
 
                         FoogleUser f = usrs.First();
                         MainWindow.professor_id = Convert.ToInt32(f.id);
@@ -86,7 +86,7 @@ namespace Foogle_WPF
                     }
                     else
                     {
-                        errormessage.Text = "Sorry! Please enter existing emailid/password.";
+                        errormessage.Text = "Krivi e-mail i/ili lozinka!";
                     }
                 }
                 //con.Close();

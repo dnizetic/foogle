@@ -182,8 +182,8 @@
     <Compile Include="AdminUserConfirmationWindow.xaml.cs">
       <DependentUpon>AdminUserConfirmationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BrisanjeKorisnika.xaml.cs">
-      <DependentUpon>BrisanjeKorisnika.xaml</DependentUpon>
+    <Compile Include="Users.xaml.cs">
+      <DependentUpon>Users.xaml</DependentUpon>
     </Compile>
     <Compile Include="Endorsement.xaml.cs">
       <DependentUpon>Endorsement.xaml</DependentUpon>
@@ -240,7 +240,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BrisanjeKorisnika.xaml">
+    <Page Include="Users.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

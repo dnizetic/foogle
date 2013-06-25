@@ -80,12 +80,12 @@ namespace Foogle_WPF
                 {
                     //MessageBox.Show("user:id " + user_id + ", skill_id: " + skill_id);
 
-                    var user_skills = from b in context.UserSkills
+                    var userSkillsMenuItem = from b in context.UserSkills
                                       where b.user.id.Equals(user_id)
                                       where b.skill.id.Equals(skill_id)
                                       select b;
 
-                    if (user_skills.Count() > 0)
+                    if (userSkillsMenuItem.Count() > 0)
                         return true;
                 }
                 return false;

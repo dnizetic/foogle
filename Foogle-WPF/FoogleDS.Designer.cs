@@ -32,11 +32,11 @@ namespace Foogle_WPF {
         
         private skillDataTable tableskill;
         
-        private user_skillsDataTable tableuser_skills;
+        private userSkillsMenuItemDataTable tableuserSkillsMenuItem;
         
         private recommendation_viewDataTable tablerecommendation_view;
         
-        private user_skills_viewDataTable tableuser_skills_view;
+        private userSkillsMenuItem_viewDataTable tableuserSkillsMenuItem_view;
         
         private global::System.Data.DataRelation relationFK_recommendation_0_0;
         
@@ -44,9 +44,9 @@ namespace Foogle_WPF {
         
         private global::System.Data.DataRelation relationFK_recommendation_2_0;
         
-        private global::System.Data.DataRelation relationFK_user_skills_0_0;
+        private global::System.Data.DataRelation relationFK_userSkillsMenuItem_0_0;
         
-        private global::System.Data.DataRelation relationFK_user_skills_1_0;
+        private global::System.Data.DataRelation relationFK_userSkillsMenuItem_1_0;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -88,14 +88,14 @@ namespace Foogle_WPF {
                 if ((ds.Tables["skill"] != null)) {
                     base.Tables.Add(new skillDataTable(ds.Tables["skill"]));
                 }
-                if ((ds.Tables["user_skills"] != null)) {
-                    base.Tables.Add(new user_skillsDataTable(ds.Tables["user_skills"]));
+                if ((ds.Tables["userSkillsMenuItem"] != null)) {
+                    base.Tables.Add(new userSkillsMenuItemDataTable(ds.Tables["userSkillsMenuItem"]));
                 }
                 if ((ds.Tables["recommendation_view"] != null)) {
                     base.Tables.Add(new recommendation_viewDataTable(ds.Tables["recommendation_view"]));
                 }
-                if ((ds.Tables["user_skills_view"] != null)) {
-                    base.Tables.Add(new user_skills_viewDataTable(ds.Tables["user_skills_view"]));
+                if ((ds.Tables["userSkillsMenuItem_view"] != null)) {
+                    base.Tables.Add(new userSkillsMenuItem_viewDataTable(ds.Tables["userSkillsMenuItem_view"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -159,9 +159,9 @@ namespace Foogle_WPF {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public user_skillsDataTable user_skills {
+        public userSkillsMenuItemDataTable userSkillsMenuItem {
             get {
-                return this.tableuser_skills;
+                return this.tableuserSkillsMenuItem;
             }
         }
         
@@ -179,9 +179,9 @@ namespace Foogle_WPF {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public user_skills_viewDataTable user_skills_view {
+        public userSkillsMenuItem_viewDataTable userSkillsMenuItem_view {
             get {
-                return this.tableuser_skills_view;
+                return this.tableuserSkillsMenuItem_view;
             }
         }
         
@@ -264,14 +264,14 @@ namespace Foogle_WPF {
                 if ((ds.Tables["skill"] != null)) {
                     base.Tables.Add(new skillDataTable(ds.Tables["skill"]));
                 }
-                if ((ds.Tables["user_skills"] != null)) {
-                    base.Tables.Add(new user_skillsDataTable(ds.Tables["user_skills"]));
+                if ((ds.Tables["userSkillsMenuItem"] != null)) {
+                    base.Tables.Add(new userSkillsMenuItemDataTable(ds.Tables["userSkillsMenuItem"]));
                 }
                 if ((ds.Tables["recommendation_view"] != null)) {
                     base.Tables.Add(new recommendation_viewDataTable(ds.Tables["recommendation_view"]));
                 }
-                if ((ds.Tables["user_skills_view"] != null)) {
-                    base.Tables.Add(new user_skills_viewDataTable(ds.Tables["user_skills_view"]));
+                if ((ds.Tables["userSkillsMenuItem_view"] != null)) {
+                    base.Tables.Add(new userSkillsMenuItem_viewDataTable(ds.Tables["userSkillsMenuItem_view"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -330,10 +330,10 @@ namespace Foogle_WPF {
                     this.tableskill.InitVars();
                 }
             }
-            this.tableuser_skills = ((user_skillsDataTable)(base.Tables["user_skills"]));
+            this.tableuserSkillsMenuItem = ((userSkillsMenuItemDataTable)(base.Tables["userSkillsMenuItem"]));
             if ((initTable == true)) {
-                if ((this.tableuser_skills != null)) {
-                    this.tableuser_skills.InitVars();
+                if ((this.tableuserSkillsMenuItem != null)) {
+                    this.tableuserSkillsMenuItem.InitVars();
                 }
             }
             this.tablerecommendation_view = ((recommendation_viewDataTable)(base.Tables["recommendation_view"]));
@@ -342,17 +342,17 @@ namespace Foogle_WPF {
                     this.tablerecommendation_view.InitVars();
                 }
             }
-            this.tableuser_skills_view = ((user_skills_viewDataTable)(base.Tables["user_skills_view"]));
+            this.tableuserSkillsMenuItem_view = ((userSkillsMenuItem_viewDataTable)(base.Tables["userSkillsMenuItem_view"]));
             if ((initTable == true)) {
-                if ((this.tableuser_skills_view != null)) {
-                    this.tableuser_skills_view.InitVars();
+                if ((this.tableuserSkillsMenuItem_view != null)) {
+                    this.tableuserSkillsMenuItem_view.InitVars();
                 }
             }
             this.relationFK_recommendation_0_0 = this.Relations["FK_recommendation_0_0"];
             this.relationFK_recommendation_1_0 = this.Relations["FK_recommendation_1_0"];
             this.relationFK_recommendation_2_0 = this.Relations["FK_recommendation_2_0"];
-            this.relationFK_user_skills_0_0 = this.Relations["FK_user_skills_0_0"];
-            this.relationFK_user_skills_1_0 = this.Relations["FK_user_skills_1_0"];
+            this.relationFK_userSkillsMenuItem_0_0 = this.Relations["FK_userSkillsMenuItem_0_0"];
+            this.relationFK_userSkillsMenuItem_1_0 = this.Relations["FK_userSkillsMenuItem_1_0"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -371,12 +371,12 @@ namespace Foogle_WPF {
             base.Tables.Add(this.tablerecommendation);
             this.tableskill = new skillDataTable();
             base.Tables.Add(this.tableskill);
-            this.tableuser_skills = new user_skillsDataTable();
-            base.Tables.Add(this.tableuser_skills);
+            this.tableuserSkillsMenuItem = new userSkillsMenuItemDataTable();
+            base.Tables.Add(this.tableuserSkillsMenuItem);
             this.tablerecommendation_view = new recommendation_viewDataTable();
             base.Tables.Add(this.tablerecommendation_view);
-            this.tableuser_skills_view = new user_skills_viewDataTable();
-            base.Tables.Add(this.tableuser_skills_view);
+            this.tableuserSkillsMenuItem_view = new userSkillsMenuItem_viewDataTable();
+            base.Tables.Add(this.tableuserSkillsMenuItem_view);
             this.relationFK_recommendation_0_0 = new global::System.Data.DataRelation("FK_recommendation_0_0", new global::System.Data.DataColumn[] {
                         this.tablecategory.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecommendation.category_idColumn}, false);
@@ -389,14 +389,14 @@ namespace Foogle_WPF {
                         this.tablefoogle_user.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecommendation.teacher_idColumn}, false);
             this.Relations.Add(this.relationFK_recommendation_2_0);
-            this.relationFK_user_skills_0_0 = new global::System.Data.DataRelation("FK_user_skills_0_0", new global::System.Data.DataColumn[] {
+            this.relationFK_userSkillsMenuItem_0_0 = new global::System.Data.DataRelation("FK_userSkillsMenuItem_0_0", new global::System.Data.DataColumn[] {
                         this.tableskill.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableuser_skills.skill_idColumn}, false);
-            this.Relations.Add(this.relationFK_user_skills_0_0);
-            this.relationFK_user_skills_1_0 = new global::System.Data.DataRelation("FK_user_skills_1_0", new global::System.Data.DataColumn[] {
+                        this.tableuserSkillsMenuItem.skill_idColumn}, false);
+            this.Relations.Add(this.relationFK_userSkillsMenuItem_0_0);
+            this.relationFK_userSkillsMenuItem_1_0 = new global::System.Data.DataRelation("FK_userSkillsMenuItem_1_0", new global::System.Data.DataColumn[] {
                         this.tablefoogle_user.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableuser_skills.user_idColumn}, false);
-            this.Relations.Add(this.relationFK_user_skills_1_0);
+                        this.tableuserSkillsMenuItem.user_idColumn}, false);
+            this.Relations.Add(this.relationFK_userSkillsMenuItem_1_0);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -425,7 +425,7 @@ namespace Foogle_WPF {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeuser_skills() {
+        private bool ShouldSerializeuserSkillsMenuItem() {
             return false;
         }
         
@@ -437,7 +437,7 @@ namespace Foogle_WPF {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeuser_skills_view() {
+        private bool ShouldSerializeuserSkillsMenuItem_view() {
             return false;
         }
         
@@ -509,16 +509,16 @@ namespace Foogle_WPF {
         public delegate void skillRowChangeEventHandler(object sender, skillRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void user_skillsRowChangeEventHandler(object sender, user_skillsRowChangeEvent e);
+        public delegate void userSkillsMenuItemRowChangeEventHandler(object sender, userSkillsMenuItemRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void recommendation_viewRowChangeEventHandler(object sender, recommendation_viewRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void user_skills_viewRowChangeEventHandler(object sender, user_skills_viewRowChangeEvent e);
+        public delegate void userSkillsMenuItem_viewRowChangeEventHandler(object sender, userSkillsMenuItem_viewRowChangeEvent e);
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
+        ///Represents the strongly named DataTable clastudentSearch.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
@@ -808,7 +808,7 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
+        ///Represents the strongly named DataTable clastudentSearch.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
@@ -1210,7 +1210,7 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
+        ///Represents the strongly named DataTable clastudentSearch.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
@@ -1525,7 +1525,7 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
+        ///Represents the strongly named DataTable clastudentSearch.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
@@ -1801,11 +1801,11 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
+        ///Represents the strongly named DataTable clastudentSearch.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class user_skillsDataTable : global::System.Data.TypedTableBase<user_skillsRow> {
+        public partial class userSkillsMenuItemDataTable : global::System.Data.TypedTableBase<userSkillsMenuItemRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -1815,8 +1815,8 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsDataTable() {
-                this.TableName = "user_skills";
+            public userSkillsMenuItemDataTable() {
+                this.TableName = "userSkillsMenuItem";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1824,7 +1824,7 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal user_skillsDataTable(global::System.Data.DataTable table) {
+            internal userSkillsMenuItemDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1841,7 +1841,7 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected user_skillsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected userSkillsMenuItemDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1881,60 +1881,60 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRow this[int index] {
+            public userSkillsMenuItemRow this[int index] {
                 get {
-                    return ((user_skillsRow)(this.Rows[index]));
+                    return ((userSkillsMenuItemRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skillsRowChangeEventHandler user_skillsRowChanging;
+            public event userSkillsMenuItemRowChangeEventHandler userSkillsMenuItemRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skillsRowChangeEventHandler user_skillsRowChanged;
+            public event userSkillsMenuItemRowChangeEventHandler userSkillsMenuItemRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skillsRowChangeEventHandler user_skillsRowDeleting;
+            public event userSkillsMenuItemRowChangeEventHandler userSkillsMenuItemRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skillsRowChangeEventHandler user_skillsRowDeleted;
+            public event userSkillsMenuItemRowChangeEventHandler userSkillsMenuItemRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Adduser_skillsRow(user_skillsRow row) {
+            public void AdduserSkillsMenuItemRow(userSkillsMenuItemRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRow Adduser_skillsRow(foogle_userRow parentfoogle_userRowByFK_user_skills_1_0, skillRow parentskillRowByFK_user_skills_0_0) {
-                user_skillsRow rowuser_skillsRow = ((user_skillsRow)(this.NewRow()));
+            public userSkillsMenuItemRow AdduserSkillsMenuItemRow(foogle_userRow parentfoogle_userRowByFK_userSkillsMenuItem_1_0, skillRow parentskillRowByFK_userSkillsMenuItem_0_0) {
+                userSkillsMenuItemRow rowuserSkillsMenuItemRow = ((userSkillsMenuItemRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null};
-                if ((parentfoogle_userRowByFK_user_skills_1_0 != null)) {
-                    columnValuesArray[1] = parentfoogle_userRowByFK_user_skills_1_0[0];
+                if ((parentfoogle_userRowByFK_userSkillsMenuItem_1_0 != null)) {
+                    columnValuesArray[1] = parentfoogle_userRowByFK_userSkillsMenuItem_1_0[0];
                 }
-                if ((parentskillRowByFK_user_skills_0_0 != null)) {
-                    columnValuesArray[2] = parentskillRowByFK_user_skills_0_0[0];
+                if ((parentskillRowByFK_userSkillsMenuItem_0_0 != null)) {
+                    columnValuesArray[2] = parentskillRowByFK_userSkillsMenuItem_0_0[0];
                 }
-                rowuser_skillsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowuser_skillsRow);
-                return rowuser_skillsRow;
+                rowuserSkillsMenuItemRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowuserSkillsMenuItemRow);
+                return rowuserSkillsMenuItemRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRow FindByid(long id) {
-                return ((user_skillsRow)(this.Rows.Find(new object[] {
+            public userSkillsMenuItemRow FindByid(long id) {
+                return ((userSkillsMenuItemRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                user_skillsDataTable cln = ((user_skillsDataTable)(base.Clone()));
+                userSkillsMenuItemDataTable cln = ((userSkillsMenuItemDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1942,7 +1942,7 @@ namespace Foogle_WPF {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new user_skillsDataTable();
+                return new userSkillsMenuItemDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1973,28 +1973,28 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRow Newuser_skillsRow() {
-                return ((user_skillsRow)(this.NewRow()));
+            public userSkillsMenuItemRow NewuserSkillsMenuItemRow() {
+                return ((userSkillsMenuItemRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new user_skillsRow(builder);
+                return new userSkillsMenuItemRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(user_skillsRow);
+                return typeof(userSkillsMenuItemRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.user_skillsRowChanged != null)) {
-                    this.user_skillsRowChanged(this, new user_skillsRowChangeEvent(((user_skillsRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItemRowChanged != null)) {
+                    this.userSkillsMenuItemRowChanged(this, new userSkillsMenuItemRowChangeEvent(((userSkillsMenuItemRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2002,8 +2002,8 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.user_skillsRowChanging != null)) {
-                    this.user_skillsRowChanging(this, new user_skillsRowChangeEvent(((user_skillsRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItemRowChanging != null)) {
+                    this.userSkillsMenuItemRowChanging(this, new userSkillsMenuItemRowChangeEvent(((userSkillsMenuItemRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2011,8 +2011,8 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.user_skillsRowDeleted != null)) {
-                    this.user_skillsRowDeleted(this, new user_skillsRowChangeEvent(((user_skillsRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItemRowDeleted != null)) {
+                    this.userSkillsMenuItemRowDeleted(this, new userSkillsMenuItemRowChangeEvent(((userSkillsMenuItemRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2020,14 +2020,14 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.user_skillsRowDeleting != null)) {
-                    this.user_skillsRowDeleting(this, new user_skillsRowChangeEvent(((user_skillsRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItemRowDeleting != null)) {
+                    this.userSkillsMenuItemRowDeleting(this, new userSkillsMenuItemRowChangeEvent(((userSkillsMenuItemRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removeuser_skillsRow(user_skillsRow row) {
+            public void RemoveuserSkillsMenuItemRow(userSkillsMenuItemRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2054,7 +2054,7 @@ namespace Foogle_WPF {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "user_skillsDataTable";
+                attribute2.FixedValue = "userSkillsMenuItemDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2096,7 +2096,7 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
+        ///Represents the strongly named DataTable clastudentSearch.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
@@ -2400,11 +2400,11 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents the strongly named DataTable class.
+        ///Represents the strongly named DataTable clastudentSearch.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class user_skills_viewDataTable : global::System.Data.TypedTableBase<user_skills_viewRow> {
+        public partial class userSkillsMenuItem_viewDataTable : global::System.Data.TypedTableBase<userSkillsMenuItem_viewRow> {
             
             private global::System.Data.DataColumn columnfirstname;
             
@@ -2414,8 +2414,8 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skills_viewDataTable() {
-                this.TableName = "user_skills_view";
+            public userSkillsMenuItem_viewDataTable() {
+                this.TableName = "userSkillsMenuItem_view";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2423,7 +2423,7 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal user_skills_viewDataTable(global::System.Data.DataTable table) {
+            internal userSkillsMenuItem_viewDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2440,7 +2440,7 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected user_skills_viewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected userSkillsMenuItem_viewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2480,47 +2480,47 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skills_viewRow this[int index] {
+            public userSkillsMenuItem_viewRow this[int index] {
                 get {
-                    return ((user_skills_viewRow)(this.Rows[index]));
+                    return ((userSkillsMenuItem_viewRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skills_viewRowChangeEventHandler user_skills_viewRowChanging;
+            public event userSkillsMenuItem_viewRowChangeEventHandler userSkillsMenuItem_viewRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skills_viewRowChangeEventHandler user_skills_viewRowChanged;
+            public event userSkillsMenuItem_viewRowChangeEventHandler userSkillsMenuItem_viewRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skills_viewRowChangeEventHandler user_skills_viewRowDeleting;
+            public event userSkillsMenuItem_viewRowChangeEventHandler userSkillsMenuItem_viewRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event user_skills_viewRowChangeEventHandler user_skills_viewRowDeleted;
+            public event userSkillsMenuItem_viewRowChangeEventHandler userSkillsMenuItem_viewRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Adduser_skills_viewRow(user_skills_viewRow row) {
+            public void AdduserSkillsMenuItem_viewRow(userSkillsMenuItem_viewRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skills_viewRow Adduser_skills_viewRow(object firstname, object lastname, object name) {
-                user_skills_viewRow rowuser_skills_viewRow = ((user_skills_viewRow)(this.NewRow()));
+            public userSkillsMenuItem_viewRow AdduserSkillsMenuItem_viewRow(object firstname, object lastname, object name) {
+                userSkillsMenuItem_viewRow rowuserSkillsMenuItem_viewRow = ((userSkillsMenuItem_viewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         firstname,
                         lastname,
                         name};
-                rowuser_skills_viewRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowuser_skills_viewRow);
-                return rowuser_skills_viewRow;
+                rowuserSkillsMenuItem_viewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowuserSkillsMenuItem_viewRow);
+                return rowuserSkillsMenuItem_viewRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                user_skills_viewDataTable cln = ((user_skills_viewDataTable)(base.Clone()));
+                userSkillsMenuItem_viewDataTable cln = ((userSkillsMenuItem_viewDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2528,7 +2528,7 @@ namespace Foogle_WPF {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new user_skills_viewDataTable();
+                return new userSkillsMenuItem_viewDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2553,28 +2553,28 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skills_viewRow Newuser_skills_viewRow() {
-                return ((user_skills_viewRow)(this.NewRow()));
+            public userSkillsMenuItem_viewRow NewuserSkillsMenuItem_viewRow() {
+                return ((userSkillsMenuItem_viewRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new user_skills_viewRow(builder);
+                return new userSkillsMenuItem_viewRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(user_skills_viewRow);
+                return typeof(userSkillsMenuItem_viewRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.user_skills_viewRowChanged != null)) {
-                    this.user_skills_viewRowChanged(this, new user_skills_viewRowChangeEvent(((user_skills_viewRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItem_viewRowChanged != null)) {
+                    this.userSkillsMenuItem_viewRowChanged(this, new userSkillsMenuItem_viewRowChangeEvent(((userSkillsMenuItem_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2582,8 +2582,8 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.user_skills_viewRowChanging != null)) {
-                    this.user_skills_viewRowChanging(this, new user_skills_viewRowChangeEvent(((user_skills_viewRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItem_viewRowChanging != null)) {
+                    this.userSkillsMenuItem_viewRowChanging(this, new userSkillsMenuItem_viewRowChangeEvent(((userSkillsMenuItem_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2591,8 +2591,8 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.user_skills_viewRowDeleted != null)) {
-                    this.user_skills_viewRowDeleted(this, new user_skills_viewRowChangeEvent(((user_skills_viewRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItem_viewRowDeleted != null)) {
+                    this.userSkillsMenuItem_viewRowDeleted(this, new userSkillsMenuItem_viewRowChangeEvent(((userSkillsMenuItem_viewRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2600,14 +2600,14 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.user_skills_viewRowDeleting != null)) {
-                    this.user_skills_viewRowDeleting(this, new user_skills_viewRowChangeEvent(((user_skills_viewRow)(e.Row)), e.Action));
+                if ((this.userSkillsMenuItem_viewRowDeleting != null)) {
+                    this.userSkillsMenuItem_viewRowDeleting(this, new userSkillsMenuItem_viewRowChangeEvent(((userSkillsMenuItem_viewRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removeuser_skills_viewRow(user_skills_viewRow row) {
+            public void RemoveuserSkillsMenuItem_viewRow(userSkillsMenuItem_viewRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2634,7 +2634,7 @@ namespace Foogle_WPF {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "user_skills_viewDataTable";
+                attribute2.FixedValue = "userSkillsMenuItem_viewDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2676,7 +2676,7 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents strongly named DataRow clastudentSearch.
         ///</summary>
         public partial class categoryRow : global::System.Data.DataRow {
             
@@ -2752,7 +2752,7 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents strongly named DataRow clastudentSearch.
         ///</summary>
         public partial class foogle_userRow : global::System.Data.DataRow {
             
@@ -3063,18 +3063,18 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRow[] Getuser_skillsRows() {
-                if ((this.Table.ChildRelations["FK_user_skills_1_0"] == null)) {
-                    return new user_skillsRow[0];
+            public userSkillsMenuItemRow[] GetuserSkillsMenuItemRows() {
+                if ((this.Table.ChildRelations["FK_userSkillsMenuItem_1_0"] == null)) {
+                    return new userSkillsMenuItemRow[0];
                 }
                 else {
-                    return ((user_skillsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_user_skills_1_0"])));
+                    return ((userSkillsMenuItemRow[])(base.GetChildRows(this.Table.ChildRelations["FK_userSkillsMenuItem_1_0"])));
                 }
             }
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents strongly named DataRow clastudentSearch.
         ///</summary>
         public partial class recommendationRow : global::System.Data.DataRow {
             
@@ -3166,7 +3166,7 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents strongly named DataRow clastudentSearch.
         ///</summary>
         public partial class skillRow : global::System.Data.DataRow {
             
@@ -3203,38 +3203,38 @@ namespace Foogle_WPF {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRow[] Getuser_skillsRows() {
-                if ((this.Table.ChildRelations["FK_user_skills_0_0"] == null)) {
-                    return new user_skillsRow[0];
+            public userSkillsMenuItemRow[] GetuserSkillsMenuItemRows() {
+                if ((this.Table.ChildRelations["FK_userSkillsMenuItem_0_0"] == null)) {
+                    return new userSkillsMenuItemRow[0];
                 }
                 else {
-                    return ((user_skillsRow[])(base.GetChildRows(this.Table.ChildRelations["FK_user_skills_0_0"])));
+                    return ((userSkillsMenuItemRow[])(base.GetChildRows(this.Table.ChildRelations["FK_userSkillsMenuItem_0_0"])));
                 }
             }
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents strongly named DataRow clastudentSearch.
         ///</summary>
-        public partial class user_skillsRow : global::System.Data.DataRow {
+        public partial class userSkillsMenuItemRow : global::System.Data.DataRow {
             
-            private user_skillsDataTable tableuser_skills;
+            private userSkillsMenuItemDataTable tableuserSkillsMenuItem;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal user_skillsRow(global::System.Data.DataRowBuilder rb) : 
+            internal userSkillsMenuItemRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableuser_skills = ((user_skillsDataTable)(this.Table));
+                this.tableuserSkillsMenuItem = ((userSkillsMenuItemDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public long id {
                 get {
-                    return ((long)(this[this.tableuser_skills.idColumn]));
+                    return ((long)(this[this.tableuserSkillsMenuItem.idColumn]));
                 }
                 set {
-                    this[this.tableuser_skills.idColumn] = value;
+                    this[this.tableuserSkillsMenuItem.idColumn] = value;
                 }
             }
             
@@ -3243,14 +3243,14 @@ namespace Foogle_WPF {
             public long user_id {
                 get {
                     try {
-                        return ((long)(this[this.tableuser_skills.user_idColumn]));
+                        return ((long)(this[this.tableuserSkillsMenuItem.user_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'user_id\' in table \'user_skills\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'user_id\' in table \'userSkillsMenuItem\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableuser_skills.user_idColumn] = value;
+                    this[this.tableuserSkillsMenuItem.user_idColumn] = value;
                 }
             }
             
@@ -3259,14 +3259,14 @@ namespace Foogle_WPF {
             public long skill_id {
                 get {
                     try {
-                        return ((long)(this[this.tableuser_skills.skill_idColumn]));
+                        return ((long)(this[this.tableuserSkillsMenuItem.skill_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'skill_id\' in table \'user_skills\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'skill_id\' in table \'userSkillsMenuItem\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableuser_skills.skill_idColumn] = value;
+                    this[this.tableuserSkillsMenuItem.skill_idColumn] = value;
                 }
             }
             
@@ -3274,10 +3274,10 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public skillRow skillRow {
                 get {
-                    return ((skillRow)(this.GetParentRow(this.Table.ParentRelations["FK_user_skills_0_0"])));
+                    return ((skillRow)(this.GetParentRow(this.Table.ParentRelations["FK_userSkillsMenuItem_0_0"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_user_skills_0_0"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_userSkillsMenuItem_0_0"]);
                 }
             }
             
@@ -3285,40 +3285,40 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public foogle_userRow foogle_userRow {
                 get {
-                    return ((foogle_userRow)(this.GetParentRow(this.Table.ParentRelations["FK_user_skills_1_0"])));
+                    return ((foogle_userRow)(this.GetParentRow(this.Table.ParentRelations["FK_userSkillsMenuItem_1_0"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_user_skills_1_0"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_userSkillsMenuItem_1_0"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isuser_idNull() {
-                return this.IsNull(this.tableuser_skills.user_idColumn);
+                return this.IsNull(this.tableuserSkillsMenuItem.user_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setuser_idNull() {
-                this[this.tableuser_skills.user_idColumn] = global::System.Convert.DBNull;
+                this[this.tableuserSkillsMenuItem.user_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isskill_idNull() {
-                return this.IsNull(this.tableuser_skills.skill_idColumn);
+                return this.IsNull(this.tableuserSkillsMenuItem.skill_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setskill_idNull() {
-                this[this.tableuser_skills.skill_idColumn] = global::System.Convert.DBNull;
+                this[this.tableuserSkillsMenuItem.skill_idColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents strongly named DataRow clastudentSearch.
         ///</summary>
         public partial class recommendation_viewRow : global::System.Data.DataRow {
             
@@ -3458,17 +3458,17 @@ namespace Foogle_WPF {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents strongly named DataRow clastudentSearch.
         ///</summary>
-        public partial class user_skills_viewRow : global::System.Data.DataRow {
+        public partial class userSkillsMenuItem_viewRow : global::System.Data.DataRow {
             
-            private user_skills_viewDataTable tableuser_skills_view;
+            private userSkillsMenuItem_viewDataTable tableuserSkillsMenuItem_view;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal user_skills_viewRow(global::System.Data.DataRowBuilder rb) : 
+            internal userSkillsMenuItem_viewRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableuser_skills_view = ((user_skills_viewDataTable)(this.Table));
+                this.tableuserSkillsMenuItem_view = ((userSkillsMenuItem_viewDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3476,14 +3476,14 @@ namespace Foogle_WPF {
             public object firstname {
                 get {
                     try {
-                        return ((object)(this[this.tableuser_skills_view.firstnameColumn]));
+                        return ((object)(this[this.tableuserSkillsMenuItem_view.firstnameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'firstname\' in table \'user_skills_view\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'firstname\' in table \'userSkillsMenuItem_view\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableuser_skills_view.firstnameColumn] = value;
+                    this[this.tableuserSkillsMenuItem_view.firstnameColumn] = value;
                 }
             }
             
@@ -3492,14 +3492,14 @@ namespace Foogle_WPF {
             public object lastname {
                 get {
                     try {
-                        return ((object)(this[this.tableuser_skills_view.lastnameColumn]));
+                        return ((object)(this[this.tableuserSkillsMenuItem_view.lastnameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lastname\' in table \'user_skills_view\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'lastname\' in table \'userSkillsMenuItem_view\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableuser_skills_view.lastnameColumn] = value;
+                    this[this.tableuserSkillsMenuItem_view.lastnameColumn] = value;
                 }
             }
             
@@ -3507,35 +3507,35 @@ namespace Foogle_WPF {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public object name {
                 get {
-                    return ((object)(this[this.tableuser_skills_view.nameColumn]));
+                    return ((object)(this[this.tableuserSkillsMenuItem_view.nameColumn]));
                 }
                 set {
-                    this[this.tableuser_skills_view.nameColumn] = value;
+                    this[this.tableuserSkillsMenuItem_view.nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsfirstnameNull() {
-                return this.IsNull(this.tableuser_skills_view.firstnameColumn);
+                return this.IsNull(this.tableuserSkillsMenuItem_view.firstnameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetfirstnameNull() {
-                this[this.tableuser_skills_view.firstnameColumn] = global::System.Convert.DBNull;
+                this[this.tableuserSkillsMenuItem_view.firstnameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IslastnameNull() {
-                return this.IsNull(this.tableuser_skills_view.lastnameColumn);
+                return this.IsNull(this.tableuserSkillsMenuItem_view.lastnameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetlastnameNull() {
-                this[this.tableuser_skills_view.lastnameColumn] = global::System.Convert.DBNull;
+                this[this.tableuserSkillsMenuItem_view.lastnameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3679,22 +3679,22 @@ namespace Foogle_WPF {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class user_skillsRowChangeEvent : global::System.EventArgs {
+        public class userSkillsMenuItemRowChangeEvent : global::System.EventArgs {
             
-            private user_skillsRow eventRow;
+            private userSkillsMenuItemRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRowChangeEvent(user_skillsRow row, global::System.Data.DataRowAction action) {
+            public userSkillsMenuItemRowChangeEvent(userSkillsMenuItemRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skillsRow Row {
+            public userSkillsMenuItemRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3747,22 +3747,22 @@ namespace Foogle_WPF {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class user_skills_viewRowChangeEvent : global::System.EventArgs {
+        public class userSkillsMenuItem_viewRowChangeEvent : global::System.EventArgs {
             
-            private user_skills_viewRow eventRow;
+            private userSkillsMenuItem_viewRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skills_viewRowChangeEvent(user_skills_viewRow row, global::System.Data.DataRowAction action) {
+            public userSkillsMenuItem_viewRowChangeEvent(userSkillsMenuItem_viewRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public user_skills_viewRow Row {
+            public userSkillsMenuItem_viewRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5924,7 +5924,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class user_skillsTableAdapter : global::System.ComponentModel.Component {
+    public partial class userSkillsMenuItemTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SQLite.SQLiteDataAdapter _adapter;
         
@@ -5938,7 +5938,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public user_skillsTableAdapter() {
+        public userSkillsMenuItemTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6035,14 +6035,14 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
             this._adapter = new global::System.Data.SQLite.SQLiteDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "user_skills";
+            tableMapping.DataSetTable = "userSkillsMenuItem";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("user_id", "user_id");
             tableMapping.ColumnMappings.Add("skill_id", "skill_id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SQLite.SQLiteCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [main].[sqlite_default_schema].[user_skills] WHERE (([id] = @Original_id) AND ((@IsNull_user_id = 1 AND [user_id] IS NULL) OR ([user_id] = @Original_user_id)) AND ((@IsNull_skill_id = 1 AND [skill_id] IS NULL) OR ([skill_id] = @Original_skill_id)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [main].[sqlite_default_schema].[userSkillsMenuItem] WHERE (([id] = @Original_id) AND ((@IsNull_user_id = 1 AND [user_id] IS NULL) OR ([user_id] = @Original_user_id)) AND ((@IsNull_skill_id = 1 AND [skill_id] IS NULL) OR ([skill_id] = @Original_skill_id)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::System.Data.SQLite.SQLiteParameter param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_id";
@@ -6083,7 +6083,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::System.Data.SQLite.SQLiteCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [main].[sqlite_default_schema].[user_skills] ([user_id], [skill_id]) " +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [main].[sqlite_default_schema].[userSkillsMenuItem] ([user_id], [skill_id]) " +
                 "VALUES (@user_id, @skill_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -6100,7 +6100,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::System.Data.SQLite.SQLiteCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [main].[sqlite_default_schema].[user_skills] SET [user_id] = @user_id, [skill_id] = @skill_id WHERE (([id] = @Original_id) AND ((@IsNull_user_id = 1 AND [user_id] IS NULL) OR ([user_id] = @Original_user_id)) AND ((@IsNull_skill_id = 1 AND [skill_id] IS NULL) OR ([skill_id] = @Original_skill_id)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [main].[sqlite_default_schema].[userSkillsMenuItem] SET [user_id] = @user_id, [skill_id] = @skill_id WHERE (([id] = @Original_id) AND ((@IsNull_user_id = 1 AND [user_id] IS NULL) OR ([user_id] = @Original_user_id)) AND ((@IsNull_skill_id = 1 AND [skill_id] IS NULL) OR ([skill_id] = @Original_skill_id)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@user_id";
@@ -6166,7 +6166,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
             this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
             this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [id], [user_id], [skill_id] FROM [user_skills]";
+            this._commandCollection[0].CommandText = "SELECT [id], [user_id], [skill_id] FROM [userSkillsMenuItem]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6174,7 +6174,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FoogleDS.user_skillsDataTable dataTable) {
+        public virtual int Fill(FoogleDS.userSkillsMenuItemDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6187,9 +6187,9 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FoogleDS.user_skillsDataTable GetData() {
+        public virtual FoogleDS.userSkillsMenuItemDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FoogleDS.user_skillsDataTable dataTable = new FoogleDS.user_skillsDataTable();
+            FoogleDS.userSkillsMenuItemDataTable dataTable = new FoogleDS.userSkillsMenuItemDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6197,7 +6197,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(FoogleDS.user_skillsDataTable dataTable) {
+        public virtual int Update(FoogleDS.userSkillsMenuItemDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6205,7 +6205,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(FoogleDS dataSet) {
-            return this.Adapter.Update(dataSet, "user_skills");
+            return this.Adapter.Update(dataSet, "userSkillsMenuItem");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6526,7 +6526,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class user_skills_viewTableAdapter : global::System.ComponentModel.Component {
+    public partial class userSkillsMenuItem_viewTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SQLite.SQLiteDataAdapter _adapter;
         
@@ -6540,7 +6540,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public user_skills_viewTableAdapter() {
+        public userSkillsMenuItem_viewTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6637,7 +6637,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
             this._adapter = new global::System.Data.SQLite.SQLiteDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "user_skills_view";
+            tableMapping.DataSetTable = "userSkillsMenuItem_view";
             tableMapping.ColumnMappings.Add("firstname", "firstname");
             tableMapping.ColumnMappings.Add("lastname", "lastname");
             tableMapping.ColumnMappings.Add("name", "name");
@@ -6657,7 +6657,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
             this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
             this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [firstname], [lastname], [name] FROM [user_skills_view]";
+            this._commandCollection[0].CommandText = "SELECT [firstname], [lastname], [name] FROM [userSkillsMenuItem_view]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6665,7 +6665,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FoogleDS.user_skills_viewDataTable dataTable) {
+        public virtual int Fill(FoogleDS.userSkillsMenuItem_viewDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6678,9 +6678,9 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FoogleDS.user_skills_viewDataTable GetData() {
+        public virtual FoogleDS.userSkillsMenuItem_viewDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FoogleDS.user_skills_viewDataTable dataTable = new FoogleDS.user_skills_viewDataTable();
+            FoogleDS.userSkillsMenuItem_viewDataTable dataTable = new FoogleDS.userSkillsMenuItem_viewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6706,7 +6706,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         
         private skillTableAdapter _skillTableAdapter;
         
-        private user_skillsTableAdapter _user_skillsTableAdapter;
+        private userSkillsMenuItemTableAdapter _userSkillsMenuItemTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -6784,12 +6784,12 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public user_skillsTableAdapter user_skillsTableAdapter {
+        public userSkillsMenuItemTableAdapter userSkillsMenuItemTableAdapter {
             get {
-                return this._user_skillsTableAdapter;
+                return this._userSkillsMenuItemTableAdapter;
             }
             set {
-                this._user_skillsTableAdapter = value;
+                this._userSkillsMenuItemTableAdapter = value;
             }
         }
         
@@ -6828,9 +6828,9 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
                             && (this._skillTableAdapter.Connection != null))) {
                     return this._skillTableAdapter.Connection;
                 }
-                if (((this._user_skillsTableAdapter != null) 
-                            && (this._user_skillsTableAdapter.Connection != null))) {
-                    return this._user_skillsTableAdapter.Connection;
+                if (((this._userSkillsMenuItemTableAdapter != null) 
+                            && (this._userSkillsMenuItemTableAdapter.Connection != null))) {
+                    return this._userSkillsMenuItemTableAdapter.Connection;
                 }
                 return null;
             }
@@ -6857,7 +6857,7 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
                 if ((this._skillTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._user_skillsTableAdapter != null)) {
+                if ((this._userSkillsMenuItemTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -6907,12 +6907,12 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._user_skillsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.user_skills.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._userSkillsMenuItemTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.userSkillsMenuItem.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._user_skillsTableAdapter.Update(updatedRows));
+                    result = (result + this._userSkillsMenuItemTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6958,11 +6958,11 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._user_skillsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.user_skills.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._userSkillsMenuItemTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.userSkillsMenuItem.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._user_skillsTableAdapter.Update(addedRows));
+                    result = (result + this._userSkillsMenuItemTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6976,11 +6976,11 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(FoogleDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._user_skillsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.user_skills.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._userSkillsMenuItemTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.userSkillsMenuItem.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._user_skillsTableAdapter.Update(deletedRows));
+                    result = (result + this._userSkillsMenuItemTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -7075,8 +7075,8 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._user_skillsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._user_skillsTableAdapter.Connection) == false))) {
+            if (((this._userSkillsMenuItemTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._userSkillsMenuItemTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -7148,13 +7148,13 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
                         adaptersWithAcceptChangesDuringUpdate.Add(this._skillTableAdapter.Adapter);
                     }
                 }
-                if ((this._user_skillsTableAdapter != null)) {
-                    revertConnections.Add(this._user_skillsTableAdapter, this._user_skillsTableAdapter.Connection);
-                    this._user_skillsTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(workConnection));
-                    this._user_skillsTableAdapter.Transaction = ((global::System.Data.SQLite.SQLiteTransaction)(workTransaction));
-                    if (this._user_skillsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._user_skillsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._user_skillsTableAdapter.Adapter);
+                if ((this._userSkillsMenuItemTableAdapter != null)) {
+                    revertConnections.Add(this._userSkillsMenuItemTableAdapter, this._userSkillsMenuItemTableAdapter.Connection);
+                    this._userSkillsMenuItemTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(workConnection));
+                    this._userSkillsMenuItemTableAdapter.Transaction = ((global::System.Data.SQLite.SQLiteTransaction)(workTransaction));
+                    if (this._userSkillsMenuItemTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._userSkillsMenuItemTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._userSkillsMenuItemTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -7231,9 +7231,9 @@ namespace Foogle_WPF.FoogleDSTableAdapters {
                     this._skillTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._skillTableAdapter]));
                     this._skillTableAdapter.Transaction = null;
                 }
-                if ((this._user_skillsTableAdapter != null)) {
-                    this._user_skillsTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._user_skillsTableAdapter]));
-                    this._user_skillsTableAdapter.Transaction = null;
+                if ((this._userSkillsMenuItemTableAdapter != null)) {
+                    this._userSkillsMenuItemTableAdapter.Connection = ((global::System.Data.SQLite.SQLiteConnection)(revertConnections[this._userSkillsMenuItemTableAdapter]));
+                    this._userSkillsMenuItemTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

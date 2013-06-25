@@ -317,10 +317,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>FoogleDS</rd:DataSetName>
         <rd:SchemaPath>|DataDirectory|FoogleDS.xsd</rd:SchemaPath>
-        <rd:TableName>user_skills_view</rd:TableName>
+        <rd:TableName>userSkillsMenuItem_view</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>user_skills_viewTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>userSkillsMenuItem_viewTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

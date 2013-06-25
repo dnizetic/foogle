@@ -18,17 +18,17 @@ using System.Windows.Shapes;
 namespace Foogle_WPF
 {
     /// <summary>
-    /// Interaction logic for BrisanjeKorisnika.xaml
+    /// Interaction logic for Users.xaml
     /// </summary>
-    public partial class BrisanjeKorisnika : Window
+    public partial class Users : Window
     {
-        public BrisanjeKorisnika()
+        public Users()
         {
             InitializeComponent();
-           
         }
 
-        private void RefreshDataGrid() {
+        private void RefreshDataGrid() 
+        {
             Foogle_WPF.FoogleDS foogleDS = ((Foogle_WPF.FoogleDS)(this.FindResource("foogleDS")));
             // Load data into the table foogle_user. You can modify this code as needed.
             Foogle_WPF.FoogleDSTableAdapters.foogle_userTableAdapter foogleDSfoogle_userTableAdapter = new Foogle_WPF.FoogleDSTableAdapters.foogle_userTableAdapter();

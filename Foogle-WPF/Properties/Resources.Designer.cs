@@ -33,7 +33,7 @@ namespace Foogle_WPF.Properties {
         }
         
         /// <summary>
-        ///   Returns the cached ResourceManager instance used by this class.
+        ///   Returns the cached ResourceManager instance used by this clastudentSearch.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Resources.ResourceManager ResourceManager {
@@ -48,7 +48,7 @@ namespace Foogle_WPF.Properties {
         
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
-        ///   resource lookups using this strongly typed resource class.
+        ///   resource lookups using this strongly typed resource clastudentSearch.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         internal static global::System.Globalization.CultureInfo Culture {

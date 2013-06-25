@@ -55,8 +55,8 @@ namespace controls
 
         static void ChangingFrameIndex(DependencyObject obj, DependencyPropertyChangedEventArgs ev)
         {
-            var gifImage = obj as GifImage;
-            gifImage.Source = gifImage._gifDecoder.Frames[(int)ev.NewValue];
+            var loadingImage = obj as GifImage;
+            loadingImage.Source = loadingImage._gifDecoder.Frames[(int)ev.NewValue];
         }
 
         /// <summary>

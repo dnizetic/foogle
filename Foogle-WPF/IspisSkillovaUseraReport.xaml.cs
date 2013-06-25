@@ -37,18 +37,18 @@ namespace Foogle_WPF
             dataset.BeginInit();
 
             reportDataSource1.Name = "ispis_skillova_usera_report"; //Name of the report dataset in our .RDLC file
-            reportDataSource1.Value = dataset.user_skills_view;
+            reportDataSource1.Value = dataset.userSkillsMenuItem_view;
 
             this.ispisSkillovaUsera.LocalReport.DataSources.Add(reportDataSource1);
             this.ispisSkillovaUsera.LocalReport.ReportPath = "../../IspisSkillovaUsera_report.rdlc";
             dataset.EndInit();
 
-            FoogleDSTableAdapters.user_skills_viewTableAdapter            
-            user_skills_view_ta = new
-            FoogleDSTableAdapters.user_skills_viewTableAdapter();
+            FoogleDSTableAdapters.userSkillsMenuItem_viewTableAdapter            
+            userSkillsMenuItem_view_ta = new
+            FoogleDSTableAdapters.userSkillsMenuItem_viewTableAdapter();
 
-            user_skills_view_ta.ClearBeforeFill = true;
-            user_skills_view_ta.Fill(dataset.user_skills_view);  
+            userSkillsMenuItem_view_ta.ClearBeforeFill = true;
+            userSkillsMenuItem_view_ta.Fill(dataset.userSkillsMenuItem_view);  
 
 
         }

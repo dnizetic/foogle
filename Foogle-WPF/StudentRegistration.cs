@@ -27,7 +27,7 @@ namespace Foogle_WPF
             }
         }
 
-        public static String access_token = "";
+        public static String accessToken = "";
 
 
         public String getUserEmailFromLinkedIn()
@@ -36,7 +36,7 @@ namespace Foogle_WPF
             try
             {
 
-                string url = "https://api.linkedin.com/v1/people/~/email-address?oauth2_access_token=" + access_token;
+                string url = "https://api.linkedin.com/v1/people/~/email-address?oauth2_access_token=" + accessToken;
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
                 HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
@@ -96,7 +96,7 @@ namespace Foogle_WPF
 
             try
             {
-                string url = "https://api.linkedin.com/v1/people/~/positions?oauth2_access_token=" + access_token;
+                string url = "https://api.linkedin.com/v1/people/~/positions?oauth2_access_token=" + accessToken;
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
                 HttpWebResponse resp = (HttpWebResponse)request.GetResponse();
@@ -208,9 +208,9 @@ namespace Foogle_WPF
 
 
 
-        public void storeUserSkills()
+        public void StoreUserSkills()
         {
-            string url = "https://api.linkedin.com/v1/people/~/skills?oauth2_access_token=" + access_token;
+            string url = "https://api.linkedin.com/v1/people/~/skills?oauth2_access_token=" + accessToken;
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             HttpWebResponse resp = (HttpWebResponse)request.GetResponse();

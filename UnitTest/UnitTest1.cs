@@ -39,7 +39,7 @@ namespace UnitTest
         {
             StudentRegistration sr = new StudentRegistration();
 
-            StudentRegistration.access_token = "123";
+            StudentRegistration.accessToken = "123";
 
             double status = sr.getYearsOfExperienceFromLinkedIn();
 
@@ -55,7 +55,7 @@ namespace UnitTest
         {
             StudentRegistration sr = new StudentRegistration();
 
-            StudentRegistration.access_token = "123";
+            StudentRegistration.accessToken = "123";
 
             string status = sr.getUserEmailFromLinkedIn();
 
